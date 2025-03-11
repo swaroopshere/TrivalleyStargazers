@@ -164,7 +164,7 @@ function changeOpacity(id, opacity) {
 // but the user can change it if need be.
 function contact(e_name, e_site, fullname, title) {
 	if (title != null) {
-		document.write("<div style=\'min-width:" + contactWidth + ";float:left;\'>" + title + ";</div>");
+		document.write("<div style=\'min-width:" + contactWidth + ";float:left;\'>" + title + "</div>");
 		document.write("<div style='min-width:" + contactWidth + ";float:left;'>");
 	}
 
