@@ -1,0 +1,13 @@
+  <html>
+ <head>
+ <title>SHTML TEST</title>
+ </head>
+ <body>
+ <p align= "center">
+ <font color= "#FF00FF">
+ <br> SSI Page calling CGI </br>
+ <!--#include virtual="/cgi-bin/info.php"-->
+ </font>
+ </p>
+ </body>
+

@@ -15,6 +15,21 @@
   <script type="text/javascript">
    <!--
     lastUpdateDate = "February 17, 2025";
+    
+    // Add this new function after lastUpdateDate
+    function currentSpeaker(title, speaker, abstract, bio) {
+      document.write(`
+        <b>${title}</b>
+        <br><br>
+        ${speaker}
+        <br><br>
+        <b>Abstract:</b> 
+        ${abstract}
+        <br><br>
+        <b>Bio:</b> ${bio}
+        <br><br>
+      `);
+    }
    //-->
   </script>
 
@@ -168,33 +183,45 @@ Please visit:  <a href="https://eastbayastro.org/events/" target="_blank">East B
 
   <div class="optional" id="opt_talk_details">
    <h3 class="subtitle">March 2025 Member Meeting Presentation</h3>
-<br><br>
+   <br><br>
  
    This meeting will be live at the Unitarian church and will also be available using the video conference utility 
    <a href="https://zoom.us/" title="Learn about Zoom" target="_blank">Zoom</a>.
-   The meeting link will be emailed to members.  For non-members
+   The meeting link will be emailed to members. For non-members
    if you would like to join the meeting, please send an email to 
    <script type="text/javascript">
       contact("president", "trivalleystargazers.org", "the club president");
-        </script>
+   </script>
    asking for the meeting link and telling us a bit about your areas of interest
    in astronomy.<br><br>
 
+   <script type="text/javascript">
+   <!--
+     currentSpeaker(
+       "Do Galaxies Breathe, Too?",
+       "Dr. Xinnan Du",
+       "Galaxies are more than just hundreds of billions of stars; the gas that fills the space between the stars plays a crucial role in determining the fate of a galaxy. In this presentation, I'll discuss how we use spectra to study the physical properties of gas in distant galaxies, with a specific focus on how galactic-scale outflows and inflows impact the formation of stars. By studying how galaxies \"breathe\" (in a similar way to human respiration), we can put together a more comprehensive picture of galaxy evolution over cosmic time.",
+       "Dr. Xinnan Du is the Outreach and Engagement Manager at the Kavli Institute for Particle Astrophysics and Cosmology (KIPAC) at Stanford University. Xinnan got her PhD in astronomy in 2018 from UCLA, and her research is focused on the physical properties of the interstellar and circumgalactic gas in distant star-forming galaxies. Before moving to Northern California, Xinnan spent 3 years at UC Riverside as a postdoctoral scholar, outreach director, and program manager. She is very enthusiastic about public outreach. With a long-term career goal in informal science education, Xinnan hopes to inspire and engage everyone in learning astronomy through various outreach and training programs."
+     );
+   //-->
+   </script>
 
-
-<b> Do Galaxies Breathe, Too? </b>
-<br>
-
-Dr. Xinnan Du 
-<br><br>
-Abstract: 
-Galaxies are more than just hundreds of billions of stars; the gas that fills the space between the stars plays a crucial role in determining the fate of a galaxy. In this presentation, I’ll discuss how we use spectra to study the physical properties of gas in distant galaxies, with a specific focus on how galactic-scale outflows and inflows impact the formation of stars. By studying how galaxies “breathe” (in a similar way to human respiration), we can put together a more comprehensive picture of galaxy evolution over cosmic time.
-
-Bio: Dr. Xinnan Du is the Outreach and Engagement Manager at the Kavli Institute for Particle Astrophysics and Cosmology (KIPAC) at Stanford University. Xinnan got her PhD in astronomy in 2018 from UCLA, and her research is focused on the physical properties of the interstellar and circumgalactic gas in distant star-forming galaxies. Before moving to Northern California, Xinnan spent 3 years at UC Riverside as a postdoctoral scholar, outreach director, and program manager. She is very enthusiastic about public outreach. With a long-term career goal in informal science education, Xinnan hopes to inspire and engage everyone in learning astronomy through various outreach and training programs.
-
-<br><br>
-   
   </div>
+
+  <div id="upcoming-events">
+    <noscript>
+      <h3 class="subtitle">Upcoming star parties</h3>
+      <br>
+      Please visit our 
+      <a href="https://groups.io/g/trivalleystargazers/calendar" title="See our calendar" target="_blank">groups.io</a>
+      calendar for upcoming events.<br><br>
+    </noscript>
+  </div>
+
+  <script type="text/javascript">
+    // Call the function when page loads
+    document.addEventListener('DOMContentLoaded', displayUpcomingEvents);
+  </script>
 
   <h3 class="subtitle">Upcoming star parties</h3>
   

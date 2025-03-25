@@ -1,0 +1,297 @@
+/* tvs.css: style sheet for all Tri-Valley Stargazer web pages */
+
+/* Last modified: May 17, 2016 */
+
+/* Reset CSS styles.  This works better than Eric Meyer's reset.css. */
+@import "normalize.css";
+
+
+/* Use Apple-style menu, based on http://www.marcofolio.net */
+@import "menubar.css";
+
+
+/***************************************************************************/
+
+a.anchor {
+	font-family: Helvetica, Geneva, SunSans-Regular, sans-serif;
+	font-size: small;
+}
+
+a.boldLink {
+	font-family: Helvetica, Geneva, SunSans-Regular, sans-serif;
+	font-weight: bold;
+}
+
+a.link {
+	font-family: Helvetica, Geneva, SunSans-Regular, sans-serif;
+}
+
+a.topLinks {
+	font-family: Helvetica, Geneva, SunSans-Regular, sans-serif;
+	font-size: medium;
+}
+
+/* Work-around for the fact that IE8 doesn't understand the last-child pseudo class */
+#appleNav li.lastChild {
+    width: 142px;  /* Coordinate this w/ menubar.css's last-child width! */
+}
+
+/* Additions to the appleNav stuff to handle drop-down menus */
+#appleNav div.popup {
+	position: absolute;
+	z-index:+1;
+	visibility: hidden;
+	margin: 0px;
+	padding-bottom: 5px;
+	background: #EAEBD8;
+	text-shadow: none;
+	color: black;
+	border: 1px solid #5970B2;
+	border-top: none;
+}
+
+#appleNav div.popup a {
+	position: relative;
+	display: block;
+	padding: 2px 15px 2px 17px;
+	margin: 0px;
+	width: auto;
+	white-space: nowrap;
+	text-align: left;
+	text-decoration: none;
+	background: #EAEBD8;
+	color: black;
+	font: 13px arial;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif; letter-spacing:-0.5px; font-size:13px;
+}
+
+#appleNav div.popup a:hover {
+        background: #555555;
+	color: #FFF;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Verdana, Arial, Helvetica, sans-serif; letter-spacing:-0.5px; font-size:13px;
+}
+
+body {
+	font-family: 'Times New Roman', Times, Georgia, serif;
+	font-size: medium;
+
+	width: 980px;
+
+	/* Center the web page in the user's display area */
+	margin-left: auto; 
+	margin-right: auto;
+
+	overflow-y: scroll;	/* Force scroll bars on every page so they don't jump around */
+}
+
+
+/* Note that the banner background images get changed by Javascript */
+
+/* This <div> lies under the main banner, and is used to make smooth transition between banners */
+#bannerBottom {
+	top: 5px;
+	position: absolute;
+	width: 980px;
+	height: 202px;
+	background-image: url("images/banners/01-H2O-daytime.jpg");
+}
+
+/* This <div> is the main banner */
+#bannerTop {
+	margin-top: 5px;
+	position: relative;
+	width: 980px;
+	height: 202px;
+	background-image: url("images/banners/01-H2O-daytime.jpg");
+}
+
+/* This <div> holds the logo.  We need a separate div so logo's opacity is fixed. */
+#logoHolder {
+	top: 5px;
+	position: absolute;
+	width: 160px;
+	height: 160px;
+}
+
+/* This class is used for the optional special announcement box */
+div.announcement {
+	width:400px; 
+	float:right;
+	margin: 30px 0em 0.5em 1em;
+	border-width: 5px;
+	border-style: outset;
+	border-color: #A8311B;
+	padding:0.5em;
+	padding-left:15px;
+	position:relative;
+}
+
+/* This class is used for members.shtml and newsletter.shtml; but someday I want it to work for all pages. */
+div.content {
+	font-size: medium;
+	font-family:"Times New Roman", Times, Georgia, serif;
+	/* I don't like the idea of fixing the width this way.  Maybe there's a better approach */
+	width: 36em;
+	margin-left: 1.3em;
+}
+
+div.footer {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	font-family: sans-serif;
+	font-size: 10px;
+	color: gray;
+}
+
+div.inset {
+	float:right;
+	width:20em;
+	margin: 1em 0em 0.5em 1em;
+	border-width: 5px;
+	border-style: outset;
+	border-color: #A8311B;
+	padding:0.5em;
+}
+
+div.insetTitle {
+	font-size: 20px;
+	text-align:center; 
+	color:red;
+	margin-bottom:0.15em;
+}
+
+div.intro {
+	font-family: Helvetica, Geneva, SunSans-Regular, sans-serif;
+	font-weight: bold;
+	color: #000066;
+	margin-top: 19px;
+}
+
+div.itemDetails {
+	padding-left: 10px;
+	margin-bottom: 10px;
+}
+
+div.lastUpdate {
+	font-size: small;
+	color: blue;
+	padding-left: 10px; 
+	padding-bottom: 10px;
+	padding-top: 10px;
+	padding-right: 10px;
+}
+
+/* This lets us keep the header area fixed at top of display when user scrolls.  But that feature isn't being used now. */
+div.leader {
+	position: fixed;
+	left: auto;
+	right: auto;
+	top: 0;
+	background-color: white;
+	z-index:999;
+}
+
+div.nav {
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+
+/* This makes the link to newsletterlinks.shtml go away; but FreeFind will still index it. */
+div.newsletterlinks {
+	display: none;
+}
+
+form.application {
+	background-color: #f4f4ff;
+	border-style: solid; 
+	border-width: 3px;
+	font-size: large;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px;
+	padding-bottom: 0px;
+	width: 80%;
+}
+
+form.application label {
+	float: left;
+	width: 200px;
+	text-align: right;
+	padding-right: 12px;
+	color: #000088;
+	font-weight: bold;
+}
+
+form.application p {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+h1.title {
+	border-bottom: 2px solid #ffd01a; 
+	width: 175px; 
+	font-family: 'Times New Roman', Times, Georgia, serif;
+	font-size: 26px; 
+	color: #000088;
+}
+
+h2.subtitle{
+	font-family: Helvetica, Geneva, SunSans-Regular, sans-serif; 
+	font-size: large; 
+	font-weight: bold;
+	color: #000088;
+}
+
+h3.subtitle{
+	font-family: Helvetica, Geneva, SunSans-Regular, sans-serif; 
+	font-size: medium; 
+	font-weight: bold;
+	color: #000088;
+	margin-bottom: 0px;
+}
+
+img.arrow {
+	margin-left:4px;
+}
+
+img#logo {
+	position: absolute;
+	left: 21px;
+	top: 21px;
+	width: 160px;
+	height: 160px;
+	border: none;
+}
+
+span.itemTitle {
+	color: #000088;
+	font-size: 20px;
+	font-weight: bold;
+	margin-top: 1px;
+	margin-bottom: 1px;
+}
+
+table.items {
+	width: 90%;
+	background-color: #f4f4ff;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+td.footer {
+	text-align: center;
+}
+
+td.items {
+	padding:10px; 
+	border-style: solid; 
+	border-width: 3px;
+}
+
+ul.bullets {
+	color: #ffa500;
+}
+
+ul.bullets li span {
+	color: black;
+}
