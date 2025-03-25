@@ -1,0 +1,82 @@
+  <!-- start of leader -->
+  <div id="bannerBottom" title="Unused...">
+   <!-- Placeholder for the old banner -->
+  </div>
+  <div id="bannerTop" title="Hidden Hill Observatory site">
+   <!-- Placeholder for new banner -->
+  </div>
+  <div id="logoHolder">
+   <a href="index.shtml" onmouseover="highlightLogo(true); return true;" onmouseout="highlightLogo(false); return true;" title="TVS Home page">
+    <img id="logo" title="TVS home page" alt="TVS Logo" src="images/logo1.png">
+   </a>
+  </div>
+  <script type="text/javascript">
+   <!--
+    startBannerSwapping();
+   //-->
+  </script>
+
+
+  <!-- Apple-style menu bar -->
+  <div class="nav">   <!-- I suppose I could replace this with a <nav> tag -->
+   <ul id="appleNav">
+    <!-- Consider using a tiny TVS logo instead of text for the home page button -->
+    <li><a href="index.shtml" title="TVS home page" id="m_home">Home</a></li>
+    <li>
+      <a onmouseover="mopen('menuAbout')" onmouseout="mclosetime()"
+	title="General information about the TVS" id="m_about"  href="about.shtml">About
+        <img class="arrow" align="middle" src="images/arrow.gif" alt="arrow"></a>
+      <div class="popup" id="menuAbout" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+        <a href="about.shtml" title="Learn more about the Tri-Valley Stargazers">General info</a>
+        <a href="pdfs/TVSbrochure.pdf"  target="_blank"
+		title="A printable copy of the TVS brochure to hand out at star parties">TVS Brochure</a>
+	<a href="official_documents.shtml" title="See our bylaws and 501(C)3 status">Official documents</a>
+        <a href="privacy.shtml" title="See our privacy policy">Privacy Policy</a>
+        <a href="history.shtml" title="Learn about the club's formation">History</a>
+        <a href="speakers.shtml" title="Learn about past presentations">Past speakers</a>
+      </div>
+    </li>
+    <li><a href="contacts.shtml" title="Board of directors, volunteers, and club members" id="m_contacts">Contacts</a></li>
+    <li><a href="calendar.shtml" title="Calendar of celestial events" id="m_calendar">Calendar</a></li>
+    <li><a href="newsletter.shtml" title="Our newsletter" id="m_newsletter">Newsletter</a></li>
+    <li><a href="activities.shtml" title="Star parties" id="m_activities">Activities</a></li>
+    <li><a href="membership.shtml" title="Become a TVS member" id="m_membership">Membership</a></li>
+    <li>
+      <a onmouseover="mopen('menuResources')" onmouseout="mclosetime()"
+	title="Links, observing site, equipment" id="m_resources">Resources
+        <img class="arrow" align="middle" src="images/arrow.gif" alt="arrow"></a>
+      <div class="popup" id="menuResources" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+        <a href="loanerscope.shtml" title="Learn about our loaner scope program">Loaner Scopes</a>
+        <a href="h2o.shtml" title="Learn about the Hidden Hill Observatory dark sky site">H2O</a>
+        <a href="contributions.shtml" title="Find special contributions to this site by our members">Member Contributions</a>
+        <a href="telescopes.shtml" title="Learn about different kinds of telescopes">Telescopes</a>
+        <a href="library.shtml" title="Learn about our lending library">Library</a>
+        <a href="books.shtml" title="See some suggested books for reading">Books</a>
+        <a href="links.shtml" title="See links to other astronomy sites">Links</a>
+      </div>
+    </li>
+    <li>
+      <a onmouseover="mopen('menuH2O')" onmouseout="mclosetime()"
+	title="Hidden Hill Observatory" id="m_h2o" href="h2o.shtml">H2O
+        <img class="arrow" align="middle" src="images/arrow.gif" alt="arrow"></a>
+      <div class="popup" id="menuH2O" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+        <a href="h2o.shtml" title="Learn about the Hidden Hill Observatory (H2O)">About</a>
+        <a href="h2oagreement.shtml" title="Learn how to get access to H2O">Agreement</a>
+      </div>
+    </li>
+    <li class="lastChild">
+     <form  id="ffresult_sbox1" action="http://search.freefind.com/find.html" method="get" accept-charset="utf-8" onsubmit="ffresults.show(1);">
+      <input type="hidden" name="si" value="9600280">
+      <input type="hidden" name="pid" value="r">
+      <input type="hidden" name="n" value="0">
+      <input type="hidden" name="_charset_" value="">
+      <input type="hidden" name="bcd" value="&#247;">
+      <input type="hidden" name="sbv" value="j1">
+      <input type="text" name="query" title="Enter search text"> 
+     </form>
+    </li>
+   </ul>
+  </div>
+ <!-- Eventually this will be class="content"; but that class is currently being used for something else -->
+ <div class="content2">
+  <!-- end of leader -->

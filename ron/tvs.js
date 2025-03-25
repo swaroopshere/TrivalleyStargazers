@@ -1,6 +1,6 @@
 // tvs.js: JavaScript functions common to all Tri-Valley Stargazer web pages
 
-// Last modified: Mar 4, 2023
+// Last modified: September 19, 2015
 
 // Names for banner image files.  They must all be in folder images/banner.
 var bannerNames = [
@@ -37,8 +37,8 @@ var numChanges = 20;			// Number of times we change opacity.  Larger values => l
 var swapTime = 10000;			// The time between banner swaps, in msec
 
 var contactWidth = "300px";		// The width of the contact table entries
-var currentTopic = null;		// Which links topic is displayed
 var lastUpdateDate;			// The time this web page was last updated
+
 
 
 // ********************************************************************************
@@ -94,9 +94,8 @@ document.onclick = mclose;
 // text that can be used to describe the item that is being added.  This is primarily for
 // the explanation of the "Other" payments option.
 function addItem(name, value, details) {
-// TBD: value can't be zero for dues page?  But I'm allowing it temporarily for contributions page
-//	if (value == 0)
-//        	return;
+	if (value == 0)
+        	return;
 	total += parseFloat(value);
 	item_count++;
 	var term = "&item_name_" + item_count + "=" + name;
@@ -105,11 +104,6 @@ function addItem(name, value, details) {
 		term = term + "&on0_" + item_count + "=Details&os0_" + item_count + "=" + details;
 	url = url + term;
 };
-
-// Display Observing Progam award info for the named person
-function award(cert_no, name, date) {
-	document.write("<tr><td>" + cert_no + "</td><td>" + name + "</td><td>" + date + "</td></tr>");
-}
 
 
 // Set the opacity to blend the top and bottom banners.
@@ -134,7 +128,6 @@ function callPayPal() {
 	}
 	if (otherValue != 0 && explanation == "") {
 		alert("Please enter an explanation for the other payment");
-		item_count = 0;			// Prevent accidentally calling PayPal
 		return;
 	}
 
@@ -164,7 +157,7 @@ function changeOpacity(id, opacity) {
 // but the user can change it if need be.
 function contact(e_name, e_site, fullname, title) {
 	if (title != null) {
-		document.write("<div style=\'min-width:" + contactWidth + ";float:left;\'>" + title + "</div>");
+		document.write("<div style='min-width:" + contactWidth + ";float:left;'>" + title + "&nbsp;</div>");
 		document.write("<div style='min-width:" + contactWidth + ";float:left;'>");
 	}
 
@@ -183,54 +176,6 @@ function contact(e_name, e_site, fullname, title) {
 		document.write("<br>");
 	}
 };
-
-function contactNew(e_name, e_site, fullname, title) {
-    let container = document.createElement('div');
-
-    if (title != null) {
-        let titleDiv = document.createElement('div');
-        titleDiv.style.minWidth = contactWidth;
-        titleDiv.style.float = 'left';
-        titleDiv.textContent = title;
-        container.appendChild(titleDiv);
-
-        let nameDiv = document.createElement('div');
-        nameDiv.style.minWidth = contactWidth;
-        nameDiv.style.float = 'left';
-
-        if (e_name === "" || e_site === "") {
-            nameDiv.textContent = fullname;
-        } else {
-            let email = e_name + "@" + e_site;
-            let mailto = "mailto:" + email;
-            let link = document.createElement('a');
-            link.href = mailto;
-            link.title = mailto;
-            link.textContent = fullname;
-            nameDiv.appendChild(link);
-        }
-        container.appendChild(nameDiv);
-
-        container.appendChild(document.createTextNode('\u00A0')); // &nbsp;
-        container.appendChild(document.createElement('br'));
-
-    } else {
-        // Handle the case where title is null (original logic using document.write)
-        if (e_name === "" || e_site === "") {
-            container.textContent = fullname;
-        } else {
-            let email = e_name + "@" + e_site;
-            let mailto = "mailto:" + email;
-            let link = document.createElement('a');
-            link.href = mailto;
-            link.title = mailto;
-            link.textContent = fullname;
-            container.appendChild(link);
-        }
-    }
-
-    document.body.appendChild(container); // Or append to a specific element
-}
 
 
 // Set up the newsletter web page to show all years for which newsletters are available.
@@ -377,46 +322,11 @@ function showLastUpdate() {
 	html += 
 '	 <div class="lastUpdate">' +
 '	 Last modified on ' + lastUpdateDate +
-'	  by <a href = "mailto:webmaster@trivalleystargazers.org" title="mailto:webmaster@trivalleystargazers.org">TVS Webmaster</a>' +
+'	  by <a href = "mailto:hdjones@pacbell.net" title="mailto:hdjones@pacbell.net">Hilary Jones</a>' +
 '	</div>';
-	html = 'Last modified on ' + lastUpdateDate + ' by <a href = "webmaster@trivalleystargazers.org" title="mailto:webmaster@trivalleystargazers.org">TVS Webmaster</a>'
+	html = 'Last modified on ' + lastUpdateDate + ' by <a href = "mailto:hdjones@pacbell.net" title="mailto:hdjones@pacbell.net">Hilary Jones</a>'
 	document.write(html);
 };
-
-
-// Highlight a named optional block of HTML.  This is used to turn on announcements, describe different kinds of
-// meetings, etc.  Blocks are identified using this syntax: <tag class="optional" id="opt_xxx"> where xxx is the option name.
-// If we need to control a second related optional block, append details to the id: <tag class="optional" id="opt_xxx_details".
-// Optional blocks are turned on in the <head> section of index.shtml.
-function showOptional(optionName) {
-        var element;
-        element  = document.getElementById(optionName);
-        if (element == null)
-	    alert("Programming error: cannot find optional code for " + optionName);
-        else
-            element.style.display = "block";
-        element = document.getElementById(optionName + "_details");
-        if (element != null)
-	    element.style.display = "block";
-}
-
-
-// Show the details for a selected topic.  This routine finds <div> tag corresponding to the given
-// topic by prepending "D_" to the id of the topic tag.
-function showLinksDetails(newTopic) {
-        var newDetails = document.getElementById("D_" + newTopic.id);	
-        if (currentTopic == null)
-	    currentTopic = document.getElementById("overview");
-        var currentDetails = document.getElementById("D_" + currentTopic.id);
-
-        currentTopic.style.fontWeight = "normal";
-	currentDetails.style.display = "none";
-
-        newTopic.style.fontWeight = "bold";
-        newDetails.style.display = "block";
-
-        currentTopic = newTopic;
-}   
 
 
 // Start swapping banner images.  This function runs forever.
@@ -451,98 +361,8 @@ function swapBanners() {
 function unloadHandler() {
     return "You must fill out this form if you want to pay using PayPal!";
 }
-	
-// Find user's name, email, and donation amount
-function updateDonation() {
-	var e;
 
-	// To test w/ PayPal's sandbox, the URL must look like http://www.trivalleystargazers.org/pay.shtml?sandbox
-	var usingSandbox = (window.location.search.substring(1) == "sandbox");
-	if (usingSandbox)
-		url = "https://www.sandbox.paypal.com/cgi-bin/webscr?business=treasurer-facilitator@trivalleystargazers.org";
-	else
-		url = "https://www.paypal.com/cgi-bin/webscr?business=treasurer@trivalleystargazers.org";
-	url += "&cmd=_cart&currency_code=USD&upload=1";
-
-	e = document.getElementById("donation");
-	if (e.value == "")
-		e.value = "0";
-	var r = /^\$?[0-9]+\.?[0-9]?[0-9]?$/;
-	if (r.test(e.value)) {
-		e.value = e.value.replace(/\$/g, '');
-		addItem("Donation", e.value);
-		e.value = "$" + e.value;
-	}
-	else {
-		alert("Please enter a valid amount for the donation.  " + e.value + " isn't valid.");
-		e.value = "$0";
-		item_count = 0;			// Prevent accidentally calling PayPal
-		return;
-	};
-
-
-}
-
-// Find info about the user and how much he wants to donate.  Create a URL that tells what the user
-// wants, then call PayPal to make the donation.
-function doPayPalDonation() {
-	var e;
-
-	item_count = 0;
-
-	// To test w/ PayPal's sandbox, the URL must look like http://www.trivalleystargazers.org/pay.shtml?sandbox
-	var usingSandbox = (window.location.search.substring(1) == "sandbox");
-	if (usingSandbox) {
-		url = "https://www.sandbox.paypal.com/cgi-bin/webscr?business=treasurer-facilitator@trivalleystargazers.org";
-		alert("Testing with PayPal's sandbox");
-	}
-	else
-		url = "https://www.paypal.com/cgi-bin/webscr?business=treasurer@trivalleystargazers.org";
-	url += "&cmd=_cart&currency_code=USD&upload=1";
-
-	e = document.getElementById("donation");
-	if (e.value == "")
-		e.value = "0";			// An error, but it will be caught below
-	var r = /^\$?[0-9]+\.?[0-9]?[0-9]?$/;
-	if (r.test(e.value)) {
-		e.value = e.value.replace(/\$/g, '');
-		if (e.value <= 0) {
-			alert("The donation amount is not valid.");
-			return;
-		}
-		addItem("Donation", e.value);
-		e.value = "$" + e.value;
-	}
-	else {
-		alert("Please enter a valid amount for the donation.  " + e.value + " isn't valid.");
-		e.value = "$0";
-		item_count = 0;			// Prevent accidentally calling PayPal
-		return;
-	};
-
-	// TBD value cannot be zereo?  But for testing I've changed addItem to allow it.
-	e = document.getElementById("name");
-	// TBD: check for empty string
-	addItem(e.value, "0");
-
-	e = document.getElementById("email");
-	// TBD: check for empty string
-	addItem(e.value, "0");
-
-	e = document.getElementById("comment");
-	// TBD: check for empty string
-	addItem(e.value, "0");
-
-
-	// Call PayPal.
-	// TBD: snapshot's login name is hilary@snapshot.com
-	window.location.assign(url);
-
-}
-
-
-
-// Find what items the member wants to pay for.  Compute total cost, and create a URL that tells PayPal
+// Find what items the user wants to pay for.  Compute total cost, and create a URL that tells PayPal
 // what he wants.
 function updateItems() {
 	var e;
@@ -552,9 +372,9 @@ function updateItems() {
 	// To test w/ PayPal's sandbox, the URL must look like http://www.trivalleystargazers.org/pay.shtml?sandbox
 	var usingSandbox = (window.location.search.substring(1) == "sandbox");
 	if (usingSandbox)
-		url = "https://www.sandbox.paypal.com/cgi-bin/webscr?business=treasurer-facilitator@trivalleystargazers.org";
+		url = "https://www.sandbox.paypal.com/cgi-bin/webscr?business=tvsac.payments-facilitator@gmail.com";
 	else
-		url = "https://www.paypal.com/cgi-bin/webscr?business=treasurer@trivalleystargazers.org";
+		url = "https://www.paypal.com/cgi-bin/webscr?business=tvsac.payments@gmail.com";
 	url += "&cmd=_cart&currency_code=USD&upload=1";
 
 	e = document.getElementById("membershipType");
@@ -568,6 +388,14 @@ function updateItems() {
 	if (e.checked)
 		addItem("H2O Yearly Access Fee", e.value);
 
+	e = document.getElementById("skyMag");
+	if (e.checked)
+		addItem("Subscription to Sky and Telescope", e.value);
+
+	e = document.getElementById("astronomyMag");
+	if (e.checked)
+		addItem("Subscription to Astronomy magazine", e.value);
+
 	e = document.getElementById("donation");
 	if (e.value == "")
 		e.value = "0";
@@ -579,8 +407,6 @@ function updateItems() {
 	}
 	else {
 		alert("Please enter a valid amount for the donation.  " + e.value + " isn't valid.");
-		e.value = "$0";
-		item_count = 0;			// Prevent accidentally calling PayPal
 		return;
 	};
 
@@ -601,8 +427,6 @@ function updateItems() {
 	}
 	else {
 		alert("Please enter a valid amount for the Other expense.  " + e.value + " isn't valid.");
-		e.value = "$0";
-		item_count = 0;			// Prevent accidentally calling PayPal
 		return;
 	};
 
@@ -618,61 +442,3 @@ function updateTotal() {
 	e = document.getElementById("total");
 	e.value = "$"+total;
 };
-
-// Function to fetch and display upcoming events
-async function displayUpcomingEvents() {
-  const calendarDiv = document.getElementById('upcoming-events');
-  
-  try {
-    // Fetch the static JSON file
-    const response = await fetch('/calendar-data.json');
-    if (!response.ok) {
-      throw new Error('Calendar data not available');
-    }
-    
-    const events = await response.json();
-    
-    let html = `
-      <h3 class="subtitle">Upcoming star parties</h3>
-      <br>
-      The following star parties are coming soon:<br>
-      <ul>
-    `;
-
-    events.forEach(event => {
-      const date = new Date(event.date);
-      const formattedDate = date.toLocaleDateString('en-US', { 
-        weekday: 'long',
-        year: 'numeric',
-        month: '2-digit',
-        day: '2-digit'
-      });
-      
-      const setupTime = event.setupTime ? `, setup ${event.setupTime}` : '';
-      const location = event.location ? ` at ${event.location}` : '';
-      
-      html += `<li>${formattedDate}, ${event.title}${location}${setupTime}</li>`;
-    });
-
-    if (events.length === 0) {
-      html += `<li>No upcoming events scheduled</li>`;
-    }
-
-    html += `</ul>
-      For a complete and up-to-date calendar of upcoming events, visit our 
-      <a href="https://groups.io/g/trivalleystargazers/calendar" title="See our calendar" target="_blank">groups.io</a>
-      calendar.<br><br>`;
-
-    calendarDiv.innerHTML = html;
-  } catch (error) {
-    console.error('Error loading calendar data:', error);
-    // Fallback content
-    calendarDiv.innerHTML = `
-      <h3 class="subtitle">Upcoming star parties</h3>
-      <br>
-      Please visit our 
-      <a href="https://groups.io/g/trivalleystargazers/calendar" title="See our calendar" target="_blank">groups.io</a>
-      calendar for upcoming events.<br><br>
-    `;
-  }
-}

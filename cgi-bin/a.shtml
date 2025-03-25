@@ -1,0 +1,4 @@
+<!--#include virtual="/home/users/web/b2656/ipg.trivalleystargazerso/cgi-bin/include/top_header.html" --> 
+<!--#include virtual="/home/users/web/b2656/ipg.trivalleystargazerso/cgi-bin/include/left_nav.html" --> 
+<!--#echo var="DATE_LOCAL" -->
+<!--#echo var="SERVER_NAME" -->
