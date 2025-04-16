@@ -1,6 +1,6 @@
 // tvs.js: JavaScript functions common to all Tri-Valley Stargazer web pages
 
-// Last modified: Mar 4, 2023
+// Last modified: March 25, 2025
 
 // Names for banner image files.  They must all be in folder images/banner.
 var bannerNames = [
@@ -40,18 +40,13 @@ var contactWidth = "300px";		// The width of the contact table entries
 var currentTopic = null;		// Which links topic is displayed
 var lastUpdateDate;			// The time this web page was last updated
 
-
-// ********************************************************************************
-// Code for pop-down menus.  TBD: this stuff still needs to be edited for style similar
-// to my other stuff, same indenting, etc.  This is just Q&D stuff copied from TBD......................
-
-var timeout         = 500;
-var closetimer		= 0;
-var ddmenuitem      = 0;
+// Code for pop-down menus
+var timeout = 500;
+var closetimer = 0;
+var ddmenuitem = 0;
 
 // open hidden layer
-function mopen(id)
-{	
+function mopen(id) {	
 	// cancel close timer
 	mcancelclosetime();
 
@@ -61,18 +56,17 @@ function mopen(id)
 	// get new layer and show it
 	ddmenuitem = document.getElementById(id);
 	ddmenuitem.style.visibility = 'visible';
-};
+}
 
 // close showed layer
 function mclose() {
-    if (ddmenuitem)
-		ddmenuitem.style.visibility = 'hidden';
-};
+    if (ddmenuitem) ddmenuitem.style.visibility = 'hidden';
+}
 
 // go close timer
 function mclosetime() {
 	closetimer = window.setTimeout(mclose, timeout);
-};
+}
 
 // cancel close timer
 function mcancelclosetime() {
@@ -80,23 +74,13 @@ function mcancelclosetime() {
 		window.clearTimeout(closetimer);
 		closetimer = null;
 	}
-};
+}
 
 // close layer when click-out
 document.onclick = mclose;
 
-// ********************************************************************************
-
-
-
-// Add one item to the list of things that user wants to pay for.  In particular, change the
-// PayPal url to include a description of that item.  The third argument (details) is optional
-// text that can be used to describe the item that is being added.  This is primarily for
-// the explanation of the "Other" payments option.
+// Add one item to the list of things that user wants to pay for
 function addItem(name, value, details) {
-// TBD: value can't be zero for dues page?  But I'm allowing it temporarily for contributions page
-//	if (value == 0)
-//        	return;
 	total += parseFloat(value);
 	item_count++;
 	var term = "&item_name_" + item_count + "=" + name;
@@ -104,15 +88,14 @@ function addItem(name, value, details) {
 	if (details)
 		term = term + "&on0_" + item_count + "=Details&os0_" + item_count + "=" + details;
 	url = url + term;
-};
+}
 
-// Display Observing Progam award info for the named person
+// Display Observing Program award info for the named person
 function award(cert_no, name, date) {
 	document.write("<tr><td>" + cert_no + "</td><td>" + name + "</td><td>" + date + "</td></tr>");
 }
 
-
-// Set the opacity to blend the top and bottom banners.
+// Set the opacity to blend the top and bottom banners
 function blendBanners() {
 	blendPercent += 100/numChanges;
 	if (blendPercent > 100) {
@@ -120,12 +103,10 @@ function blendBanners() {
 		return;
 	}
 	changeOpacity("bannerTop", blendPercent);
-	// changeOpacity("logo", 100);	// But the logo must always be visible
 	return;
-};
+}
 
-
-// Find what the user wants to pay for, and call PayPal.
+// Find what the user wants to pay for, and call PayPal
 function callPayPal() {
 	updateItems();
 	if (item_count == 0) {
@@ -144,11 +125,9 @@ function callPayPal() {
 		alert("Testing with PayPal's sandbox");
 	document.body.onbeforeunload = "";		// Let the user leave this page w/o a warning.
 	window.location.assign(url);
-};
+}
 
-
-// Change the opacity of an element.  This is used to transition smoothly between banner images.
-// The id is the element to be changed, and the opacity is an integer percentage, between 0 and 100.
+// Change the opacity of an element
 function changeOpacity(id, opacity) { 
 	var object = document.getElementById(id).style; 
 	object.opacity = (opacity / 100); 
@@ -157,11 +136,7 @@ function changeOpacity(id, opacity) {
 	object.filter = "alpha(opacity=" + opacity + ")"; 
 }
 
-
-// Display information about a contact.  If the title is non-null, format the contact's name
-// and title in separate columns to facilitate preparation of a table.  The width of the
-// table's entries is specified by global variable contactWidth.  A default value is used,
-// but the user can change it if need be.
+// Display information about a contact
 function contact(e_name, e_site, fullname, title) {
 	if (title != null) {
 		document.write("<div style=\'min-width:" + contactWidth + ";float:left;\'>" + title + "</div>");
@@ -182,8 +157,9 @@ function contact(e_name, e_site, fullname, title) {
 		document.write("&nbsp;</div>");
 		document.write("<br>");
 	}
-};
+}
 
+// Modern version of contact function using DOM manipulation
 function contactNew(e_name, e_site, fullname, title) {
     let container = document.createElement('div');
 
@@ -210,12 +186,9 @@ function contactNew(e_name, e_site, fullname, title) {
             nameDiv.appendChild(link);
         }
         container.appendChild(nameDiv);
-
         container.appendChild(document.createTextNode('\u00A0')); // &nbsp;
         container.appendChild(document.createElement('br'));
-
     } else {
-        // Handle the case where title is null (original logic using document.write)
         if (e_name === "" || e_site === "") {
             container.textContent = fullname;
         } else {
@@ -229,12 +202,10 @@ function contactNew(e_name, e_site, fullname, title) {
         }
     }
 
-    document.body.appendChild(container); // Or append to a specific element
+    document.body.appendChild(container);
 }
 
-
-// Set up the newsletter web page to show all years for which newsletters are available.
-// We assume they are always available from any year since 1996 up to the present date.
+// Set up the newsletter web page to show all years for which newsletters are available
 function defineNewsletterYears() {
 	var thisYear = Number((new Date()).getFullYear());
 	var select = document.getElementById("theYear");
@@ -250,429 +221,190 @@ function defineNewsletterYears() {
 			select.add(option, select.options[null]);
 		}
 		catch (e) {
+			// for IE8 and later
 			select.add(option, null);
 		}
 	}
-};
+}
 
-
-// Show an astronomical event.  Assumes that a surrounding <table> has been set up.
+// Display an event in the calendar
 function event(day, time, description) {
-	var html = "";
-	html +=
-'	 <tr>' +
-'	  <td>' + day + '</td>' +
-'	  <td>' + time + '</td>' +
-'	  <td>' + description + '</td>' +
-'	 </tr>';
-	document.write(html);
-};
+	document.write("<tr><td>" + day + "</td><td>" + time + "</td><td>" + description + "</td></tr>");
+}
 
-
-// Parse URL for query parameters of form name=value.  Returns the value, or "" if param is missing.
+// Get a query parameter from the URL
 function getQueryParam(name) {
-	var params;			/* Parameter string from the URL */
-	var value;			/* Value, if any */
-
-	var query = window.location.search.substring(1);	/* everything after the question mark */
-	var vars = query.split("&");
-	for (var i = 0; i < vars.length; i++) {
-		var pair = vars[i].split("=");
-		if (pair[0] == name)
-			return pair[1];
-	}
-	return "";
+	name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+	var regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
+	var results = regex.exec(location.search);
+	return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
 
-
-// Fetch a newsletter
-function goFetch() {
-	var theMonth = document.getElementById("theMonth").value;
-	var theYear = document.getElementById("theYear").value;		// eg. 2001
-	var shortYear = theYear.substring(2);				// eg. 01
-	var filename = "newsletters/" + theYear + "/";
-
-
-	// Give user a warning if he tries to display a file that probably doesn't exist
-	// This check won't know whether this month's newsletter has been published yet,
-	// so it will try to display it, even if that triggers the 1&1 bug.
-
-	if (theYear == 1996 && theMonth < 3) {
-		alert("There is no newsletter for that date");
-		return;
-	}
-	var thisYear = Number((new Date()).getFullYear());
-	var thisMonth = Number((new Date()).getMonth()) + 1;
-	if (theYear == thisYear && theMonth > thisMonth) {
-		alert("That newsletter hasn't been published yet ");
-		return;
-	}
-
-	// Files before 09'01 are HTML files, and files on or after that are PDF files
-
-	if ((theYear < 2001) || (theYear == 2001 && theMonth < 9))
-		filename += theMonth + shortYear + "/index.html";
-	else
-		filename += "tvsnews" + theMonth + shortYear + ".pdf#zoom=100&pagemode=none";
-
-	// On 1&1's servers, if the file doesn't exist, they may try to do you a "favor"
-	// by substituting a file that does exist.  For example, tvsnews0196/index.html
-	// doesn't exist; so they substitute tvsnew1096/index.html assuming you have made a
-	// typo.  This caused me many hours of debugging before I realized what was happening.
-
-	window.location.href = filename;		// display the selected newsletter
-};
-
-
-// Highlight the TVS logo according to whether the mouse is over it or not
-function highlightLogo(mouseover) {
-	var logoSrc = document.getElementById("logo").src;
-	if (mouseover)
-		document.getElementById("logo").src = "images/logo2.png";
-	else
-		document.getElementById("logo").src = "images/logo1.png";	
-};
-
-
-// Display a presentation.  The link is optional.  If provided, it gives
-// a link to a URL that gives the presenter's slides.  This might be a
-// PDF file or an HTML file.  The function assumes that a <table> has
-// be set up by the surrounding code.
-function presentation(month, day, presenter, title, link) {
-	if (link) {
-		title = '<a href="' + link + '" title="See more about this talk">' + title + '</a>';
-	}
-	if (presenter) {
-		if (title != null) {
-			title = '; "' + title + '"';
-		}
-		else {
-			title = "";
-		}
-	}
-	else {
-		presenter = "";
-	}
-	var html = "";
-	html +=
-'	 <tr>' +
-'	  <td>' + month + '</td>' +
-'	  <td>' + day + '</td>' +
-'	  <td>' + presenter + title + '</td>' +
-'	 </tr>';
-	document.write(html);
-};
-
-
-// Set up the membership application form.  We do these things here to foil spambots.
-function setupForm() {
-	document.application.action="cgi-bin/apply.pl";
-	document.getElementById("preset").value = "Preset";
-};
-
-
-// Display the date when this page was last updated
-function showLastUpdate() {
-	var html = "";
-	html += 
-'	 <div class="lastUpdate">' +
-'	 Last modified on ' + lastUpdateDate +
-'	  by <a href = "mailto:webmaster@trivalleystargazers.org" title="mailto:webmaster@trivalleystargazers.org">TVS Webmaster</a>' +
-'	</div>';
-	html = 'Last modified on ' + lastUpdateDate + ' by <a href = "webmaster@trivalleystargazers.org" title="mailto:webmaster@trivalleystargazers.org">TVS Webmaster</a>'
-	document.write(html);
-};
-
-
-// Highlight a named optional block of HTML.  This is used to turn on announcements, describe different kinds of
-// meetings, etc.  Blocks are identified using this syntax: <tag class="optional" id="opt_xxx"> where xxx is the option name.
-// If we need to control a second related optional block, append details to the id: <tag class="optional" id="opt_xxx_details".
-// Optional blocks are turned on in the <head> section of index.shtml.
-function showOptional(optionName) {
-        var element;
-        element  = document.getElementById(optionName);
-        if (element == null)
-	    alert("Programming error: cannot find optional code for " + optionName);
-        else
-            element.style.display = "block";
-        element = document.getElementById(optionName + "_details");
-        if (element != null)
-	    element.style.display = "block";
+// Show or hide optional elements
+function showOptional(id) {
+    const element = document.getElementById(id);
+    if (element) {
+        element.style.display = 'block';
+    }
 }
 
-
-// Show the details for a selected topic.  This routine finds <div> tag corresponding to the given
-// topic by prepending "D_" to the id of the topic tag.
-function showLinksDetails(newTopic) {
-        var newDetails = document.getElementById("D_" + newTopic.id);	
-        if (currentTopic == null)
-	    currentTopic = document.getElementById("overview");
-        var currentDetails = document.getElementById("D_" + currentTopic.id);
-
-        currentTopic.style.fontWeight = "normal";
-	currentDetails.style.display = "none";
-
-        newTopic.style.fontWeight = "bold";
-        newDetails.style.display = "block";
-
-        currentTopic = newTopic;
-}   
-
-
-// Start swapping banner images.  This function runs forever.
+// Start the banner swapping animation
 function startBannerSwapping() {
-	setInterval(function() {swapBanners()}, swapTime);
+    const bannerTop = document.getElementById('bannerTop');
+    const bannerBottom = document.getElementById('bannerBottom');
+    
+    if (!bannerTop || !bannerBottom) return;
+    
+    function swapBanners() {
+        bannerBottom.src = bannerTop.src;
+        bannerBottom.alt = bannerTop.alt;
+        bannerBottom.title = bannerTop.title;
+        
+        bannerIndex = (bannerIndex + 1) % bannerNames.length;
+        bannerTop.src = 'images/banner/' + bannerNames[bannerIndex];
+        bannerTop.alt = bannerTitles[bannerIndex];
+        bannerTop.title = bannerTitles[bannerIndex];
+        
+        blendPercent = 0;
+        blendID = setInterval(blendBanners, fadeTime/numChanges);
+    }
+    
+    // Initial setup
+    bannerTop.src = 'images/banner/' + bannerNames[0];
+    bannerTop.alt = bannerTitles[0];
+    bannerTop.title = bannerTitles[0];
+    
+    bannerBottom.src = 'images/banner/' + bannerNames[1];
+    bannerBottom.alt = bannerTitles[1];
+    bannerBottom.title = bannerTitles[1];
+    
+    // Start the swapping
+    setInterval(swapBanners, swapTime);
 }
 
-
-// Swap banner images.  Ideally when user changes tabs, the banner image shouldn't revert 
-// to the first image.  However, fixing this is hard.
-function swapBanners() {
-	var oldName = "url('images/banners/" + bannerNames[bannerIndex] + "')";
-	oldname = "url('nosuch.jpg')";
-	document.getElementById("bannerBottom").style.backgroundImage = oldName;
-	blendPercent = 0;		// Set opacity of top element to 0, so that we still see the old banner for a while
-	changeOpacity("bannerTop", blendPercent);
-	// changeOpacity("logo", 100);	// But the logo must always be visible
-	bannerIndex++;
-	if (bannerIndex >= bannerNames.length)
-		bannerIndex = 0;
-	var newName = "url('images/banners/" + bannerNames[bannerIndex] + "')";
-	document.getElementById("bannerTop").style.backgroundImage = newName;
-	document.getElementById("bannerTop").title = bannerTitles[bannerIndex];
-	// Start blending images
-	blendID = setInterval(function() {blendBanners()}, fadeTime/numChanges);
-};
-
-
-// Don't let a user leave pay.shtml if he hasn't filled out the form.  The warning will only be delivered to
-// people who get to pay.shtml by way of membership.shtml.  These are people who haven't completed the
-// standard procedure fully.
-function unloadHandler() {
-    return "You must fill out this form if you want to pay using PayPal!";
-}
-	
-// Find user's name, email, and donation amount
-function updateDonation() {
-	var e;
-
-	// To test w/ PayPal's sandbox, the URL must look like http://www.trivalleystargazers.org/pay.shtml?sandbox
-	var usingSandbox = (window.location.search.substring(1) == "sandbox");
-	if (usingSandbox)
-		url = "https://www.sandbox.paypal.com/cgi-bin/webscr?business=treasurer-facilitator@trivalleystargazers.org";
-	else
-		url = "https://www.paypal.com/cgi-bin/webscr?business=treasurer@trivalleystargazers.org";
-	url += "&cmd=_cart&currency_code=USD&upload=1";
-
-	e = document.getElementById("donation");
-	if (e.value == "")
-		e.value = "0";
-	var r = /^\$?[0-9]+\.?[0-9]?[0-9]?$/;
-	if (r.test(e.value)) {
-		e.value = e.value.replace(/\$/g, '');
-		addItem("Donation", e.value);
-		e.value = "$" + e.value;
-	}
-	else {
-		alert("Please enter a valid amount for the donation.  " + e.value + " isn't valid.");
-		e.value = "$0";
-		item_count = 0;			// Prevent accidentally calling PayPal
-		return;
-	};
-
-
-}
-
-// Find info about the user and how much he wants to donate.  Create a URL that tells what the user
-// wants, then call PayPal to make the donation.
-function doPayPalDonation() {
-	var e;
-
-	item_count = 0;
-
-	// To test w/ PayPal's sandbox, the URL must look like http://www.trivalleystargazers.org/pay.shtml?sandbox
-	var usingSandbox = (window.location.search.substring(1) == "sandbox");
-	if (usingSandbox) {
-		url = "https://www.sandbox.paypal.com/cgi-bin/webscr?business=treasurer-facilitator@trivalleystargazers.org";
-		alert("Testing with PayPal's sandbox");
-	}
-	else
-		url = "https://www.paypal.com/cgi-bin/webscr?business=treasurer@trivalleystargazers.org";
-	url += "&cmd=_cart&currency_code=USD&upload=1";
-
-	e = document.getElementById("donation");
-	if (e.value == "")
-		e.value = "0";			// An error, but it will be caught below
-	var r = /^\$?[0-9]+\.?[0-9]?[0-9]?$/;
-	if (r.test(e.value)) {
-		e.value = e.value.replace(/\$/g, '');
-		if (e.value <= 0) {
-			alert("The donation amount is not valid.");
-			return;
-		}
-		addItem("Donation", e.value);
-		e.value = "$" + e.value;
-	}
-	else {
-		alert("Please enter a valid amount for the donation.  " + e.value + " isn't valid.");
-		e.value = "$0";
-		item_count = 0;			// Prevent accidentally calling PayPal
-		return;
-	};
-
-	// TBD value cannot be zereo?  But for testing I've changed addItem to allow it.
-	e = document.getElementById("name");
-	// TBD: check for empty string
-	addItem(e.value, "0");
-
-	e = document.getElementById("email");
-	// TBD: check for empty string
-	addItem(e.value, "0");
-
-	e = document.getElementById("comment");
-	// TBD: check for empty string
-	addItem(e.value, "0");
-
-
-	// Call PayPal.
-	// TBD: snapshot's login name is hilary@snapshot.com
-	window.location.assign(url);
-
-}
-
-
-
-// Find what items the member wants to pay for.  Compute total cost, and create a URL that tells PayPal
-// what he wants.
-function updateItems() {
-	var e;
-
-	item_count = 0;
-	total = 0;
-	// To test w/ PayPal's sandbox, the URL must look like http://www.trivalleystargazers.org/pay.shtml?sandbox
-	var usingSandbox = (window.location.search.substring(1) == "sandbox");
-	if (usingSandbox)
-		url = "https://www.sandbox.paypal.com/cgi-bin/webscr?business=treasurer-facilitator@trivalleystargazers.org";
-	else
-		url = "https://www.paypal.com/cgi-bin/webscr?business=treasurer@trivalleystargazers.org";
-	url += "&cmd=_cart&currency_code=USD&upload=1";
-
-	e = document.getElementById("membershipType");
-	addItem(e.options[e.selectedIndex].text + " Membership", e.value);
-
-	e = document.getElementById("H2OKey");
-	if (e.checked)
-		addItem("H2O Key Deposit", e.value);
-
-	e = document.getElementById("H2OAccess");
-	if (e.checked)
-		addItem("H2O Yearly Access Fee", e.value);
-
-	e = document.getElementById("donation");
-	if (e.value == "")
-		e.value = "0";
-	var r = /^\$?[0-9]+\.?[0-9]?[0-9]?$/;
-	if (r.test(e.value)) {
-		e.value = e.value.replace(/\$/g, '');
-		addItem("Donation", e.value);
-		e.value = "$" + e.value;
-	}
-	else {
-		alert("Please enter a valid amount for the donation.  " + e.value + " isn't valid.");
-		e.value = "$0";
-		item_count = 0;			// Prevent accidentally calling PayPal
-		return;
-	};
-
-
-	// Special handling for the Other payment item
-
-	e = document.getElementById("other");
-	explanation = document.getElementById("explanation").value;
-        explanation = explanation.slice(0, 50);		// Up to 127 characters OK, but playing it safe
-	otherValue = 0;
-	if (e.value == "")
-		e.value = "0";
-	var r = /^\$?[0-9]+\.?[0-9]?[0-9]?$/;
-	if (r.test(e.value)) {
-		e.value = e.value.replace(/\$/g, '');
-		otherValue = e.value;
-		e.value = "$" + e.value;
-	}
-	else {
-		alert("Please enter a valid amount for the Other expense.  " + e.value + " isn't valid.");
-		e.value = "$0";
-		item_count = 0;			// Prevent accidentally calling PayPal
-		return;
-	};
-
-	// Add the item even if the explanation is missing.  We will catch that later.
-	addItem("Other", otherValue, explanation);
-
-};
-
-
-// Show the user the current total value of things being ordered
-function updateTotal() {
-	updateItems();		// Computes global variable total (as well as the URL; but we don't use that)
-	e = document.getElementById("total");
-	e.value = "$"+total;
-};
-
-// Function to fetch and display upcoming events
+// Fetch and display upcoming events
 async function displayUpcomingEvents() {
-  const calendarDiv = document.getElementById('upcoming-events');
-  
-  try {
-    // Fetch the static JSON file
-    const response = await fetch('/calendar-data.json');
-    if (!response.ok) {
-      throw new Error('Calendar data not available');
+    try {
+        const response = await fetch('calendar-data.json');
+        if (!response.ok) {
+            throw new Error('Failed to fetch events');
+        }
+        const data = await response.json();
+        
+        const eventsDiv = document.getElementById('upcoming-events');
+        if (!eventsDiv) return;
+        
+        const now = new Date();
+        const upcomingEvents = data.events
+            .filter(event => {
+                // Filter out member-only events and club meetings
+                const isMemberOnly = event.title.toLowerCase().includes('member') || 
+                                   event.description.toLowerCase().includes('member only') ||
+                                   event.title.toLowerCase().includes('tesla vintner');
+                const isMeeting = event.title.toLowerCase().includes('meeting') ||
+                                event.description.toLowerCase().includes('meeting') ||
+                                event.title.toLowerCase().includes('board') ||
+                                event.description.toLowerCase().includes('board');
+                return new Date(event.date) >= now && !isMemberOnly && !isMeeting;
+            })
+            .sort((a, b) => new Date(a.date) - new Date(b.date));
+            
+        if (upcomingEvents.length === 0) {
+            eventsDiv.innerHTML = '<p>No upcoming public star parties scheduled.</p>';
+            return;
+        }
+        
+        const table = document.createElement('table');
+        table.className = 'star-party-table';
+        
+        // Create table header
+        const thead = document.createElement('thead');
+        const headerRow = document.createElement('tr');
+        ['Date', 'Event', 'Location', 'Time'].forEach(headerText => {
+            const th = document.createElement('th');
+            th.textContent = headerText;
+            headerRow.appendChild(th);
+        });
+        thead.appendChild(headerRow);
+        table.appendChild(thead);
+        
+        // Create table body
+        const tbody = document.createElement('tbody');
+        upcomingEvents.forEach(event => {
+            const row = document.createElement('tr');
+            
+            // Format date
+            const date = new Date(event.date).toLocaleDateString('en-US', {
+                weekday: 'short',
+                month: 'short',
+                day: 'numeric',
+                year: 'numeric'
+            });
+            
+            // Create cells
+            const cells = [
+                date,
+                event.title,
+                event.location,
+                event.time || 'Time TBD' // Use the time property directly from the JSON
+            ];
+            
+            cells.forEach(cellText => {
+                const td = document.createElement('td');
+                td.textContent = cellText;
+                row.appendChild(td);
+            });
+            
+            tbody.appendChild(row);
+        });
+        table.appendChild(tbody);
+        
+        // Add table to the page
+        eventsDiv.innerHTML = '<h3 class="subtitle">Upcoming Public Star Parties</h3>';
+        eventsDiv.appendChild(table);
+        
+        // Add some basic styling for the table
+        const style = document.createElement('style');
+        style.textContent = `
+            .star-party-table {
+                width: 100%;
+                border-collapse: collapse;
+                margin: 20px 0;
+                font-size: 0.9em;
+            }
+            .star-party-table th, .star-party-table td {
+                padding: 12px 15px;
+                text-align: left;
+                border-bottom: 1px solid #ddd;
+            }
+            .star-party-table th {
+                background-color: #f8f9fa;
+                color: #2c3e50;
+                font-weight: bold;
+            }
+            .star-party-table tr:hover {
+                background-color: #f5f5f5;
+            }
+            @media (max-width: 768px) {
+                .star-party-table {
+                    display: block;
+                    overflow-x: auto;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+        
+    } catch (error) {
+        console.error('Error loading events:', error);
+        const eventsDiv = document.getElementById('upcoming-events');
+        if (eventsDiv) {
+            eventsDiv.innerHTML = '<p>Unable to load upcoming star parties. Please check back later.</p>';
+        }
     }
-    
-    const events = await response.json();
-    
-    let html = `
-      <h3 class="subtitle">Upcoming star parties</h3>
-      <br>
-      The following star parties are coming soon:<br>
-      <ul>
-    `;
-
-    events.forEach(event => {
-      const date = new Date(event.date);
-      const formattedDate = date.toLocaleDateString('en-US', { 
-        weekday: 'long',
-        year: 'numeric',
-        month: '2-digit',
-        day: '2-digit'
-      });
-      
-      const setupTime = event.setupTime ? `, setup ${event.setupTime}` : '';
-      const location = event.location ? ` at ${event.location}` : '';
-      
-      html += `<li>${formattedDate}, ${event.title}${location}${setupTime}</li>`;
-    });
-
-    if (events.length === 0) {
-      html += `<li>No upcoming events scheduled</li>`;
-    }
-
-    html += `</ul>
-      For a complete and up-to-date calendar of upcoming events, visit our 
-      <a href="https://groups.io/g/trivalleystargazers/calendar" title="See our calendar" target="_blank">groups.io</a>
-      calendar.<br><br>`;
-
-    calendarDiv.innerHTML = html;
-  } catch (error) {
-    console.error('Error loading calendar data:', error);
-    // Fallback content
-    calendarDiv.innerHTML = `
-      <h3 class="subtitle">Upcoming star parties</h3>
-      <br>
-      Please visit our 
-      <a href="https://groups.io/g/trivalleystargazers/calendar" title="See our calendar" target="_blank">groups.io</a>
-      calendar for upcoming events.<br><br>
-    `;
-  }
 }
+
+// Initialize the page
+document.addEventListener('DOMContentLoaded', function() {
+    displayUpcomingEvents();
+    startBannerSwapping();
+});

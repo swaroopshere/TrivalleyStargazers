@@ -6,9 +6,11 @@
   <meta name="copyright" content="Tri-Valley Stargazers, 2023">
   <meta name="description" content="The Tri-Valley Stargazers home page">
   <meta name="keywords" content="Tri-Valley, Stargazers, astronomy">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tri-Valley Stargazers, Livermore CA</title>
 
   <link href="tvs.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
   <script src="tvs.js" type="text/javascript"></script>
 
@@ -19,39 +21,136 @@
     // Add this new function after lastUpdateDate
     function currentSpeaker(title, speaker, abstract, bio) {
       document.write(`
-        <b>${title}</b>
-        <br><br>
-        ${speaker}
-        <br><br>
-        <b>Abstract:</b> 
-        ${abstract}
-        <br><br>
-        <b>Bio:</b> ${bio}
-        <br><br>
+        <div class="speaker-info">
+          <h4 class="speaker-title">${title}</h4>
+          <p class="speaker-name">${speaker}</p>
+          <div class="speaker-content">
+            <p class="speaker-abstract"><strong>Abstract:</strong> ${abstract}</p>
+            <p class="speaker-bio"><strong>Bio:</strong> ${bio}</p>
+          </div>
+        </div>
       `);
     }
    //-->
   </script>
 
+  <style>
+    /* Modern styling improvements */
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .intro {
+      background-color: #f8f9fa;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .subtitle {
+      color: #2c3e50;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 5px;
+      margin-top: 25px;
+    }
+
+    .optional {
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .announcement {
+      background-color: #fff3cd;
+      border-left: 4px solid #ffc107;
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    td {
+      padding: 15px;
+      vertical-align: top;
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      padding: 8px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    ul li:last-child {
+      border-bottom: none;
+    }
+
+    a {
+      color: #3498db;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #2980b9;
+    }
+
+    .speaker-info {
+      background-color: #f8f9fa;
+      padding: 20px;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+
+    .speaker-title {
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+
+    .speaker-name {
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .speaker-content {
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 4px;
+    }
+
+    @media (max-width: 768px) {
+      table {
+        display: block;
+      }
+      
+      td {
+        display: block;
+        width: 100%;
+      }
+    }
+  </style>
+
   <script type="text/javascript">
    <!--
-        // Use the following script to select which "optional" elements will be displayed.  
-        // Comment out the lines that you don't need, but don't delete them please!
-	function setupOptionalCode() {
-
-        //showOptional("opt_announce");  	// Optional announcement at the head of the page
-         showOptional("opt_talk");
-         //showOptional("opt_bbq");
-	  //showOptional("opt_potluck");
-	 // showOptional("opt_other");		// Regular meetings that don't fit into previous categories
-	 //showOptional("opt_h2o");
-	 showOptional("opt_tesla");		// Club star party at Tesla Vintners
+        function setupOptionalCode() {
+            showOptional("opt_talk");
+            showOptional("opt_tesla");
         }
-
    //-->
   </script>
 
-  <!-- The id for the button that needs to be underlined. -->
   <style type='text/css'>#appleNav li a#m_home { text-decoration: underline;}</style>
 
  </head>
@@ -200,7 +299,7 @@ Please visit:  <a href="https://eastbayastro.org/events/" target="_blank">East B
      currentSpeaker(
        "Binary Stars",
        "Dr. Catherine Clark",
-       "Dr. Clark’s research interests include binary star systems, exoplanet host stars, low-mass stars, and astronomical instrumentation. Please note that Dr. Clark will be giving her presentation to the club this month in person. Please consider attending this month’s meeting in person if you can.",
+       "Dr. Clark's research interests include binary star systems, exoplanet host stars, low-mass stars, and astronomical instrumentation. Please note that Dr. Clark will be giving her presentation to the club this month in person. Please consider attending this month's meeting in person if you can.",
        "Dr. Catherine Clark began her academic journey at the University of Michigan, earning a dual Bachelor of Science in Astronomy and Astrophysics and Spanish. In 2017, Dr. Catherine Clark relocated to Flagstaff, Arizona to pursue her PhD in Astronomy and Planetary Science at Northern Arizona University. Her dissertation research at Lowell Observatory focused on M-dwarf multiplicity and its impact on planetary system architectures and occurrence rates, utilizing high-resolution imaging under the guidance of Dr. Gerard van Belle. During this period, Dr. Clark also completed a Graduate Certificate in Science Communication. In 2022, Dr. Catherine Clark moved to Pasadena, California to begin her position as a NASA Jet Propulsion Laboratory Postdoctoral Fellow. In this role, she worked with Dr. David Ciardi to characterize planets in multi-star systems, investigating how they differ from single-star systems like our own."
      );
    //-->
