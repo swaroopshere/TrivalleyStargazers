@@ -1,0 +1,53 @@
+{
+    "events": [
+        {
+            "date": "2025-04-05",
+            "title": "Cub Scout star party at Del Valle Arroyo Road Staging Area",
+            "description": "Cub Scout star party at Del Valle Arroyo Road Staging Area. Start set up 6:30, observing from 7:30 to 9:30.&nbsp;",
+            "location": "Del Valle Arroyo Road Staging Area, Arroyo Road",
+            "time": "6:30 PM"
+        },
+        {
+            "date": "2025-04-10",
+            "title": "Livermore School District Science Odyssey",
+            "description": "Indoor exhibit and activities at Livermore School District Science Odyssey (Science Fair) at Joe Michell School in Livermore. The event goes from 5:00 to 7:00, so it will be over before it gets dark. Set up 4:00 pm.&nbsp;",
+            "location": "Joe Michell School, 1001 Elaine Avenue, Livermore",
+            "time": "4:00 PM"
+        },
+        {
+            "date": "2025-04-12",
+            "title": "Solar observing at Tri-Valley Innovation Fair",
+            "description": "Solar observing and activities. Set up 9:00 am. The fair goes from 10 to 5.&nbsp;",
+            "location": "Alameda County Fairgrounds, Pleasanton",
+            "time": "9:00 AM"
+        },
+        {
+            "date": "2025-04-18",
+            "title": "TVS Club Meeting",
+            "description": "TVS Club meetings are open to all members and the public.&nbsp;See TVS newsletter www.trivalleystargazers.org&nbsp;for details on how to participate in the zoom video conference call.",
+            "location": "Zoom meeting",
+            "time": "7:30 PM"
+        },
+        {
+            "date": "2025-04-30",
+            "title": "School star party at John Green Elementary School",
+            "description": "School star party at John Green Elementary, set up 6:30, observing 7:30 to 9:30.&nbsp;",
+            "location": "John Green Elementary School, 3300 Antone Way, Dublin",
+            "time": "6:30 PM"
+        },
+        {
+            "date": "2025-05-02",
+            "title": "School star party at Murray Elementary School",
+            "description": "School star party at Murray Elementary, set up at 6:45, observing 7:30 to 9:30. I am told we should be able to drive out onto their blacktop.",
+            "location": "Murray Elementary School, 8435 Davona Dr, Dublin, CA 94568",
+            "time": "6:45 PM"
+        },
+        {
+            "date": "2025-05-16",
+            "title": "TVS Club Meeting",
+            "description": "TVS Club meetings are open to all members and the public.&nbsp;See TVS newsletter www.trivalleystargazers.org&nbsp;for details on how to participate in the zoom video conference call.",
+            "location": "Zoom meeting",
+            "time": "7:30 PM"
+        }
+    ]
+}
