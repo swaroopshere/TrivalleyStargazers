@@ -248,6 +248,14 @@ function showOptional(id) {
     }
 }
 
+// Hide optional elements by default
+function hideOptional(id) {
+    const element = document.getElementById(id);
+    if (element) {
+        element.style.display = 'none';
+    }
+}
+
 // Start the banner swapping animation
 function startBannerSwapping() {
     const bannerTop = document.getElementById('bannerTop');
@@ -452,4 +460,16 @@ function currentSpeaker(title, speaker, abstract, bio) {
 document.addEventListener('DOMContentLoaded', function() {
     displayUpcomingEvents();
     startBannerSwapping();
+    
+    // Hide all optional elements by default
+    hideOptional("opt_announce");
+    hideOptional("opt_talk");
+    hideOptional("opt_tesla");
+    hideOptional("opt_talk_details");
+    hideOptional("opt_potluck");
+    hideOptional("opt_potluck_details");
+    hideOptional("opt_bbq");
+    hideOptional("opt_bbq_details");
+    hideOptional("opt_other");
+    hideOptional("opt_h2o");
 });
