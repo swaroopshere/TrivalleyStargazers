@@ -45,7 +45,7 @@
 	  //showOptional("opt_potluck");
 	 // showOptional("opt_other");		// Regular meetings that don't fit into previous categories
 	 //showOptional("opt_h2o");
-	 //showOptional("opt_tesla");		// Club star party at Tesla Vintners
+	 showOptional("opt_tesla");		// Club star party at Tesla Vintners
         }
 
    //-->
@@ -101,11 +101,11 @@ The Tri-Valley Stargazers Privacy Policy is available <a href="https://trivalley
 
      <h3 class="subtitle">Next Public Meeting</h3>	
      <div class="optional" id="opt_talk">
-     <br> Friday March 21, 2025
+     <br> Friday April 18, 2025
      <br>
-     <br> <b>Do Galaxies Breathe, Too?</b> <br><br>
+     <br> <b>Binary Stars</b> <br><br>
          
-     Presenter:  Dr. Xinnan Du
+     Presenter:  Dr. Catherine Clark
         <br><br>
       
       Meeting starts at 7:30 p.m.<br>
@@ -147,7 +147,7 @@ The Tri-Valley Stargazers Privacy Policy is available <a href="https://trivalley
     <td valign="top" width="295" align="left">
      <h3 class="subtitle">Next Board Meeting</h3>
      <br>
-     Monday, March 24, 2025, 7:30 p.m.     <br><br>
+     Monday, April 21, 2025, 7:30 p.m.     <br><br>
 Board meetings are usually held using video conferencing.  Members are always welcome at board meetings.
 
     </td>
@@ -182,7 +182,7 @@ Please visit:  <a href="https://eastbayastro.org/events/" target="_blank">East B
 <br><br> -->
 
   <div class="optional" id="opt_talk_details">
-   <h3 class="subtitle">March 2025 Member Meeting Presentation</h3>
+   <h3 class="subtitle">April 2025 Member Meeting Presentation</h3>
    <br><br>
  
    This meeting will be live at the Unitarian church and will also be available using the video conference utility 
@@ -198,10 +198,10 @@ Please visit:  <a href="https://eastbayastro.org/events/" target="_blank">East B
    <script type="text/javascript">
    <!--
      currentSpeaker(
-       "Do Galaxies Breathe, Too?",
-       "Dr. Xinnan Du",
-       "Galaxies are more than just hundreds of billions of stars; the gas that fills the space between the stars plays a crucial role in determining the fate of a galaxy. In this presentation, I'll discuss how we use spectra to study the physical properties of gas in distant galaxies, with a specific focus on how galactic-scale outflows and inflows impact the formation of stars. By studying how galaxies \"breathe\" (in a similar way to human respiration), we can put together a more comprehensive picture of galaxy evolution over cosmic time.",
-       "Dr. Xinnan Du is the Outreach and Engagement Manager at the Kavli Institute for Particle Astrophysics and Cosmology (KIPAC) at Stanford University. Xinnan got her PhD in astronomy in 2018 from UCLA, and her research is focused on the physical properties of the interstellar and circumgalactic gas in distant star-forming galaxies. Before moving to Northern California, Xinnan spent 3 years at UC Riverside as a postdoctoral scholar, outreach director, and program manager. She is very enthusiastic about public outreach. With a long-term career goal in informal science education, Xinnan hopes to inspire and engage everyone in learning astronomy through various outreach and training programs."
+       "Binary Stars",
+       "Dr. Catherine Clark",
+       "Dr. Clark’s research interests include binary star systems, exoplanet host stars, low-mass stars, and astronomical instrumentation. Please note that Dr. Clark will be giving her presentation to the club this month in person. Please consider attending this month’s meeting in person if you can.",
+       "Dr. Catherine Clark began her academic journey at the University of Michigan, earning a dual Bachelor of Science in Astronomy and Astrophysics and Spanish. In 2017, Dr. Catherine Clark relocated to Flagstaff, Arizona to pursue her PhD in Astronomy and Planetary Science at Northern Arizona University. Her dissertation research at Lowell Observatory focused on M-dwarf multiplicity and its impact on planetary system architectures and occurrence rates, utilizing high-resolution imaging under the guidance of Dr. Gerard van Belle. During this period, Dr. Clark also completed a Graduate Certificate in Science Communication. In 2022, Dr. Catherine Clark moved to Pasadena, California to begin her position as a NASA Jet Propulsion Laboratory Postdoctoral Fellow. In this role, she worked with Dr. David Ciardi to characterize planets in multi-star systems, investigating how they differ from single-star systems like our own."
      );
    //-->
    </script>
@@ -236,9 +236,8 @@ Please visit:  <a href="https://eastbayastro.org/events/" target="_blank">East B
     <li>Sunday mm/dd/yy, Outreach party (Perseids) at Del Valle ridge near park entrance; 8:15</li>
     -->
 
-    <li>Wednesday, 04/02/25, School star party at John Green Elementary School, 3300 Antone Way, Dublin, setup 6.30 pm</li>
-    <li>Saturday, 04/05/25, Cub Scout star party at Del Valle Arroyo Road Staging Area. Start set up 6:30, observing from 7:30 to 9:30.</li>
-    <li>Thursday, 04/10/25, Indoor exhibit and activities at Livermore School District Science Odyssey (Science Fair) at Joe Michell School in Livermore. The event goes from 5:00 to 7:00, so it will be over before it gets dark. Set up 4:00 pm</li>      
+    <li>Wednesday, 04/30/25, School star party at John Green Elementary School, 3300 Antone Way, Dublin, setup 6.30 pm, start observing at 7.30 pm</li>
+    <li>Friday, 05/02/25, School star party at Murray Elementary School, 8435 Davona Dr, Dublin, CA 94568. Start set up 6:45 pm, observing from 7:30 to 9:30.</li>
   </ul>
   For a complete and up-to-date calendar of upcoming events, visit our 
   <a href="https://groups.io/g/trivalleystargazers/calendar" title="See our calendar" target="_blank">groups.io</a>
@@ -325,13 +324,10 @@ Please visit:  <a href="https://eastbayastro.org/events/" target="_blank">East B
     }
 </style>
 <ul>
-    <li>4/27/24</li>
-    <li>6/29/24</li>
-    <li>8/31/24</li>
-    <li>10/26/24</li>
+    <li>4/19/25</li>
 </ul>
 
-   Tesla Vintner star parties are generally open to club members and their guests.  The star parties will run from 6:00 PM
+   Tesla Vintner star parties are generally open to club members and their guests.  The star parties will run from 7:00 PM
    until midnight.  Tesla Vintners is in Livermore near the intersection of Tesla and Mines.  For
    those new to the site, please use the unmarked west entrance (closest to Mines) to enter the
    winery grounds.<br><br>
