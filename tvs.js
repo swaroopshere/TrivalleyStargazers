@@ -334,19 +334,21 @@ async function displayUpcomingEvents() {
             const row = document.createElement('tr');
             
             // Format date
-            const date = new Date(event.date).toLocaleDateString('en-US', {
-                weekday: 'short',
-                month: 'short',
+            const date = new Date(event.date + 'T00:00:00'); // Add time to ensure consistent timezone handling
+            const formattedDate = date.toLocaleDateString('en-US', {
+                weekday: 'long',
+                month: 'long',
                 day: 'numeric',
-                year: 'numeric'
+                year: 'numeric',
+                timeZone: 'America/Los_Angeles' // Specify Pacific timezone
             });
             
             // Create cells
             const cells = [
-                date,
+                formattedDate,
                 event.title,
                 event.location,
-                event.time || 'Time TBD' // Use the time property directly from the JSON
+                event.time || 'Time TBD'
             ];
             
             cells.forEach(cellText => {
@@ -400,6 +402,49 @@ async function displayUpcomingEvents() {
         if (eventsDiv) {
             eventsDiv.innerHTML = '<p>Unable to load upcoming star parties. Please check back later.</p>';
         }
+    }
+}
+
+// Display current speaker information
+function currentSpeaker(title, speaker, abstract, bio) {
+    const speakerInfo = document.createElement('div');
+    speakerInfo.className = 'meeting-card';
+    
+    const header = document.createElement('h3');
+    header.className = 'meeting-header';
+    header.textContent = 'Speaker Information';
+    speakerInfo.appendChild(header);
+    
+    const details = document.createElement('div');
+    details.className = 'meeting-details';
+    
+    const topic = document.createElement('p');
+    topic.innerHTML = `<strong>Topic:</strong> ${title}`;
+    details.appendChild(topic);
+    
+    const presenter = document.createElement('p');
+    presenter.innerHTML = `<strong>Presenter:</strong> ${speaker}`;
+    details.appendChild(presenter);
+    
+    speakerInfo.appendChild(details);
+    
+    const description = document.createElement('div');
+    description.className = 'meeting-description';
+    
+    const abstractPara = document.createElement('p');
+    abstractPara.innerHTML = `<strong>Abstract:</strong> ${abstract}`;
+    description.appendChild(abstractPara);
+    
+    const bioPara = document.createElement('p');
+    bioPara.innerHTML = `<strong>Bio:</strong> ${bio}`;
+    description.appendChild(bioPara);
+    
+    speakerInfo.appendChild(description);
+    
+    // Find the opt_talk_details div and append the speaker info
+    const talkDetails = document.getElementById('opt_talk_details');
+    if (talkDetails) {
+        talkDetails.appendChild(speakerInfo);
     }
 }
 

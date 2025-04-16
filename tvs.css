@@ -152,7 +152,7 @@ body {
 }
 
 .modal-header .title {
-  font-size 1.25rem;
+  font-size: 1.25rem;
   font-weight: bold;
 }
 
@@ -438,4 +438,56 @@ tvsCalendar {
 		float: none;
 		margin: 20px 0;
 	}
+}
+
+/* Meeting section styles */
+.meeting-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.meeting-header {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.meeting-details {
+    margin-bottom: 15px;
+}
+
+.meeting-details p {
+    margin: 8px 0;
+    line-height: 1.4;
+}
+
+.meeting-time {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.meeting-location {
+    color: #666;
+    font-style: italic;
+}
+
+.meeting-presenter {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.meeting-presenter strong {
+    color: #2c3e50;
+}
+
+.meeting-description {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
 }
