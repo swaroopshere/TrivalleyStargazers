@@ -72,8 +72,10 @@ a.topLinks {
 }
 
 body {
-	font-family: 'Times New Roman', Times, Georgia, serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: medium;
+	line-height: 1.6;
+	color: #333;
 
 	width: 980px;
 
@@ -109,7 +111,11 @@ body {
 
 /* This controls sections of the code that are optional.  For example, the BBQ description. an announcement, etc. */
 .optional {
-	display:none;
+	background-color: #fff;
+	padding: 15px;
+	border-radius: 8px;
+	margin-bottom: 20px;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 /* This <div> holds the logo.  We need a separate div so logo's opacity is fixed. */
@@ -181,17 +187,10 @@ body {
 
 /* This class is used for the optional special announcement box */
 div.announcement {
-	width:350px; 
-	float:right;
-	margin: 30px 0em 0.5em 1em;
-	border-width: 5px;
-	border-style: outset;
-	border-color: #A8311B;
-	padding:0.5em;
-	padding-left:15px;
-	position:relative;
-	background-color: #fff;
-	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+	background-color: #fff3cd;
+	border-left: 4px solid #ffc107;
+	padding: 15px;
+	margin-bottom: 20px;
 }
 
 /* This class is used for members.shtml and newsletter.shtml; but someday I want it to work for all pages. */
@@ -232,11 +231,11 @@ div.insetTitle {
 }
 
 div.intro {
-	font-family: Helvetica, Geneva, SunSans-Regular, sans-serif;
-	font-weight: bold;
-	color: #000066;
-	margin-top: 19px;
-	line-height: 1.5;
+	background-color: #f8f9fa;
+	padding: 20px;
+	border-radius: 8px;
+	margin-bottom: 20px;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 div.itemDetails {
@@ -490,4 +489,110 @@ tvsCalendar {
     padding: 15px;
     background-color: #f8f9fa;
     border-radius: 4px;
+}
+
+/* Modern styling improvements */
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.intro {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.subtitle {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+  margin-top: 25px;
+}
+
+.optional {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.announcement {
+  background-color: #fff3cd;
+  border-left: 4px solid #ffc107;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+td {
+  padding: 15px;
+  vertical-align: top;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+ul li:last-child {
+  border-bottom: none;
+}
+
+a {
+  color: #3498db;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #2980b9;
+}
+
+.speaker-info {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+.speaker-title {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.speaker-name {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.speaker-content {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  table {
+    display: block;
+  }
+  
+  td {
+    display: block;
+    width: 100%;
+  }
 }
