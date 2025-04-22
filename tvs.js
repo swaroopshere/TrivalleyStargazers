@@ -473,3 +473,202 @@ document.addEventListener('DOMContentLoaded', function() {
     hideOptional("opt_other");
     hideOptional("opt_h2o");
 });
+
+// ...existing code...
+
+// Initialize the page
+document.addEventListener('DOMContentLoaded', function() {
+    displayUpcomingEvents();
+    startBannerSwapping();
+    
+    // Hide all optional elements by default
+    hideOptional("opt_announce");
+    hideOptional("opt_talk");
+    hideOptional("opt_tesla");
+    hideOptional("opt_talk_details");
+    hideOptional("opt_potluck");
+    hideOptional("opt_potluck_details");
+    hideOptional("opt_bbq");
+    hideOptional("opt_bbq_details");
+    hideOptional("opt_other");
+    hideOptional("opt_h2o");
+    
+    // Set up optional elements based on current meeting settings
+    setupOptionalCode();
+    
+    // Set last update date
+    setLastUpdateDate("February 17, 2025");
+    
+    // Set up speaker information if available
+    setupCurrentSpeaker();
+});
+
+// Function to set up which optional sections to display
+function setupOptionalCode() {
+    showOptional("opt_talk");
+    showOptional("opt_tesla");
+    showOptional("opt_talk_details");
+    //showOptional("opt_announce");
+    //showOptional("opt_potluck");
+    //showOptional("opt_potluck_details");
+    //showOptional("opt_bbq");
+    //showOptional("opt_bbq_details");
+}
+
+// Function to set the last update date
+function setLastUpdateDate(date) {
+    window.lastUpdateDate = date;
+}
+
+// Function to set up the current speaker information
+function setupCurrentSpeaker() {
+    currentSpeaker(
+        "Binary Stars",
+        "Dr. Catherine Clark",
+        "Dr. Clark's research interests include binary star systems, exoplanet host stars, low-mass stars, and astronomical instrumentation. Please note that Dr. Clark will be giving her presentation to the club this month in person. Please consider attending this month's meeting in person if you can.",
+        "Dr. Catherine Clark began her academic journey at the University of Michigan, earning a dual Bachelor of Science in Astronomy and Astrophysics and Spanish. In 2017, Dr. Catherine Clark relocated to Flagstaff, Arizona to pursue her PhD in Astronomy and Planetary Science at Northern Arizona University. Her dissertation research at Lowell Observatory focused on M-dwarf multiplicity and its impact on planetary system architectures and occurrence rates, utilizing high-resolution imaging under the guidance of Dr. Gerard van Belle. During this period, Dr. Clark also completed a Graduate Certificate in Science Communication. In 2022, Dr. Catherine Clark moved to Pasadena, California to begin her position as a NASA Jet Propulsion Laboratory Postdoctoral Fellow. In this role, she worked with Dr. David Ciardi to characterize planets in multi-star systems, investigating how they differ from single-star systems like our own."
+    );
+}
+
+// Function to populate contact information for coordinator
+function setupCoordinatorContact() {
+    const contactElement = document.getElementById("coordinator-contact");
+    if (contactElement) {
+        contactElement.innerHTML = '';
+        contact("coordinator", "trivalleystargazers.org", "Eric Dueltgen");
+    }
+}
+
+// Function to populate contact information for president
+function setupPresidentContact() {
+    const contactElement = document.getElementById("president-contact");
+    if (contactElement) {
+        contactElement.innerHTML = '';
+        contact("president", "trivalleystargazers.org", "the club president");
+    }
+}
+
+// Display a presentation.  The link is optional.  If provided, it gives
+// a link to a URL that gives the presenter's slides.  This might be a
+// PDF file or an HTML file.  The function assumes that a <table> has
+// be set up by the surrounding code.
+function presentation(month, day, presenter, title, link) {
+	if (link) {
+		title = '<a href="' + link + '" title="See more about this talk">' + title + '</a>';
+	}
+	if (presenter) {
+		if (title != null) {
+			title = '; "' + title + '"';
+		}
+		else {
+			title = "";
+		}
+	}
+	else {
+		presenter = "";
+	}
+	var html = "";
+	html +=
+'	 <tr>' +
+'	  <td>' + month + '</td>' +
+'	  <td>' + day + '</td>' +
+'	  <td>' + presenter + title + '</td>' +
+'	 </tr>';
+	document.write(html);
+};
+
+
+// Set up the membership application form.  We do these things here to foil spambots.
+function setupForm() {
+	document.application.action="cgi-bin/apply.pl";
+	document.getElementById("preset").value = "Preset";
+};
+
+// Display the date when this page was last updated
+function showLastUpdate() {
+	var html = "";
+	html += 
+'	 <div class="lastUpdate">' +
+'	 Last modified on ' + lastUpdateDate +
+'	  by <a href = "mailto:webmaster@trivalleystargazers.org" title="mailto:webmaster@trivalleystargazers.org">TVS Webmaster</a>' +
+'	</div>';
+	html = 'Last modified on ' + lastUpdateDate + ' by <a href = "webmaster@trivalleystargazers.org" title="mailto:webmaster@trivalleystargazers.org">TVS Webmaster</a>'
+	document.write(html);
+};
+
+// Find what items the member wants to pay for.  Compute total cost, and create a URL that tells PayPal
+// what he wants.
+function updateItems() {
+	var e;
+
+	item_count = 0;
+	total = 0;
+	// To test w/ PayPal's sandbox, the URL must look like http://www.trivalleystargazers.org/pay.shtml?sandbox
+	var usingSandbox = (window.location.search.substring(1) == "sandbox");
+	if (usingSandbox)
+		url = "https://www.sandbox.paypal.com/cgi-bin/webscr?business=treasurer-facilitator@trivalleystargazers.org";
+	else
+		url = "https://www.paypal.com/cgi-bin/webscr?business=treasurer@trivalleystargazers.org";
+	url += "&cmd=_cart&currency_code=USD&upload=1";
+
+	e = document.getElementById("membershipType");
+	addItem(e.options[e.selectedIndex].text + " Membership", e.value);
+
+	e = document.getElementById("H2OKey");
+	if (e.checked)
+		addItem("H2O Key Deposit", e.value);
+
+	e = document.getElementById("H2OAccess");
+	if (e.checked)
+		addItem("H2O Yearly Access Fee", e.value);
+
+	e = document.getElementById("donation");
+	if (e.value == "")
+		e.value = "0";
+	var r = /^\$?[0-9]+\.?[0-9]?[0-9]?$/;
+	if (r.test(e.value)) {
+		e.value = e.value.replace(/\$/g, '');
+		addItem("Donation", e.value);
+		e.value = "$" + e.value;
+	}
+	else {
+		alert("Please enter a valid amount for the donation.  " + e.value + " isn't valid.");
+		e.value = "$0";
+		item_count = 0;			// Prevent accidentally calling PayPal
+		return;
+	};
+
+
+	// Special handling for the Other payment item
+
+	e = document.getElementById("other");
+	explanation = document.getElementById("explanation").value;
+        explanation = explanation.slice(0, 50);		// Up to 127 characters OK, but playing it safe
+	otherValue = 0;
+	if (e.value == "")
+		e.value = "0";
+	var r = /^\$?[0-9]+\.?[0-9]?[0-9]?$/;
+	if (r.test(e.value)) {
+		e.value = e.value.replace(/\$/g, '');
+		otherValue = e.value;
+		e.value = "$" + e.value;
+	}
+	else {
+		alert("Please enter a valid amount for the Other expense.  " + e.value + " isn't valid.");
+		e.value = "$0";
+		item_count = 0;			// Prevent accidentally calling PayPal
+		return;
+	};
+
+	// Add the item even if the explanation is missing.  We will catch that later.
+	addItem("Other", otherValue, explanation);
+
+};
+
+
+// Show the user the current total value of things being ordered
+function updateTotal() {
+	updateItems();		// Computes global variable total (as well as the URL; but we don't use that)
+	e = document.getElementById("total");
+	e.value = "$"+total;
+};
