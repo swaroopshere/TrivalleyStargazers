@@ -499,8 +499,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Set last update date
     setLastUpdateDate("February 17, 2025");
     
-    // Set up speaker information if available
-    setupCurrentSpeaker();
 });
 
 // Function to set up which optional sections to display

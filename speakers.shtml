@@ -42,6 +42,24 @@
          <td>&nbsp;</td>
        </tr>
 
+       <tr>
+        <td colspan="3"><h3 class="subtitle">TVS Meetings 2025</h3></td>
+      </tr>
+      <script type="text/javascript">
+      <!--
+         presentation("January", "24", "Dr. Jon Rees", "James Lick and the history of the Lick Observatory");
+         presentation("February", "21", "Brian Kloppenborg", "Citizen Science, Variable Stars and the AAVSO"); 
+         presentation("March", "21", "Dr. Xinnan Du", "Do Galaxies breathe too?");
+         presentation("April", "18", "Dr. Catherine Clark", "Binary Stars");
+      </script>
+       <tr>
+         <td colspan="3">
+           <p><a href="#Anchor">Return to Top</a></p><br>
+         </td>
+       </tr>
+      </tr>
+<!-- End of year -->
+
 <!-- Start of year -->
 <tr>
   <td colspan="3"><h3 class="subtitle">TVS Meetings 2024</h3></td>
@@ -55,8 +73,11 @@
    presentation("May", "17", "Ross Gaunt", "Review and Comparison of Smart Telescopes");
    presentation("June", "21", "Summer Potluck BBQ");
    presentation("July", "19", "Dr. Thomas Barclay", "The Pandora SmallSat: Characterizing exoplanet from a low-cost space telescope");
-   presentation("August", "16", "null", "null");
-   presentation("September", "20", "Frank Ravizza", "Deep Purple: LLNL UV and SWIR sensor for NASA CubeSat")
+   presentation("August", "16", "rescheduled", "rescheduled");
+   presentation("September", "20", "Frank Ravizza", "Deep Purple: LLNL UV and SWIR sensor for NASA CubeSat");
+   presentation("October", "18", "Richard Bell", "Galaxie: Island Universes");
+   presentation("November", "22", "Ted Blank", "Chasing Shadows: Supporting the Lucy Mission to Jupiter's Trojan Asteroids");
+   presentation("December", "21", "null", "Solstice Potluck");
 </script>
  <tr>
    <td colspan="3">
