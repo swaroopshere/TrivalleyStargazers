@@ -14,8 +14,8 @@ function formatDate(date) {
 
 // Function to get events for a specific month
 async function getEventsForMonth(year, month) {
-    const startDate = new Date(year, month - 1, 1);
-    const endDate = new Date(year, month, 0);
+    const startDate = new Date(year, month, 1);
+    const endDate = new Date(year, month, 31);
     
     try {
         const url = new URL('https://groups.io/api/v1/getevents');
@@ -89,8 +89,10 @@ async function buildCalendar() {
     try {
         // Get current date
         const now = new Date();
-        const currentYear = now.getFullYear();
-        const currentMonth = now.getMonth() + 1;
+        console.log("Today's date " + now);
+        const currentYear = now.getUTCFullYear();
+        const currentMonth = now.getUTCMonth() + 1;
+        console.log('getting calendar dates for month ' + currentMonth + '/' + currentYear);
 
         // Get events for current month and next month
         const currentMonthEvents = await getEventsForMonth(currentYear, currentMonth);

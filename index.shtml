@@ -16,7 +16,7 @@
 
   <script type="text/javascript">
    <!--
-    lastUpdateDate = "February 17, 2025";
+    lastUpdateDate = "May 12, 2025";
    //-->
   </script>
 
@@ -54,12 +54,12 @@ The Tri-Valley Stargazers Privacy Policy is available <a href="https://trivalley
 
  </div>
 
- <div style="border-style: solid; background-color:#003354; color:white; padding: 12px;">
+<!-- <div style="border-style: solid; background-color:#003354; color:white; padding: 12px;">
    Please read the latest about our Health rules:
    <a href="covid3.shtml" title="Click me to read the rules">
      <button style="margin-left: 10px; border-radius: 6px; background-color: white; color: black;">Rules</button>
    </a>
- </div>
+ </div> -->
  <br>
 
  <img src="images/rulehoriz.gif" alt="rule" width="294" height="10"><br>
@@ -85,13 +85,13 @@ The Tri-Valley Stargazers Privacy Policy is available <a href="https://trivalley
       <h3 class="meeting-header">Next Public Meeting</h3>	
       <div class="optional" id="opt_talk">
        <div class="meeting-details">
-        <p class="meeting-time">Friday, April 18, 2025 at 7:30 p.m.</p>
+        <p class="meeting-time">Friday, May 16, 2025 at 7:30 p.m.</p>
         <p class="meeting-location">Unitarian Universalist Church<br>1893 N. Vasco Rd., Livermore</p>
        </div>
        
        <div class="meeting-presenter">
-        <strong>Topic:</strong> Binary Stars<br>
-        <strong>Presenter:</strong> Dr. Catherine Clark
+        <strong>Topic:</strong> Deflection of light near Jupiter<br>
+        <strong>Presenter:</strong> Dr. William (Bill) Fisher 
        </div>
 
        <div class="meeting-description">
@@ -134,7 +134,7 @@ The Tri-Valley Stargazers Privacy Policy is available <a href="https://trivalley
      <div class="meeting-card">
       <h3 class="meeting-header">Next Board Meeting</h3>
       <div class="meeting-details">
-       <p class="meeting-time">Monday, April 21, 2025, 7:30 p.m.</p>
+       <p class="meeting-time">Monday, May 19, 2025, 7:30 p.m.</p>
        <p class="meeting-description">Board meetings are usually held using video conferencing. Members are always welcome at board meetings.</p>
       </div>
      </div>
@@ -170,7 +170,7 @@ Please visit:  <a href="https://eastbayastro.org/events/" target="_blank">East B
 <br><br> -->
 
   <div class="optional" id="opt_talk_details">
-   <h3 class="subtitle">April 2025 Member Meeting Presentation</h3>
+   <h3 class="subtitle">May 2025 Member Meeting Presentation</h3>
    <br><br>
  
    This meeting will be live at the Unitarian church and will also be available using the video conference utility 
@@ -184,14 +184,29 @@ Please visit:  <a href="https://eastbayastro.org/events/" target="_blank">East B
    in astronomy.<br><br>
 
    <script type="text/javascript">
-   <!--
      currentSpeaker(
-       "Binary Stars",
-       "Dr. Catherine Clark",
-       "Dr. Clark's research interests include binary star systems, exoplanet host stars, low-mass stars, and astronomical instrumentation. Please note that Dr. Clark will be giving her presentation to the club this month in person. Please consider attending this month's meeting in person if you can.",
-       "Dr. Catherine Clark began her academic journey at the University of Michigan, earning a dual Bachelor of Science in Astronomy and Astrophysics and Spanish. In 2017, Dr. Catherine Clark relocated to Flagstaff, Arizona to pursue her PhD in Astronomy and Planetary Science at Northern Arizona University. Her dissertation research at Lowell Observatory focused on M-dwarf multiplicity and its impact on planetary system architectures and occurrence rates, utilizing high-resolution imaging under the guidance of Dr. Gerard van Belle. During this period, Dr. Clark also completed a Graduate Certificate in Science Communication. In 2022, Dr. Catherine Clark moved to Pasadena, California to begin her position as a NASA Jet Propulsion Laboratory Postdoctoral Fellow. In this role, she worked with Dr. David Ciardi to characterize planets in multi-star systems, investigating how they differ from single-star systems like our own."
+       "Deflection of light near Jupiter",
+       "Dr William (Bill) Fisher",
+       "In the August 2023 issue of Sky and Telescope Don Bruns made a call for volunteers to join an effort to attempt to measure the deflection of light due to Jupiter’s gravity. Bill accepted that challenge. Don and his other collaborators had noted that on October 27-27 2023 3 nearly collinear 7th magnitude stars would pass near Jupiter. One star would come within 25” of the\
+surface of Jupiter and the two others were close enough to fit in the field of view of\
+typical amateur imaging equipment. This configuration allowed for data reduction that\
+could reduce the measurement error to around .003 arcsec, a factor of 2 greater than\
+the expected deflection.\
+Bill will talk about the methods used; the results reported in the November 2024 issue of\
+Sky and Telescope and follow on efforts to measure the deflection of light of Jupiter’s\
+moons.",
+       "Bill has been a member of TVS since 2018 when he retired after selling his company\
+that provides the satellite scheduling algorithms for the aerospace industry ( yes even\
+NASA uses them). He has a Doctor of Science degree from MIT in Nuclear\
+Engineering.\
+Prior to his software company he worked at the Lockheed Palo Alto Research\
+Laboratory in experimental physics he developed programmable analog neural\
+networks used for adaptive optics and high speed optimization. The adaptive mirror that\
+Bill used for his experiments was also used at Lick observatory to demonstrate laser\
+guide star adaptive optics.\
+He joined the Jupiter Star deflection effort in 2023."
      );
-   //-->
+   
    </script>
 
   </div>
@@ -219,7 +234,7 @@ Please visit:  <a href="https://eastbayastro.org/events/" target="_blank">East B
   Please contact
   <script type="text/javascript">
     <!--
-      contact("coordinator", "trivalleystargazers.org", "Eric Dueltgen");
+      contact("coordinator", "trivalleystargazers.org", "Johnathan Bailey");
     -->
   </script>
   for further information.<br><br>
