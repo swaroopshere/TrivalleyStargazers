@@ -29,8 +29,8 @@
             //showOptional("opt_announce");
             //showOptional("opt_potluck");
             //showOptional("opt_potluck_details");
-            //showOptional("opt_bbq");
-            //showOptional("opt_bbq_details");
+            showOptional("opt_bbq");
+            showOptional("opt_bbq_details");
         }
    //-->
   </script>
@@ -104,8 +104,8 @@ The Tri-Valley Stargazers Privacy Policy is available <a href="https://trivalley
       <div class="meeting-card">
        <h3 class="meeting-header">Summer Barbecue</h3>
        <div class="meeting-details">
-        <p class="meeting-time">Saturday, June 22, 2024</p>
-        <p>Set up at 4:00 p.m.<br>Dinner starts at 5:00 p.m.</p>
+        <p class="meeting-time">Friday, June 20, 2024</p>
+        <p>Set up at 6:00 p.m.<br>Dinner starts at 7:30 p.m.</p>
         <p class="meeting-location">Unitarian Universalist Church<br>1893 N. Vasco Rd., Livermore</p>
        </div>
       </div>
@@ -244,7 +244,7 @@ He joined the Jupiter Star deflection effort in 2023."
    <h3 class="subtitle">June's meeting</h3>
    <!-- Next year be sure to invite family members, esp. Sue!  -->
    Our June meeting will be our annual Summer BBQ. Plan on working up an appetite by
-   helping to set-up and get the charcoal going at about 5:30pm. We will start eating
+   helping to set-up and get the charcoal going at about 6:30pm. We will start eating
    around 6:00pm.  <br><br>
    The club will provide hamburgers, hotdogs and vegetarian black bean burgers,
    along with a variety of toppings.  If you wish, provide side dishes for your family, but not
@@ -312,7 +312,7 @@ He joined the Jupiter Star deflection effort in 2023."
     }
 </style>
 <ul>
-    <li>4/19/25</li>
+    <li>6/21/25</li>
 </ul>
 
    Tesla Vintner star parties are generally open to club members and their guests.  The star parties will run from 7:00 PM
