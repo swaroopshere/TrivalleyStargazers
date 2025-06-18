@@ -59,7 +59,7 @@
      <script type="text/javascript">
       <!--
        contact("alrep",		"trivalleystargazers.org",	"Don Dossa",			"Astronomical League Representative");
-       contact("delvalle",	"trivalleystargazers.org",	"David Wright", 	"Del Valle Coordinator");
+       contact("delvalle",	"trivalleystargazers.org",	"Dave Wilzius", 	"Del Valle Coordinator");
        contact("historian",	"trivalleystargazers.org",	"Open",     	        "Historian");
        contact("librarian",	"trivalleystargazers.org",	"Ron Kane",	 	"Librarian");
        contact("telescopes", 	"trivalleystargazers.org",	"Ron Kane",		"Loaner Scope Manager");
