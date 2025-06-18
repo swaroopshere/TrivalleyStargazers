@@ -14,7 +14,7 @@
 
   <script type="text/javascript">
    <!--
-    lastUpdateDate = "April 15, 2025";
+    lastUpdateDate = "May 12, 2025";
    //-->
   </script>
   <!-- The id for the button that needs to be underlined. -->
@@ -31,7 +31,7 @@
     <div class="content" style="font-size:medium; text-align:center; width:100%; margin-bottom:30px;">
 
      <b>
-     <a title="This month's Prime Focus" href="newsletters/2025/tvsnews0425.pdf#zoom=100&amp;pagemode=none" target="_top">
+     <a title="This month's Prime Focus" href="newsletters/2025/tvsnews0525.pdf#zoom=100&amp;pagemode=none" target="_top">
       View the latest newsletter:<br><br>
        <img src="images/newscover.jpg" title="Click here to view the latest newsletter" alt="Newsletter cover"
 	style="border:ridge; border-color:black; border-width:1px;">

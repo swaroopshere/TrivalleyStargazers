@@ -1,53 +1,39 @@
 {
     "events": [
         {
-            "date": "2025-04-05",
-            "title": "Cub Scout star party at Del Valle Arroyo Road Staging Area",
-            "description": "Cub Scout star party at Del Valle Arroyo Road Staging Area. Start set up 6:30, observing from 7:30 to 9:30.&nbsp;",
-            "location": "Del Valle Arroyo Road Staging Area, Arroyo Road",
-            "time": "1:30 AM"
+            "date": "2025-05-31",
+            "title": "Evening Stargazing at the Bankhead Theatre",
+            "description": "Livermore Amador Symphony will play a \"Celestial Sounds\" concert at the Bankhead Saturday evening May 31st. They would like us to set up out front for an intermission starting about 8:00-8:30. We would be looking at a first quarter moon in the daylight for this one. Then when the concert is over, a little starparty out front for until maybe 10 or so...I think",
+            "location": "Bankhead Theatre 2466 8th Street Livermore, CA 94550",
+            "time": "7:30 PM"
         },
         {
-            "date": "2025-04-10",
-            "title": "Livermore School District Science Odyssey",
-            "description": "Indoor exhibit and activities at Livermore School District Science Odyssey (Science Fair) at Joe Michell School in Livermore. The event goes from 5:00 to 7:00, so it will be over before it gets dark. Set up 4:00 pm.&nbsp;",
-            "location": "Joe Michell School, 1001 Elaine Avenue, Livermore",
-            "time": "11:00 PM"
+            "date": "2025-06-14",
+            "title": "H2O open house",
+            "description": "Description\n\n\nA trip for club members and the public to TVS&rsquo;s dark observing site. Meet at the corner of Mines and Tesla Roads. The caravan to the site leaves at 6:30 pm sharp. Bring $3 for site admission. &nbsp;This is also an opportunity for members who want access but have not completed site orientation to do so.&nbsp;",
+            "location": "Meet at the corner of Mines and Tesla Roads",
+            "time": "6:30 PM"
         },
         {
-            "date": "2025-04-12",
-            "title": "Solar observing at Tri-Valley Innovation Fair",
-            "description": "Solar observing and activities. Set up 9:00 am. The fair goes from 10 to 5.&nbsp;",
-            "location": "Alameda County Fairgrounds, Pleasanton",
-            "time": "4:00 PM"
-        },
-        {
-            "date": "2025-04-18",
-            "title": "TVS Club Meeting",
-            "description": "https://us02web.zoom.us/j/88133066421?pwd=7UtRdUIL8FvHQBrDCbfNZEFik6oakt.1\n&nbsp;",
-            "location": "Zoom meeting",
-            "time": "2:30 AM"
-        },
-        {
-            "date": "2025-04-30",
-            "title": "School star party at John Green Elementary School",
-            "description": "School star party at John Green Elementary, set up 6:30, observing 7:30 to 9:30.&nbsp;",
-            "location": "John Green Elementary School, 3300 Antone Way, Dublin",
-            "time": "1:30 AM"
-        },
-        {
-            "date": "2025-05-02",
-            "title": "School star party at Murray Elementary School",
-            "description": "School star party at Murray Elementary, set up at 6:45, observing 7:30 to 9:30. I am told we should be able to drive out onto their blacktop.",
-            "location": "Murray Elementary School, 8435 Davona Dr, Dublin, CA 94568",
-            "time": "1:45 AM"
-        },
-        {
-            "date": "2025-05-16",
+            "date": "2025-06-20",
             "title": "TVS Club Meeting",
             "description": "TVS Club meetings are open to all members and the public.&nbsp;See TVS newsletter www.trivalleystargazers.org&nbsp;for details on how to participate in the zoom video conference call.",
             "location": "Zoom meeting",
-            "time": "2:30 AM"
+            "time": "7:30 PM"
+        },
+        {
+            "date": "2025-06-28",
+            "title": "Public star party at Sunol Regional Wilderness",
+            "description": "Public star party at Sunol Regional Wilderness. Set up 8:00. &nbsp;Observing starts 9:00 pm, ends about 11:00 pm. &nbsp;",
+            "location": "1895 Geary Road, Sunol",
+            "time": "8:00 PM"
+        },
+        {
+            "date": "2025-07-18",
+            "title": "TVS Club Meeting",
+            "description": "TVS Club meetings are open to all members and the public.&nbsp;See TVS newsletter www.trivalleystargazers.org&nbsp;for details on how to participate in the zoom video conference call.",
+            "location": "Zoom meeting",
+            "time": "7:30 PM"
         }
     ]
 }
