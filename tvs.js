@@ -687,3 +687,12 @@ currentDetails.style.display = "none";
 
     currentTopic = newTopic;
 }
+
+// Highlight the TVS logo according to whether the mouse is over it or not
+function highlightLogo(mouseover) {
+	var logoSrc = document.getElementById("logo").src;
+	if (mouseover)
+		document.getElementById("logo").src = "images/logo2.png";
+	else
+		document.getElementById("logo").src = "images/logo1.png";	
+};
