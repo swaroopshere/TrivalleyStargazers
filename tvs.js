@@ -670,3 +670,29 @@ function updateTotal() {
 	e = document.getElementById("total");
 	e.value = "$"+total;
 };
+
+// Show the details for a selected topic.  This routine finds <div> tag corresponding to the given
+// topic by prepending "D_" to the id of the topic tag.
+function showLinksDetails(newTopic) {
+    var newDetails = document.getElementById("D_" + newTopic.id);	
+    if (currentTopic == null)
+    currentTopic = document.getElementById("overview");
+    var currentDetails = document.getElementById("D_" + currentTopic.id);
+
+    currentTopic.style.fontWeight = "normal";
+currentDetails.style.display = "none";
+
+    newTopic.style.fontWeight = "bold";
+    newDetails.style.display = "block";
+
+    currentTopic = newTopic;
+}
+
+// Highlight the TVS logo according to whether the mouse is over it or not
+function highlightLogo(mouseover) {
+	var logoSrc = document.getElementById("logo").src;
+	if (mouseover)
+		document.getElementById("logo").src = "images/logo2.png";
+	else
+		document.getElementById("logo").src = "images/logo1.png";	
+};
