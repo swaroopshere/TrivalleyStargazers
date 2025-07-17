@@ -29,8 +29,8 @@
             //showOptional("opt_announce");
             //showOptional("opt_potluck");
             //showOptional("opt_potluck_details");
-            showOptional("opt_bbq");
-            showOptional("opt_bbq_details");
+            //showOptional("opt_bbq");
+            //showOptional("opt_bbq_details");
         }
    //-->
   </script>
@@ -85,13 +85,13 @@ The Tri-Valley Stargazers Privacy Policy is available <a href="https://trivalley
       <h3 class="meeting-header">Next Public Meeting</h3>	
       <div class="optional" id="opt_talk">
        <div class="meeting-details">
-        <p class="meeting-time">Friday, May 16, 2025 at 7:30 p.m.</p>
+        <p class="meeting-time">Friday, July 18, 2025 at 7:30 p.m.</p>
         <p class="meeting-location">Unitarian Universalist Church<br>1893 N. Vasco Rd., Livermore</p>
        </div>
        
        <div class="meeting-presenter">
-        <strong>Topic:</strong> Deflection of light near Jupiter<br>
-        <strong>Presenter:</strong> Dr. William (Bill) Fisher 
+        <strong>Topic:</strong> "Astronomy and the Billionaire Space Race<br>
+        <strong>Presenter:</strong> Samantha Lawler 
        </div>
 
        <div class="meeting-description">
@@ -134,7 +134,7 @@ The Tri-Valley Stargazers Privacy Policy is available <a href="https://trivalley
      <div class="meeting-card">
       <h3 class="meeting-header">Next Board Meeting</h3>
       <div class="meeting-details">
-       <p class="meeting-time">Monday, May 19, 2025, 7:30 p.m.</p>
+       <p class="meeting-time">Monday, July 21, 2025, 7:30 p.m.</p>
        <p class="meeting-description">Board meetings are usually held using video conferencing. Members are always welcome at board meetings.</p>
       </div>
      </div>
@@ -167,7 +167,7 @@ Please visit:  <a href="https://eastbayastro.org/events/" target="_blank">East B
 <br><br> -->
 
   <div class="optional" id="opt_talk_details">
-   <h3 class="subtitle">May 2025 Member Meeting Presentation</h3>
+   <h3 class="subtitle">July 2025 Member Meeting Presentation</h3>
    <br><br>
  
    This meeting will be live at the Unitarian church and will also be available using the video conference utility 
@@ -182,26 +182,10 @@ Please visit:  <a href="https://eastbayastro.org/events/" target="_blank">East B
 
    <script type="text/javascript">
      currentSpeaker(
-       "Deflection of light near Jupiter",
-       "Dr William (Bill) Fisher",
-       "In the August 2023 issue of Sky and Telescope Don Bruns made a call for volunteers to join an effort to attempt to measure the deflection of light due to Jupiter’s gravity. Bill accepted that challenge. Don and his other collaborators had noted that on October 27-27 2023 3 nearly collinear 7th magnitude stars would pass near Jupiter. One star would come within 25” of the\
-surface of Jupiter and the two others were close enough to fit in the field of view of\
-typical amateur imaging equipment. This configuration allowed for data reduction that\
-could reduce the measurement error to around .003 arcsec, a factor of 2 greater than\
-the expected deflection.\
-Bill will talk about the methods used; the results reported in the November 2024 issue of\
-Sky and Telescope and follow on efforts to measure the deflection of light of Jupiter’s\
-moons.",
-       "Bill has been a member of TVS since 2018 when he retired after selling his company\
-that provides the satellite scheduling algorithms for the aerospace industry ( yes even\
-NASA uses them). He has a Doctor of Science degree from MIT in Nuclear\
-Engineering.\
-Prior to his software company he worked at the Lockheed Palo Alto Research\
-Laboratory in experimental physics he developed programmable analog neural\
-networks used for adaptive optics and high speed optimization. The adaptive mirror that\
-Bill used for his experiments was also used at Lick observatory to demonstrate laser\
-guide star adaptive optics.\
-He joined the Jupiter Star deflection effort in 2023."
+       "Astronomy and the Billionaire Space Race",
+       "Samantha Lawler",
+       "In February 2024, hundreds of pounds of potentially lethal debris from a SpaceX Crew Dragon trunk from a private astronaut mission fell on farmland near Regina, Saskatchewan. Dr. Samantha Lawler of the University of Regina has been studying the degradation of the night sky due to thousands of new commercial satellites over the past six years and was stunned to learn that space debris fell so close to her home. This talk begins with the story of SpaceX employees driving a rented U-Haul truck to an isolated grain farm to be greeted by an astronomer and a dozen of Saskatchewan's finest local journalists. By the end of the talk, we'll cover international space law, atmospheric pollution due to launches and reentries, and how thousands of new commercial satellites are already changing casual stargazing, astrophotography, and astronomy research alike",
+       "Dr. Samantha Lawler is an Associate Professor of Astronomy at Campion College and the Department of Physics at the University of Regina in Saskatchewan, Canada. She received her B.S. in Astrophysics from the California Institute of Technology, an M.A. in Astronomy from Wesleyan University, and a Ph.D. from the University of British Columbia. Her research includes studying how the Kuiper Belt formed and how its orbits have changed over time, the stability of exoplanet orbits and how they interact with planetesimal disks, how to make artificial satellites less visible and less harmful, and whether planets can support life. Her discoveries in the Kuiper Belt and predictions for satellite pollution have been featured by CBC, CNN, NPR, Scientific American, The New York Times, The Los Angeles Times, Wired Magazine, Nature, and many other international news outlets. She lives on a farm outside Regina and deeply appreciates the beautiful prairie skies. Recorded: February 7, 2025"
      );
    
    </script>
