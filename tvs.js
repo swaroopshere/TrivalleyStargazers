@@ -76,6 +76,44 @@ function mcancelclosetime() {
 	}
 }
 
+function goFetch() {
+	var theMonth = document.getElementById("theMonth").value;
+	var theYear = document.getElementById("theYear").value;		// eg. 2001
+	var shortYear = theYear.substring(2);				// eg. 01
+	var filename = "newsletters/" + theYear + "/";
+
+
+	// Give user a warning if he tries to display a file that probably doesn't exist
+	// This check won't know whether this month's newsletter has been published yet,
+	// so it will try to display it, even if that triggers the 1&1 bug.
+
+	if (theYear == 1996 && theMonth < 3) {
+		alert("There is no newsletter for that date");
+		return;
+	}
+	var thisYear = Number((new Date()).getFullYear());
+	var thisMonth = Number((new Date()).getMonth()) + 1;
+	if (theYear == thisYear && theMonth > thisMonth) {
+		alert("That newsletter hasn't been published yet ");
+		return;
+	}
+
+	// Files before 09'01 are HTML files, and files on or after that are PDF files
+
+	if ((theYear < 2001) || (theYear == 2001 && theMonth < 9))
+		filename += theMonth + shortYear + "/index.html";
+	else
+		filename += "tvsnews" + theMonth + shortYear + ".pdf#zoom=100&pagemode=none";
+
+	// On 1&1's servers, if the file doesn't exist, they may try to do you a "favor"
+	// by substituting a file that does exist.  For example, tvsnews0196/index.html
+	// doesn't exist; so they substitute tvsnew1096/index.html assuming you have made a
+	// typo.  This caused me many hours of debugging before I realized what was happening.
+
+	window.location.href = filename;		// display the selected newsletter
+};
+
+
 // close layer when click-out
 document.onclick = mclose;
 
