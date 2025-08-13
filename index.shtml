@@ -85,13 +85,13 @@ The Tri-Valley Stargazers Privacy Policy is available <a href="https://trivalley
       <h3 class="meeting-header">Next Public Meeting</h3>	
       <div class="optional" id="opt_talk">
        <div class="meeting-details">
-        <p class="meeting-time">Friday, July 18, 2025 at 7:30 p.m.</p>
+        <p class="meeting-time">Friday, August 15, 2025 at 7:30 p.m.</p>
         <p class="meeting-location">Unitarian Universalist Church<br>1893 N. Vasco Rd., Livermore</p>
        </div>
        
        <div class="meeting-presenter">
-        <strong>Topic:</strong> "Astronomy and the Billionaire Space Race<br>
-        <strong>Presenter:</strong> Samantha Lawler 
+        <strong>Topic:</strong> "The Secrets of Long Focal Length Imaging"<br>
+        <strong>Presenter:</strong> John Hayes, Ph.D.
        </div>
 
        <div class="meeting-description">
@@ -134,7 +134,7 @@ The Tri-Valley Stargazers Privacy Policy is available <a href="https://trivalley
      <div class="meeting-card">
       <h3 class="meeting-header">Next Board Meeting</h3>
       <div class="meeting-details">
-       <p class="meeting-time">Monday, July 21, 2025, 7:30 p.m.</p>
+       <p class="meeting-time">Monday, August 18, 2025, 7:30 p.m.</p>
        <p class="meeting-description">Board meetings are usually held using video conferencing. Members are always welcome at board meetings.</p>
       </div>
      </div>
@@ -167,7 +167,7 @@ Please visit:  <a href="https://eastbayastro.org/events/" target="_blank">East B
 <br><br> -->
 
   <div class="optional" id="opt_talk_details">
-   <h3 class="subtitle">July 2025 Member Meeting Presentation</h3>
+   <h3 class="subtitle">August 2025 Member Meeting Presentation</h3>
    <br><br>
  
    This meeting will be live at the Unitarian church and will also be available using the video conference utility 
@@ -182,10 +182,10 @@ Please visit:  <a href="https://eastbayastro.org/events/" target="_blank">East B
 
    <script type="text/javascript">
      currentSpeaker(
-       "Astronomy and the Billionaire Space Race",
-       "Samantha Lawler",
-       "In February 2024, hundreds of pounds of potentially lethal debris from a SpaceX Crew Dragon trunk from a private astronaut mission fell on farmland near Regina, Saskatchewan. Dr. Samantha Lawler of the University of Regina has been studying the degradation of the night sky due to thousands of new commercial satellites over the past six years and was stunned to learn that space debris fell so close to her home. This talk begins with the story of SpaceX employees driving a rented U-Haul truck to an isolated grain farm to be greeted by an astronomer and a dozen of Saskatchewan's finest local journalists. By the end of the talk, we'll cover international space law, atmospheric pollution due to launches and reentries, and how thousands of new commercial satellites are already changing casual stargazing, astrophotography, and astronomy research alike",
-       "Dr. Samantha Lawler is an Associate Professor of Astronomy at Campion College and the Department of Physics at the University of Regina in Saskatchewan, Canada. She received her B.S. in Astrophysics from the California Institute of Technology, an M.A. in Astronomy from Wesleyan University, and a Ph.D. from the University of British Columbia. Her research includes studying how the Kuiper Belt formed and how its orbits have changed over time, the stability of exoplanet orbits and how they interact with planetesimal disks, how to make artificial satellites less visible and less harmful, and whether planets can support life. Her discoveries in the Kuiper Belt and predictions for satellite pollution have been featured by CBC, CNN, NPR, Scientific American, The New York Times, The Los Angeles Times, Wired Magazine, Nature, and many other international news outlets. She lives on a farm outside Regina and deeply appreciates the beautiful prairie skies. Recorded: February 7, 2025"
+       "The Secrets of Long Focal Length Imaging",
+       "John Hayes, Ph.D.",
+       "Long focal length deep sky imaging presents special challenges and rewards. It’s possible to produce stunning images of many galaxies and smaller nebula; however, there are many challenges that must be adressed to achieve good results. We’ll review mechanical stability requirements, precision optical alignment, guiding methods, dealing with thermal issues, selecting the best camera and how seeing affects results. The author will pass along a number of recommendations, tips and tricks learned from imaging with a highly modified C14 EdgeHD, a 20” CDK, and an ASA600--all working at an EFL of around 4 m.",
+       "John Hayes is a retired optical engineer, entrepreneur, and professor with a B.S. in physics and astronomy, a M.S. and Ph.D. in optics from the University of Arizona. His interest in telescopes and astronomy started in elementary school, which led to a career in the field of optical engineering. He has authored 30 professional papers, articles, book chapters, and presentations in the field of optical testing and holds 14 patents in the fields of optics and atomic force microscopy. In retirement, Dr. Hayes has returned to the hobby of astro-imaging, which he does with an ASA600 on a L-600 mount and a GTX130 refractor on a Mach2 mount-- both at Obstech in Chile.  He has made numerous presentations on the Astro-Imaging Channel, AIC, NEIAC and to numerous other clubs, universities and organizations. He has been recognized with 23 IOTD awards and 2 NASA APODs. He is also an active pilot and flight instructor with jet type ratings and a former regular contributor to Plane and Pilot magazine. As an Adjunct Research Professor of Optics, he enjoys using his technical background to help amateurs explore and advance the state of the art of astro-imaging."
      );
    
    </script>
