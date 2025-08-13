@@ -596,3 +596,41 @@ a:hover {
     width: 100%;
   }
 }
+
+/* H2O Rebuild Section Styles */
+.h2o-rebuild-section {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  /*border-left: 4px solid #3498db;*/
+}
+
+.h2o-rebuild-section p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.h2o-image-container {
+  text-align: right;
+  margin: 20px 0;
+  float: right;
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
+.h2o-image-container img {
+  border: 3px solid #3498db;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.h2o-image-container img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+.h2o-image-container a {
+  display: inline-block;
+}

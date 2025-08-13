@@ -26,6 +26,7 @@
             showOptional("opt_talk");
             showOptional("opt_tesla");
             showOptional("opt_talk_details");
+            showOptional("opt_h2o");
             //showOptional("opt_announce");
             //showOptional("opt_potluck");
             //showOptional("opt_potluck_details");
@@ -264,7 +265,7 @@ Please visit:  <a href="https://eastbayastro.org/events/" target="_blank">East B
   <div class="optional" id="opt_h2o">
   <h3 class="subtitle">H2O Open House</h3>
 
-   Our next open house is September 28, 2024 for the club's dark sky site, 
+   Our next open house is August 16, 2025 for the club's dark sky site, 
    <a href="h2o.shtml" title="Learn more about the TVS's Hidden Hill Observatory">Hidden Hill Observatory</a>, 
    aka H2O.  <br><br>
 
@@ -309,12 +310,20 @@ Please visit:  <a href="https://eastbayastro.org/events/" target="_blank">East B
 
 
   <h3 class="subtitle">We continue to rebuild the Hidden Hill Observatory</h3>
-  Our latest change is to add a shed for storing tools and portable telescopes.
-  Click on this image to see more pictures of our progress:<br><br>
-  <a href="images/fire/album/index.html" title="Fire images">
-   <img src="images/temp/shed_IMG_2955_resized.jpg" width="181" alt="Shed" 
-      title="Click to see our recontruction progress" style="floatxxx:right;">
-  </a><br><br>
+  <div class="h2o-rebuild-section">
+    <p>Brand new updates on our H2O Rebuild project! The new dome has been installed and painted! Volunteers have been tirelessly working to bring the dome to life! Work on the mount is in progress.</p>
+    
+    <p>Click on this image to see more pictures of our progress:</p>
+    
+    <div class="h2o-image-container">
+      <a href="images/fire/album/index.html" title="H2O Rebuild images">
+        <img src="images/h2o_rebuild/Dome.jpeg" width="181" alt="Dome" 
+             title="Click to see our recontruction progress">
+      </a>
+    </div>
+    
+    <div style="clear: both;"></div>
+  </div>
 
   <h3 class="subtitle">TVS Crystal Wine Glasses For Sale</h3>
   <img src="images/wine_glass.jpg" alt="wine glass" width="200" height="243" style="float:right; margin: 0 20px 10px 10px;">
@@ -335,7 +344,7 @@ Please visit:  <a href="https://eastbayastro.org/events/" target="_blank">East B
   embroidered with the TVS logo. If you are interested in obtaining an
   embroidered logo item, you can do so by ordering whatever you would like
   through 
-  <a title="Land's End Corporate Sales" href="http://landsend.com/" target="_blank">
+  <a title="Land's End Corporate Sales" href="https://business.landsend.com/" target="_blank">
    <b>Land's End's Corporate Sales</b>
   </a>
   section and specifying TVS logo #0118948. You will need to set up an account, which will 
