@@ -328,7 +328,7 @@ function startBannerSwapping() {
     setInterval(swapBanners, swapTime);
 }
 
-// Fetch and display upcoming events
+// Fetch and display upcoming events for current month and next month
 async function displayUpcomingEvents() {
     try {
         const response = await fetch('calendar-data.json');
@@ -341,6 +341,9 @@ async function displayUpcomingEvents() {
         if (!eventsDiv) return;
         
         const now = new Date();
+        const currentYear = now.getFullYear();
+        const currentMonth = now.getMonth(); // 0-based month (0=January, 1=February, etc.)
+        
         const upcomingEvents = data.events
             .filter(event => {
                 // Filter out member-only events and club meetings
@@ -351,12 +354,34 @@ async function displayUpcomingEvents() {
                                 event.description.toLowerCase().includes('meeting') ||
                                 event.title.toLowerCase().includes('board') ||
                                 event.description.toLowerCase().includes('board');
-                return new Date(event.date) >= now && !isMemberOnly && !isMeeting;
+                
+                // Only filter by member-only and meeting criteria, not by date
+                return !isMemberOnly && !isMeeting;
+            })
+            .filter(event => {
+                // Show events for current month and next month only
+                const eventDate = new Date(event.date);
+                const eventYear = eventDate.getFullYear();
+                const eventMonth = eventDate.getMonth();
+                
+                // Check if event is in current month or next month
+                if (eventYear === currentYear) {
+                    return eventMonth === currentMonth || eventMonth === (currentMonth + 1) % 12;
+                } else if (eventYear === currentYear + 1 && currentMonth === 11) {
+                    // Handle December to January transition
+                    return eventMonth === 0;
+                }
+                return false;
             })
             .sort((a, b) => new Date(a.date) - new Date(b.date));
             
         if (upcomingEvents.length === 0) {
-            eventsDiv.innerHTML = '<p>No upcoming public star parties scheduled.</p>';
+            const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+            const currentMonthName = monthNames[currentMonth];
+            const nextMonthName = monthNames[(currentMonth + 1) % 12];
+            const nextMonthYear = currentMonth === 11 ? currentYear + 1 : currentYear;
+            
+            eventsDiv.innerHTML = `<p>No public star parties scheduled for ${currentMonthName} ${currentYear} or ${nextMonthName} ${nextMonthYear}.</p>`;
             return;
         }
         
