@@ -33,12 +33,18 @@
      <b>
      <a title="This month's Prime Focus" href="newsletters/2024/tvsnews0124.pdf#zoom=100&amp;pagemode=none" target="_top">
       View the latest newsletter:<br><br>
-       <img src="images/newscover.jpg" title="Click here to view the latest newsletter" alt="Newsletter cover"
-	style="border:ridge; border-color:black; border-width:1px;">
       </a>
 
      </b>
      <br><br><br><br>
+
+    <!-- Newsletter cover dynamically updated -->
+    <div id="new-newsletter-container" style="margin-top: 20px;">
+      <a id="new-newsletter-link" href="newsletters/2025/tvsnews0725.pdf" target="_blank">
+        <img id="new-newsletter-img" src="images/newscover.jpg" alt="Newsletter cover" style="border: ridge; border-color: black; border-width: 1px;">
+      </a>
+    </div>
+
      <b>View older newsletters:</b><br>
      <table align="center">
       <tr>
@@ -76,12 +82,34 @@
      </script>
      <br><br>
 
-     To contribute to the newsletter, please contact the editor
-     <script type="text/javascript">
-      <!--
-       contact("newsletter", "trivalleystargazers.org", "Scott Schneider");
-       //-->
-     </script>.
+     <p>
+        To contribute to the newsletter, please contact the editor
+        <script type="text/javascript">
+          <!--
+          contact("newsletter", "trivalleystargazers.org", "Scott Schneider");
+          //-->
+        </script>.
+      </p>
+
+      <!-- Upload new newsletter button -->
+      <p>
+        <button type="button" onclick="window.open('upload_newsletter.shtml', '_blank')">Upload New Newsletter</button>
+      </p>
+
+      <script>
+        // Update image and link from upload tab
+        window.addEventListener("message", (event) => {
+          if (event.data?.pdfUrl && event.data?.imageUrl) {
+            const img = document.getElementById("new-newsletter-img");
+            const link = document.getElementById("new-newsletter-link");
+
+            img.src = event.data.imageUrl;
+            link.href = event.data.pdfUrl;
+
+            console.log("Newsletter updated.");
+          }
+        });
+      </script>
      
 
      <div class="newsletterlinks">

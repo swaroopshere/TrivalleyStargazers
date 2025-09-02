@@ -1,0 +1,93 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="author" content="Tri-Valley Stargazers">
+  <meta name="description" content="Upload a new newsletter">
+  <meta name="keywords" content="newsletter, upload, astronomy, Tri-Valley Stargazers">
+
+  <link href="tvs.css" rel="stylesheet" type="text/css">
+
+  <style type="text/css">
+    .content {
+      font-size: medium;
+      text-align: center;
+      padding: 40px;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    input[type="file"] {
+      width: 80%;
+      padding: 8px;
+      margin: 10px 0;
+      font-size: medium;
+    }
+
+    button {
+      padding: 8px 16px;
+      font-size: medium;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    h1, h2 {
+      color: #000066;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="content">
+  <h1 class="title" style="width: 270px;">Upload New Newsletter</h1>
+
+  <div id="upload-section">
+    <h2>Select PDF</h2>
+    <input type="file" id="pdfFile" accept="application/pdf">
+    <br>
+    <button onclick="handleUpload()">Upload Newsletter</button>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js"></script>
+<script type="text/javascript">
+  async function handleUpload() {
+    const file = document.getElementById("pdfFile").files[0];
+    if (!file) {
+      alert("Please select a PDF file.");
+      return;
+    }
+
+    const reader = new FileReader();
+    reader.onload = async function () {
+      const typedarray = new Uint8Array(reader.result);
+      const pdfBlob = new Blob([typedarray], { type: "application/pdf" });
+      const pdfUrl = URL.createObjectURL(pdfBlob);
+
+      const pdf = await pdfjsLib.getDocument({ data: typedarray }).promise;
+      const page = await pdf.getPage(1);
+
+      const desiredWidth = 725;
+      const originalViewport = page.getViewport({ scale: 1 });
+      const scale = desiredWidth / originalViewport.width;
+      const viewport = page.getViewport({ scale });
+
+      const canvas = document.createElement("canvas");
+      canvas.width = viewport.width;
+      canvas.height = viewport.height;
+      const context = canvas.getContext("2d");
+
+      await page.render({ canvasContext: context, viewport }).promise;
+      const imageUrl = canvas.toDataURL("image/png");
+
+      // Send PDF and image preview back to the main page
+      window.opener.postMessage({ pdfUrl, imageUrl }, "*");
+      alert("Newsletter uploaded successfully. You may now close this window.");
+    };
+
+    reader.readAsArrayBuffer(file);
+  }
+</script>
+
+</body>
+</html>
