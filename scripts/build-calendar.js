@@ -91,7 +91,7 @@ async function buildCalendar() {
         const now = new Date();
         console.log("Today's date " + now);
         const currentYear = now.getUTCFullYear();
-        const currentMonth = now.getUTCMonth() + 1;
+        const currentMonth = now.getUTCMonth();
         console.log('getting calendar dates for month ' + currentMonth + '/' + currentYear);
 
         // Get events for current month and next month

@@ -16,7 +16,7 @@
 
   <script type="text/javascript">
    <!--
-    lastUpdateDate = "May 12, 2025";
+    lastUpdateDate = "September 17, 2025";
    //-->
   </script>
 
@@ -86,13 +86,13 @@ The Tri-Valley Stargazers Privacy Policy is available <a href="https://trivalley
       <h3 class="meeting-header">Next Public Meeting</h3>	
       <div class="optional" id="opt_talk">
        <div class="meeting-details">
-        <p class="meeting-time">Friday, August 15, 2025 at 7:30 p.m.</p>
+        <p class="meeting-time">Friday, September 19, 2025 at 7:30 p.m.</p>
         <p class="meeting-location">Unitarian Universalist Church<br>1893 N. Vasco Rd., Livermore</p>
        </div>
        
        <div class="meeting-presenter">
-        <strong>Topic:</strong> "The Secrets of Long Focal Length Imaging"<br>
-        <strong>Presenter:</strong> John Hayes, Ph.D.
+        <strong>Topic:</strong> "Latest on Vera Rubin Observatory"<br>
+        <strong>Presenter:</strong> Don Dossa, Ph.D.
        </div>
 
        <div class="meeting-description">
@@ -135,7 +135,7 @@ The Tri-Valley Stargazers Privacy Policy is available <a href="https://trivalley
      <div class="meeting-card">
       <h3 class="meeting-header">Next Board Meeting</h3>
       <div class="meeting-details">
-       <p class="meeting-time">Monday, August 18, 2025, 7:30 p.m.</p>
+       <p class="meeting-time">Monday, September 22, 2025, 7:30 p.m.</p>
        <p class="meeting-description">Board meetings are usually held using video conferencing. Members are always welcome at board meetings.</p>
       </div>
      </div>
@@ -168,7 +168,7 @@ Please visit:  <a href="https://eastbayastro.org/events/" target="_blank">East B
 <br><br> -->
 
   <div class="optional" id="opt_talk_details">
-   <h3 class="subtitle">August 2025 Member Meeting Presentation</h3>
+   <h3 class="subtitle">September 2025 Member Meeting Presentation</h3>
    <br><br>
  
    This meeting will be live at the Unitarian church and will also be available using the video conference utility 
@@ -183,10 +183,10 @@ Please visit:  <a href="https://eastbayastro.org/events/" target="_blank">East B
 
    <script type="text/javascript">
      currentSpeaker(
-       "The Secrets of Long Focal Length Imaging",
-       "John Hayes, Ph.D.",
-       "Long focal length deep sky imaging presents special challenges and rewards. It’s possible to produce stunning images of many galaxies and smaller nebula; however, there are many challenges that must be adressed to achieve good results. We’ll review mechanical stability requirements, precision optical alignment, guiding methods, dealing with thermal issues, selecting the best camera and how seeing affects results. The author will pass along a number of recommendations, tips and tricks learned from imaging with a highly modified C14 EdgeHD, a 20” CDK, and an ASA600--all working at an EFL of around 4 m.",
-       "John Hayes is a retired optical engineer, entrepreneur, and professor with a B.S. in physics and astronomy, a M.S. and Ph.D. in optics from the University of Arizona. His interest in telescopes and astronomy started in elementary school, which led to a career in the field of optical engineering. He has authored 30 professional papers, articles, book chapters, and presentations in the field of optical testing and holds 14 patents in the fields of optics and atomic force microscopy. In retirement, Dr. Hayes has returned to the hobby of astro-imaging, which he does with an ASA600 on a L-600 mount and a GTX130 refractor on a Mach2 mount-- both at Obstech in Chile.  He has made numerous presentations on the Astro-Imaging Channel, AIC, NEIAC and to numerous other clubs, universities and organizations. He has been recognized with 23 IOTD awards and 2 NASA APODs. He is also an active pilot and flight instructor with jet type ratings and a former regular contributor to Plane and Pilot magazine. As an Adjunct Research Professor of Optics, he enjoys using his technical background to help amateurs explore and advance the state of the art of astro-imaging."
+       "Latest on Vera Rubin Observatory",
+       "Don Dossa, Ph.D.",
+       "After 20 years of proposals, multiple DOE and NSF reviews, the construction of the Vera Rubin Observatory on Cerro Pachon in Chile was finally approved. While a few minor construction details remain, the observatory has taken several weeks of test images. This talk includes a review of the observatory, the technology, and its science goals. Early results from the Rubin will be presented. Differences with the James Webb Space Telescope (JWST) capabilities and operations are explained.",
+       "Don Dossa has a PhD in theoretical physics and most of his career has been in supercomputer design, computational astrophysics and astronomy. He has worked most recently at LLNL. Since retirement he has enjoyed amateur astronomy with his son Tom and wrote a novel."
      );
    
    </script>
