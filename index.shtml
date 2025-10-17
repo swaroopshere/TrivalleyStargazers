@@ -86,13 +86,13 @@ The Tri-Valley Stargazers Privacy Policy is available <a href="https://trivalley
       <h3 class="meeting-header">Next Public Meeting</h3>	
       <div class="optional" id="opt_talk">
        <div class="meeting-details">
-        <p class="meeting-time">Friday, September 19, 2025 at 7:30 p.m.</p>
+        <p class="meeting-time">Friday, October 17, 2025 at 7:30 p.m.</p>
         <p class="meeting-location">Unitarian Universalist Church<br>1893 N. Vasco Rd., Livermore</p>
        </div>
        
        <div class="meeting-presenter">
-        <strong>Topic:</strong> "Latest on Vera Rubin Observatory"<br>
-        <strong>Presenter:</strong> Don Dossa, Ph.D.
+        <strong>Topic:</strong> "Solar Imaging with SUNRISE"<br>
+        <strong>Presenter:</strong> Mike Rushford
        </div>
 
        <div class="meeting-description">
@@ -135,7 +135,7 @@ The Tri-Valley Stargazers Privacy Policy is available <a href="https://trivalley
      <div class="meeting-card">
       <h3 class="meeting-header">Next Board Meeting</h3>
       <div class="meeting-details">
-       <p class="meeting-time">Monday, September 22, 2025, 7:30 p.m.</p>
+       <p class="meeting-time">Monday, October 20, 2025, 7:30 p.m.</p>
        <p class="meeting-description">Board meetings are usually held using video conferencing. Members are always welcome at board meetings.</p>
       </div>
      </div>
@@ -168,7 +168,7 @@ Please visit:  <a href="https://eastbayastro.org/events/" target="_blank">East B
 <br><br> -->
 
   <div class="optional" id="opt_talk_details">
-   <h3 class="subtitle">September 2025 Member Meeting Presentation</h3>
+   <h3 class="subtitle">October 2025 Member Meeting Presentation</h3>
    <br><br>
  
    This meeting will be live at the Unitarian church and will also be available using the video conference utility 
@@ -183,10 +183,10 @@ Please visit:  <a href="https://eastbayastro.org/events/" target="_blank">East B
 
    <script type="text/javascript">
      currentSpeaker(
-       "Latest on Vera Rubin Observatory",
-       "Don Dossa, Ph.D.",
-       "After 20 years of proposals, multiple DOE and NSF reviews, the construction of the Vera Rubin Observatory on Cerro Pachon in Chile was finally approved. While a few minor construction details remain, the observatory has taken several weeks of test images. This talk includes a review of the observatory, the technology, and its science goals. Early results from the Rubin will be presented. Differences with the James Webb Space Telescope (JWST) capabilities and operations are explained.",
-       "Don Dossa has a PhD in theoretical physics and most of his career has been in supercomputer design, computational astrophysics and astronomy. He has worked most recently at LLNL. Since retirement he has enjoyed amateur astronomy with his son Tom and wrote a novel."
+       "Solar Imaging with SUNRISE",
+       "Mike Rushford",
+       "Mike Rushford, TVS member during 1980 to 2000 made a robotic DayStar solar telescope. In 1993 controlled via BBS modem transitioned the early 90ies onto the internet using the linux OS called Eyes on the skies. A Sky and telescope article explained this modem system September 1995. Cameras and most electronics were those purchased at amature radio swap meets. Today Lunt double stacked H-alpha filter telescope is run under windows 11 and custom python software he calls SUNRISE and will explain this. This software captures \"lucky images\" that are measured to be the best seeing within a short burst of images, saving disk space as only the sharpest images are saved. Cmos camera images of the sun seen through these H-alpha filters will be described and software operation demonstrated. A pdf slide show will introduce the system followed by a mpeg movie that can be accelerated or paused to show the process of taking images and stitching them into full disk images. Show a few images and a few gif movies showing solar rotation.",
+       "Mike Rushford is a retired software engineer and has been an active member of the Tri-Valley Stargazers since 1980. He has a passion for solar astronomy and has been involved in the development of the SUNRISE software for solar imaging."
      );
    
    </script>
