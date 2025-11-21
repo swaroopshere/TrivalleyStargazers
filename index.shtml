@@ -16,7 +16,7 @@
 
   <script type="text/javascript">
    <!--
-    lastUpdateDate = "September 17, 2025";
+    lastUpdateDate = "November 16, 2025";
    //-->
   </script>
 
@@ -27,7 +27,7 @@
             showOptional("opt_tesla");
             showOptional("opt_talk_details");
             showOptional("opt_h2o");
-            //showOptional("opt_announce");
+            showOptional("opt_announce");
             //showOptional("opt_potluck");
             //showOptional("opt_potluck_details");
             //showOptional("opt_bbq");
@@ -86,13 +86,13 @@ The Tri-Valley Stargazers Privacy Policy is available <a href="https://trivalley
       <h3 class="meeting-header">Next Public Meeting</h3>	
       <div class="optional" id="opt_talk">
        <div class="meeting-details">
-        <p class="meeting-time">Friday, October 17, 2025 at 7:30 p.m.</p>
+        <p class="meeting-time">Friday, November 21, 2025 at 7:30 p.m.</p>
         <p class="meeting-location">Unitarian Universalist Church<br>1893 N. Vasco Rd., Livermore</p>
        </div>
        
        <div class="meeting-presenter">
-        <strong>Topic:</strong> "Solar Imaging with SUNRISE"<br>
-        <strong>Presenter:</strong> Mike Rushford
+        <strong>Topic:</strong> "Panel Presentation on Astrophotography"<br>
+        <strong>Presenter:</strong> Gert Gottschalk, Mark Du, Curtis Macchioni, and Swaroop Shere
        </div>
 
        <div class="meeting-description">
@@ -135,7 +135,7 @@ The Tri-Valley Stargazers Privacy Policy is available <a href="https://trivalley
      <div class="meeting-card">
       <h3 class="meeting-header">Next Board Meeting</h3>
       <div class="meeting-details">
-       <p class="meeting-time">Monday, October 20, 2025, 7:30 p.m.</p>
+       <p class="meeting-time">Monday, November 24, 2025, 7:30 p.m.</p>
        <p class="meeting-description">Board meetings are usually held using video conferencing. Members are always welcome at board meetings.</p>
       </div>
      </div>
@@ -168,7 +168,7 @@ Please visit:  <a href="https://eastbayastro.org/events/" target="_blank">East B
 <br><br> -->
 
   <div class="optional" id="opt_talk_details">
-   <h3 class="subtitle">October 2025 Member Meeting Presentation</h3>
+   <h3 class="subtitle">November 2025 Member Meeting Presentation</h3>
    <br><br>
  
    This meeting will be live at the Unitarian church and will also be available using the video conference utility 
@@ -183,10 +183,10 @@ Please visit:  <a href="https://eastbayastro.org/events/" target="_blank">East B
 
    <script type="text/javascript">
      currentSpeaker(
-       "Solar Imaging with SUNRISE",
-       "Mike Rushford",
-       "Mike Rushford, TVS member during 1980 to 2000 made a robotic DayStar solar telescope. In 1993 controlled via BBS modem transitioned the early 90ies onto the internet using the linux OS called Eyes on the skies. A Sky and telescope article explained this modem system September 1995. Cameras and most electronics were those purchased at amature radio swap meets. Today Lunt double stacked H-alpha filter telescope is run under windows 11 and custom python software he calls SUNRISE and will explain this. This software captures \"lucky images\" that are measured to be the best seeing within a short burst of images, saving disk space as only the sharpest images are saved. Cmos camera images of the sun seen through these H-alpha filters will be described and software operation demonstrated. A pdf slide show will introduce the system followed by a mpeg movie that can be accelerated or paused to show the process of taking images and stitching them into full disk images. Show a few images and a few gif movies showing solar rotation.",
-       "Mike Rushford is a retired software engineer and has been an active member of the Tri-Valley Stargazers since 1980. He has a passion for solar astronomy and has been involved in the development of the SUNRISE software for solar imaging."
+       "Panel Presentation on Astrophotography",
+       "Gert Gottschalk, Mark Du, Curtis Macchioni, and Swaroop Shere",
+       "This month's meeting will be a panel presentation on astrophotography. The panel will be comprised of Gert Gottschalk, Mark Du, Curtis Macchioni, and Swaroop Shere. The panel will discuss the various aspects of astrophotography, including the equipment used, the techniques employed, and the results achieved. The panel will also discuss the various areas of astrophotography, including introductory astrophotography, planetary astrophotography, EAA and deep sky astrophotography. The presentations will be followed by a Q&A session.",
+       "Mark Du is an astrophotographer who began imaging in 2020 and has been learning and refining his craft ever since. By day, he works as a software engineer, bringing an analytical approach to solving the technical challenges of deep sky imaging. He currently shoots with an ASI2600MC Pro camera, ASKAR 120APO telescope, and ZWO AM5 mount. Gert Gottschalk  has been interested in all things astronomy since the 1980. His interest are building optics, making telescopes, and all kinds of observation and imaging in astronomy. He is TVS member since 1998. Gert has a PhD in electrical engineering from the university in Berlin, Germany and has professionally worked in the silicon valley tech industry since 1997. Gert Gottschalk  has been interested in all things astronomy since the 1980. His interest are building optics, making telescopes, and all kinds of observation and imaging in astronomy. He is TVS member since 1998. Gert has a PhD in electrical engineering from the university in Berlin, Germany and has professionally worked in the silicon valley tech industry since 1997. Curtis Macchioni is a physicist who retired after 40 years in the tech industry.  He has shared his interest in Electronically Assisted Astronomy through numerous presentations, a article in the March 2016 issue of Sky & Telescope and his YouTube channel. Swaroop Shere is a software engineer by profession and an amateur astrophotographer when time and family allows for it. He started with visual astronomy in the early 2010s before venturing into basic astrophotography around 2015. Over the years, he learnt the ropes mostly from other fellow astrophotographers, club members, youtube and other online resources. Currently he images with a remote setup consisting of AP-130 GT on paramount MYT with a QHY-268-M camera. "
      );
    
    </script>
@@ -311,13 +311,13 @@ Please visit:  <a href="https://eastbayastro.org/events/" target="_blank">East B
 
   <h3 class="subtitle">We continue to rebuild the Hidden Hill Observatory</h3>
   <div class="h2o-rebuild-section">
-    <p>Brand new updates on our H2O Rebuild project! The new dome has been installed and painted! Volunteers have been tirelessly working to bring the dome to life! Work on the mount is in progress.</p>
+    <p>Brand new updates on our H2O Rebuild project! The new dome has been installed and painted! The mount and the telescope have been installed as well!! Volunteers have been tirelessly working to bring the dome to life! Work on the mount is in progress.</p>
     
     <p>Click on this image to see more pictures of our progress:</p>
     
     <div class="h2o-image-container">
       <a href="images/fire/album/index.html" title="H2O Rebuild images">
-        <img src="images/h2o_rebuild/Dome.jpeg" width="181" alt="Dome" 
+        <img src="images/h2o_rebuild/current.jpeg" width="181" alt="Dome" 
              title="Click to see our recontruction progress">
       </a>
     </div>

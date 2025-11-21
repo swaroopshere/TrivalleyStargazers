@@ -1,42 +1,35 @@
 {
     "events": [
         {
-            "date": "2025-09-19",
+            "date": "2025-11-07",
+            "title": "School Star Party at Valley Christian School",
+            "description": "School star party at Valley Christian School for elementary aged children. Set up at 5. Start time at 5:45 or 6 pm. Moon comes up just after dark. Good blacktop with a few lights scattered about.&nbsp;",
+            "location": "Valley Christian School, 7500 Inspiration Drive, Dublin, CA 94568",
+            "time": "5:45 PM"
+        },
+        {
+            "date": "2025-11-14",
+            "title": "School Star Party at Kolb Elementary School, Dublin",
+            "description": "School Star party at Kolb Elementary in Dublin. Set up about 5 pm to start viewing 5:45 or so. Saturn should be up when it is dark, we might get a hint of Jupiter if we stay late enough. The event planners would like a headcount for us, so if you plan on volunteering, please add your name to this google doc. https://docs.google.com/document/d/1GAN9HT7xtf6GcrE_o3d5uP9-8Kr-za4PX65MBjXRYJk/edit?usp=sharing",
+            "location": "Kolb Elementary School, 3150 Palermo Way, Dublin",
+            "time": "5:00 PM"
+        },
+        {
+            "date": "2025-11-21",
             "title": "TVS Club Meeting",
-            "description": "TVS Club meetings are open to all members and the public.&nbsp;See TVS newsletter www.trivalleystargazers.org&nbsp;for details on how to participate in the zoom video conference call.\n&nbsp;\nZoom link: https://us02web.zoom.us/j/85036372699?pwd=9mx5CSBvVnqfVOXfuqsXgOPKWgJQMm.1\n&nbsp;",
-            "location": "Zoom meeting",
+            "description": "TVS Club meetings are open to all members and the public.&nbsp;See TVS newsletter www.trivalleystargazers.org&nbsp;for details on how to participate in the zoom video conference call.\n&nbsp;\nZoom link: https://us02web.zoom.us/j/84110975089?pwd=9iCSFNBwQbq4gldKK6wkaabbpJkOT7.1#success",
+            "location": "Zoom meeting: https://us02web.zoom.us/j/84110975089?pwd=9iCSFNBwQbq4gldKK6wkaabbpJkOT7.1#success",
             "time": "7:30 PM"
         },
         {
-            "date": "2025-09-27",
-            "title": "Public Star Party at Sunol Regional Wilderness",
-            "description": "Public star party at Sunol Regional Wilderness. Set up 6:45. &nbsp;Observing starts 7:30 pm, ends about 9:30 or 10 pm. Map to the parking lot we will be setting up in https://maps.app.goo.gl/sGxWWiah37SY7rhN8. Moon is a few days past new, and Saturn will be rising early in the evening. Please let me know if you are planning on bringing a telescope or binoculars to share with the public.\n&nbsp;\nThanks,\nJohnathan Bailey",
-            "location": "1895 Geary Road, Sunol",
-            "time": "7:30 PM"
+            "date": "2025-11-22",
+            "title": "Club/public star party at Del Valle Arroyo Road Staging Area",
+            "description": "We have scheduled a club/public star party at the Del Valle Arroyo Rd Staging area for Saturday November 22. Setup starts about 4:45. The public portion runs from about 5:30-8:30. Curfew is 10 pm, so if we stick around that long, we have to make sure the public has vacated by then.\n&nbsp;\nThe star party is at the Arroyo Rd Staging area just past 5055 Arroyo Rd. This is not the main entrance to del valle, but rather a gravel lot past the golf course and VA hospital down Arroyo street (an extension of L street).\n&nbsp;\nWeather permitting, we should have a good view of the moon and the fall objects and Saturn with Jupiter and Orion coming up a bit later. Views to the south are blocked by a large hill, but otherwise is relatively free many of the normal sight blocking objects. The skies are relatively dark for being very close to Livermore.\n&nbsp;\nI hope to get several club members with telescopes or binoculars. If you don't have a telescope or binoculars to share, please come anyway and enjoy the star party and feel free to stick around after the public leaves. Please let me know if you are bringing your equipment to share. We need several telescopes to make this a successful event.\n&nbsp;\nThanks,\nJohnathan\n&nbsp;\nCoordinates: (37.6196638, -121.7528899)",
+            "location": "Arroyo Road Staging Area",
+            "time": "5:30 PM"
         },
         {
-            "date": "2025-10-01",
-            "title": "Stargazing at the Livermore Library",
-            "description": "Stargazing at the Livermore library. They said we can start setting up after 5, though that is pretty early. Let's start set up at 6. Presentation starts at 6:30 pm. I will take any volunteer for that, or I will do the presentation myself. Telescope stuff starts about 7 pm.",
-            "location": "Livermore Library 1188 S Livermore Ave, Livermore, CA 94550",
-            "time": "6:30 PM"
-        },
-        {
-            "date": "2025-10-06",
-            "title": "School Star Party at John Green Elementary",
-            "description": "School star party at John Green Elementary. Set up at 6:30 or 6:45 and observing starts near dark at 7:30. Nearly full moon and Saturn is rising.",
-            "location": "John Green Elementary School, 3300 Antone Way, Dublin",
-            "time": "6:30 PM"
-        },
-        {
-            "date": "2025-10-10",
-            "title": "School Star Party at Murray Elementary School",
-            "description": "School star party at Murray Elementary. They had a good blacktop that we could drive out to last time. Set up 6:30 observing once Saturn is visible until about 9:30. Please let me know if you can make it.\n&nbsp;\nThanks,\nJohnathan",
-            "location": "Murray Elementary School, 8435 Davona Dr, Dublin, CA 94568",
-            "time": "6:30 PM"
-        },
-        {
-            "date": "2025-10-17",
+            "date": "2025-12-19",
             "title": "TVS Club Meeting",
             "description": "TVS Club meetings are open to all members and the public.&nbsp;See TVS newsletter www.trivalleystargazers.org&nbsp;for details on how to participate in the zoom video conference call.",
             "location": "Zoom meeting",
