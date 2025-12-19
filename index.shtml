@@ -23,13 +23,13 @@
   <script type="text/javascript">
    <!--
         function setupOptionalCode() {
-            showOptional("opt_talk");
+            //showOptional("opt_talk");
             showOptional("opt_tesla");
-            showOptional("opt_talk_details");
+            //showOptional("opt_talk_details");
             showOptional("opt_h2o");
-            showOptional("opt_announce");
-            //showOptional("opt_potluck");
-            //showOptional("opt_potluck_details");
+            //showOptional("opt_announce");
+            showOptional("opt_potluck");
+            showOptional("opt_potluck_details");
             //showOptional("opt_bbq");
             //showOptional("opt_bbq_details");
         }
@@ -116,7 +116,7 @@ The Tri-Valley Stargazers Privacy Policy is available <a href="https://trivalley
       <div class="meeting-card">
        <h3 class="meeting-header">Winter Solstice Potluck</h3>
        <div class="meeting-details">
-        <p class="meeting-time">Friday, December 20, 2024</p>
+        <p class="meeting-time">Friday, December 19, 2025</p>
         <p>Set up at 6:30 p.m.<br>Dinner starts at 7:00 p.m.</p>
         <p class="meeting-location">Unitarian Universalist Church<br>1893 N. Vasco Rd., Livermore</p>
        </div>
