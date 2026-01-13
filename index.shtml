@@ -23,13 +23,13 @@
   <script type="text/javascript">
    <!--
         function setupOptionalCode() {
-            //showOptional("opt_talk");
+            showOptional("opt_talk");
             showOptional("opt_tesla");
-            //showOptional("opt_talk_details");
+            showOptional("opt_talk_details");
             showOptional("opt_h2o");
             //showOptional("opt_announce");
-            showOptional("opt_potluck");
-            showOptional("opt_potluck_details");
+            //showOptional("opt_potluck");
+            //showOptional("opt_potluck_details");
             //showOptional("opt_bbq");
             //showOptional("opt_bbq_details");
         }
@@ -86,13 +86,13 @@ The Tri-Valley Stargazers Privacy Policy is available <a href="https://trivalley
       <h3 class="meeting-header">Next Public Meeting</h3>	
       <div class="optional" id="opt_talk">
        <div class="meeting-details">
-        <p class="meeting-time">Friday, November 21, 2025 at 7:30 p.m.</p>
+        <p class="meeting-time">Friday, January 16, 2026 at 7:30 p.m.</p>
         <p class="meeting-location">Unitarian Universalist Church<br>1893 N. Vasco Rd., Livermore</p>
        </div>
        
        <div class="meeting-presenter">
-        <strong>Topic:</strong> "Panel Presentation on Astrophotography"<br>
-        <strong>Presenter:</strong> Gert Gottschalk, Mark Du, Curtis Macchioni, and Swaroop Shere
+        <strong>Topic:</strong> "Stars Without Nuclear Fusion -- Much of the physics without all of the confusion"<br>
+        <strong>Presenter:</strong> Dr. Kirk T. Korista, Professor of Astronomy and Graduate Programs Advisor, Department of Physics, Western Michigan University
        </div>
 
        <div class="meeting-description">
@@ -135,7 +135,7 @@ The Tri-Valley Stargazers Privacy Policy is available <a href="https://trivalley
      <div class="meeting-card">
       <h3 class="meeting-header">Next Board Meeting</h3>
       <div class="meeting-details">
-       <p class="meeting-time">Monday, November 24, 2025, 7:30 p.m.</p>
+       <p class="meeting-time">Monday, January 19, 2026, 7:30 p.m.</p>
        <p class="meeting-description">Board meetings are usually held using video conferencing. Members are always welcome at board meetings.</p>
       </div>
      </div>
@@ -168,7 +168,7 @@ Please visit:  <a href="https://eastbayastro.org/events/" target="_blank">East B
 <br><br> -->
 
   <div class="optional" id="opt_talk_details">
-   <h3 class="subtitle">November 2025 Member Meeting Presentation</h3>
+   <h3 class="subtitle">January 2026 Member Meeting Presentation</h3>
    <br><br>
  
    This meeting will be live at the Unitarian church and will also be available using the video conference utility 
@@ -183,10 +183,10 @@ Please visit:  <a href="https://eastbayastro.org/events/" target="_blank">East B
 
    <script type="text/javascript">
      currentSpeaker(
-       "Panel Presentation on Astrophotography",
-       "Gert Gottschalk, Mark Du, Curtis Macchioni, and Swaroop Shere",
-       "This month's meeting will be a panel presentation on astrophotography. The panel will be comprised of Gert Gottschalk, Mark Du, Curtis Macchioni, and Swaroop Shere. The panel will discuss the various aspects of astrophotography, including the equipment used, the techniques employed, and the results achieved. The panel will also discuss the various areas of astrophotography, including introductory astrophotography, planetary astrophotography, EAA and deep sky astrophotography. The presentations will be followed by a Q&A session.",
-       "Mark Du is an astrophotographer who began imaging in 2020 and has been learning and refining his craft ever since. By day, he works as a software engineer, bringing an analytical approach to solving the technical challenges of deep sky imaging. He currently shoots with an ASI2600MC Pro camera, ASKAR 120APO telescope, and ZWO AM5 mount. Gert Gottschalk  has been interested in all things astronomy since the 1980. His interest are building optics, making telescopes, and all kinds of observation and imaging in astronomy. He is TVS member since 1998. Gert has a PhD in electrical engineering from the university in Berlin, Germany and has professionally worked in the silicon valley tech industry since 1997. Gert Gottschalk  has been interested in all things astronomy since the 1980. His interest are building optics, making telescopes, and all kinds of observation and imaging in astronomy. He is TVS member since 1998. Gert has a PhD in electrical engineering from the university in Berlin, Germany and has professionally worked in the silicon valley tech industry since 1997. Curtis Macchioni is a physicist who retired after 40 years in the tech industry.  He has shared his interest in Electronically Assisted Astronomy through numerous presentations, a article in the March 2016 issue of Sky & Telescope and his YouTube channel. Swaroop Shere is a software engineer by profession and an amateur astrophotographer when time and family allows for it. He started with visual astronomy in the early 2010s before venturing into basic astrophotography around 2015. Over the years, he learnt the ropes mostly from other fellow astrophotographers, club members, youtube and other online resources. Currently he images with a remote setup consisting of AP-130 GT on paramount MYT with a QHY-268-M camera. "
+       "Stars Without Nuclear Fusion -- Much of the physics without all of the confusion",
+       "Dr. Kirk T. Korista, Professor of Astronomy and Graduate Programs Advisor, Department of Physics, Western Michigan University",
+       "The phenomenon of nuclear fusion influences the structure and evolution of stars in many important ways, but several key physical processes in and behaviors of stars are ubiquitously mis-attributed to nuclear fusion. These serve as major misconceptions that lead to widespread confusion about how stars work.  Nuclear fusion does not support stars against the force of gravity and gravitational collapse, nor does it generate significant radiation pressure to do so as is mysteriously invoked. In fact, radiation pressure rarely contributes significantly to supporting stars at all. In point of fact, stars do not require nuclear fusion in order to exist as hot, luminous objects that are in force balance against gravity. In order to illuminate their fundamental natures, we explore stars without nuclear processes and compare their evolutionary behavior to stars with nuclear fusion",
+       "Dr. Kirk T. Korista is a Professor of Astronomy and Graduate Programs Advisor, Department of Physics, Western Michigan University."
      );
    
    </script>
