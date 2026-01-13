@@ -1,0 +1,16 @@
+# Database files
+data/
+*.db
+*.sqlite
+*.sqlite3
+
+# Configuration overrides (if any)
+config.local.php
+
+# Temporary files
+*.tmp
+temp_cover.jpg
+
+# Logs
+*.log
+
