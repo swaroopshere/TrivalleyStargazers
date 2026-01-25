@@ -1,0 +1,7 @@
+# Deny all access to data directory
+Require all denied
+
+# Block all file types
+<FilesMatch ".*">
+    Require all denied
+</FilesMatch>

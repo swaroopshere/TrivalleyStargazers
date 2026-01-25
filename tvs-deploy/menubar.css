@@ -1,0 +1,230 @@
+/* menubar.css - Modern Responsive Navigation for TVS Website */
+/* Last modified: January 2026 - Complete UI Refresh */
+
+/* ============================================
+   NAVIGATION COMPONENT
+   This file extends the navigation styles in tvs.css
+   with additional enhancements for the Apple-style menu
+   ============================================ */
+
+/* Legacy appleNav Support - Restyle for modern look */
+#appleNav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: var(--max-width, 1200px);
+    height: auto;
+    font-family: var(--font-primary, 'Inter', -apple-system, sans-serif);
+    font-size: var(--text-sm, 0.875rem);
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+#appleNav li {
+    display: block;
+    position: relative;
+    border: none;
+    background: transparent;
+    height: auto;
+    width: auto;
+    float: none;
+}
+
+#appleNav li:first-child,
+#appleNav li:last-child,
+#appleNav li.lastChild {
+    border-radius: 0;
+    border: none;
+    width: auto;
+}
+
+#appleNav li a {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 0.5rem 0.75rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    text-decoration: none;
+    text-align: center;
+    line-height: 1.5;
+    border-radius: 0.5rem;
+    transition: all 150ms ease;
+    outline: none;
+    white-space: nowrap;
+}
+
+#appleNav li a:hover,
+#appleNav li a:focus {
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+}
+
+#appleNav li a#m_home,
+#appleNav li a#m_about,
+#appleNav li a#m_contacts,
+#appleNav li a#m_newsletter,
+#appleNav li a#m_activities,
+#appleNav li a#m_membership,
+#appleNav li a#m_resources,
+#appleNav li a#m_sites {
+    text-decoration: none;
+}
+
+/* Active page indicator */
+#appleNav li a[style*="underline"] {
+    color: var(--color-accent, #d4a84b);
+    text-decoration: none !important;
+    position: relative;
+}
+
+#appleNav li a[style*="underline"]::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 2px;
+    background: var(--color-accent, #d4a84b);
+    border-radius: 1px;
+}
+
+/* Dropdown arrow */
+#appleNav li a img.arrow {
+    width: 10px;
+    height: 10px;
+    margin-left: 4px;
+    opacity: 0.7;
+    transition: transform 150ms ease;
+    filter: brightness(0) invert(1);
+}
+
+#appleNav li:hover a img.arrow {
+    transform: rotate(180deg);
+}
+
+/* Dropdown Menu (popup) */
+#appleNav div.popup {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    padding: 0.5rem 0;
+    margin: 0;
+    background: white;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.05);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 150ms ease;
+    z-index: 100;
+    text-shadow: none;
+}
+
+#appleNav li:hover div.popup,
+#appleNav li:focus-within div.popup {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+#appleNav div.popup a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: var(--color-text, #2c3e50);
+    font-size: var(--text-sm, 0.875rem);
+    font-weight: 400;
+    text-align: left;
+    text-decoration: none;
+    background: transparent;
+    border-radius: 0;
+    white-space: nowrap;
+    transition: background 150ms ease;
+}
+
+#appleNav div.popup a:hover {
+    background: var(--color-bg-alt, #f5f7fa);
+    color: var(--color-link, #2563eb);
+}
+
+/* Search Input in Navigation */
+#appleNav li.lastChild,
+#appleNav li:last-child {
+    margin-left: auto;
+}
+
+#appleNav form {
+    display: flex;
+    align-items: center;
+}
+
+#appleNav form input[type="text"] {
+    width: 140px;
+    padding: 0.5rem 0.75rem;
+    font-size: var(--text-sm, 0.875rem);
+    color: white;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0.5rem;
+    outline: none;
+    transition: all 150ms ease;
+}
+
+#appleNav form input[type="text"]::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+#appleNav form input[type="text"]:focus {
+    width: 180px;
+    background: rgba(255, 255, 255, 0.15);
+    border-color: var(--color-accent, #d4a84b);
+}
+
+/* ============================================
+   RESPONSIVE NAVIGATION
+   ============================================ */
+@media (max-width: 1023px) {
+    #appleNav {
+        display: none;
+    }
+}
+
+/* ============================================
+   NAVIGATION WRAPPER (for header.php)
+   ============================================ */
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 0;
+    background: var(--color-primary, #0a1628);
+}
+
+/* ============================================
+   ANIMATION
+   ============================================ */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#appleNav div.popup[style*="visible"] {
+    animation: slideDown 150ms ease forwards;
+}

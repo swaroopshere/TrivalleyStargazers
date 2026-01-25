@@ -1,0 +1,9 @@
+# TVS Security Contact Information
+# https://securitytxt.org/
+
+Contact: mailto:secretary@trivalleystargazers.org
+Expires: 2027-01-01T00:00:00.000Z
+Preferred-Languages: en
+
+# If you discover a security vulnerability, please report it responsibly.
+# We appreciate your help in keeping our website secure.
