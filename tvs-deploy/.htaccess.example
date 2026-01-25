@@ -1,14 +1,16 @@
 # TVS Beta Site Configuration
+# Copy this file to .htaccess and update the database credentials
 
 DirectoryIndex index.php index.html
 
 # =====================================================
 # DATABASE CREDENTIALS (Environment Variables)
 # =====================================================
-SetEnv TVS_DB_HOST "trivalleystargazerso.ipagemysql.com"
-SetEnv TVS_DB_NAME "tvs_beta"
-SetEnv TVS_DB_USER "tvs_user"
-SetEnv TVS_DB_PASS "fmd-czw!gbg!kvg4FMF"
+# IMPORTANT: Replace these placeholder values with actual credentials
+SetEnv TVS_DB_HOST "your_mysql_host"
+SetEnv TVS_DB_NAME "your_database_name"
+SetEnv TVS_DB_USER "your_username"
+SetEnv TVS_DB_PASS "your_password"
 
 # =====================================================
 # FORCE HTTPS
