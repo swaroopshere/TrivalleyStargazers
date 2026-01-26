@@ -43,7 +43,7 @@ SetEnv TVS_DB_PASS "your_password"
     Header always set Referrer-Policy "strict-origin-when-cross-origin"
 
     # Content Security Policy
-    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.paypal.com https://www.paypalobjects.com https://www.google.com https://calendar.google.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://www.paypal.com https://calendar.google.com https://www.google.com; connect-src 'self' https://search.freefind.com"
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.paypal.com https://www.paypalobjects.com https://www.google.com https://calendar.google.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-src 'self' https://www.paypal.com https://calendar.google.com https://www.google.com; connect-src 'self' https://search.freefind.com"
 
     # HSTS (Strict Transport Security) - enforce HTTPS for 1 year
     Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"

@@ -357,9 +357,145 @@ function enableSmoothScroll() {
 	});
 }
 
+// ============================================
+// PHOTO GALLERY & LIGHTBOX
+// ============================================
+
+// Gallery state
+var currentGallery = null;
+var currentIndex = 0;
+var galleryImages = [];
+
+// Create lightbox HTML structure
+function createLightbox() {
+	if (document.querySelector('.lightbox')) return;
+
+	var lightbox = document.createElement('div');
+	lightbox.className = 'lightbox';
+	lightbox.innerHTML = [
+		'<button class="lightbox-close" aria-label="Close lightbox">&times;</button>',
+		'<button class="lightbox-nav lightbox-prev" aria-label="Previous image">&#10094;</button>',
+		'<img class="lightbox-image" src="" alt="">',
+		'<button class="lightbox-nav lightbox-next" aria-label="Next image">&#10095;</button>',
+		'<div class="lightbox-caption"></div>'
+	].join('');
+
+	document.body.appendChild(lightbox);
+
+	// Event listeners
+	lightbox.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+	lightbox.querySelector('.lightbox-prev').addEventListener('click', function() {
+		navigateLightbox(-1);
+	});
+	lightbox.querySelector('.lightbox-next').addEventListener('click', function() {
+		navigateLightbox(1);
+	});
+
+	// Close on background click
+	lightbox.addEventListener('click', function(e) {
+		if (e.target === lightbox) {
+			closeLightbox();
+		}
+	});
+}
+
+// Initialize all galleries on the page
+function initGalleries() {
+	createLightbox();
+
+	document.querySelectorAll('.photo-gallery').forEach(function(gallery) {
+		gallery.querySelectorAll('.gallery-item').forEach(function(item, index) {
+			item.setAttribute('tabindex', '0');
+			item.setAttribute('role', 'button');
+			item.setAttribute('aria-label', 'View ' + (item.getAttribute('data-title') || 'image') + ' in lightbox');
+
+			item.addEventListener('click', function() {
+				openLightbox(gallery, index);
+			});
+
+			item.addEventListener('keydown', function(e) {
+				if (e.key === 'Enter' || e.key === ' ') {
+					e.preventDefault();
+					openLightbox(gallery, index);
+				}
+			});
+		});
+	});
+}
+
+// Open lightbox with image from gallery
+function openLightbox(gallery, index) {
+	currentGallery = gallery;
+	currentIndex = index;
+	galleryImages = Array.from(gallery.querySelectorAll('.gallery-item'));
+
+	var lightbox = document.querySelector('.lightbox');
+	lightbox.setAttribute('data-count', galleryImages.length);
+
+	showImage();
+	lightbox.classList.add('active');
+	document.body.style.overflow = 'hidden';
+
+	// Focus the lightbox for keyboard navigation
+	lightbox.focus();
+}
+
+// Close lightbox
+function closeLightbox() {
+	var lightbox = document.querySelector('.lightbox');
+	if (lightbox) {
+		lightbox.classList.remove('active');
+		document.body.style.overflow = '';
+	}
+}
+
+// Navigate to prev/next image
+function navigateLightbox(direction) {
+	currentIndex += direction;
+	if (currentIndex < 0) currentIndex = galleryImages.length - 1;
+	if (currentIndex >= galleryImages.length) currentIndex = 0;
+	showImage();
+}
+
+// Display the current image in the lightbox
+function showImage() {
+	var item = galleryImages[currentIndex];
+	var lightbox = document.querySelector('.lightbox');
+	var img = lightbox.querySelector('.lightbox-image');
+	var caption = lightbox.querySelector('.lightbox-caption');
+
+	// Get full-size image source (data-full attribute or the img src)
+	var fullSrc = item.getAttribute('data-full');
+	if (!fullSrc) {
+		var imgElement = item.querySelector('img');
+		fullSrc = imgElement ? imgElement.src : '';
+	}
+
+	var title = item.getAttribute('data-title') || '';
+
+	img.src = fullSrc;
+	img.alt = title;
+	caption.textContent = title;
+}
+
+// Keyboard navigation for lightbox
+document.addEventListener('keydown', function(e) {
+	var lightbox = document.querySelector('.lightbox');
+	if (!lightbox || !lightbox.classList.contains('active')) return;
+
+	if (e.key === 'Escape') {
+		closeLightbox();
+	} else if (e.key === 'ArrowLeft') {
+		navigateLightbox(-1);
+	} else if (e.key === 'ArrowRight') {
+		navigateLightbox(1);
+	}
+});
+
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', function() {
 	startBannerSwapping();
 	enhanceContactLinks();
 	enableSmoothScroll();
+	initGalleries();
 });

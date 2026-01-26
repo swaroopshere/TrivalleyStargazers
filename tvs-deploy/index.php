@@ -224,21 +224,92 @@ include __DIR__ . '/includes/templates/header.php';
         <!-- H2O Rebuild Section -->
         <section class="mt-8">
             <h3 class="subtitle">We Continue to Rebuild the Hidden Hill Observatory</h3>
-            <div class="h2o-rebuild-section clearfix">
-                <div class="h2o-image-container">
-                    <a href="images/fire/album/index.html" title="H2O Rebuild images">
-                        <img src="images/h2o_rebuild/current.jpeg" width="200" alt="H2O Dome"
-                             title="Click to see our reconstruction progress">
-                    </a>
-                </div>
+            <div class="h2o-rebuild-section">
                 <p>
                     Brand new updates on our H2O Rebuild project! The new dome has been installed and painted!
                     The mount and the telescope have been installed as well! Volunteers have been tirelessly
                     working to bring the dome to life! Work on the mount is in progress.
                 </p>
-                <p>
-                    Click on the image to see more pictures of our progress.
+                <p>Click any image below to view full size.</p>
+                <div class="photo-gallery" data-gallery="h2o-rebuild">
+                    <div class="gallery-item"
+                         data-full="images/fire/album/slides/H2O 2018.jpg"
+                         data-title="H2O Observatory Before Fire">
+                        <img src="images/fire/album/thumbs/H2O 2018.jpg" alt="H2O Observatory Before Fire">
+                        <span class="gallery-caption">Before Fire</span>
+                    </div>
+                    <div class="gallery-item"
+                         data-full="images/fire/album/slides/New OTA built by Rich.jpg"
+                         data-title="New Telescope Assembly by Rich">
+                        <img src="images/fire/album/thumbs/New OTA built by Rich.jpg" alt="New Telescope Assembly">
+                        <span class="gallery-caption">New OTA</span>
+                    </div>
+                    <div class="gallery-item"
+                         data-full="images/fire/album/slides/H2O_OTA_Deploy_20200531_10.jpg"
+                         data-title="OTA Deployment">
+                        <img src="images/fire/album/thumbs/H2O_OTA_Deploy_20200531_10.jpg" alt="OTA Deployment">
+                        <span class="gallery-caption">OTA Deployment</span>
+                    </div>
+                    <div class="gallery-item"
+                         data-full="images/fire/album/slides/D0042_0016 Astrophysics mount and power panel.jpg"
+                         data-title="Astrophysics Mount Installation">
+                        <img src="images/fire/album/thumbs/D0042_0016 Astrophysics mount and power panel.jpg" alt="Mount Installation">
+                        <span class="gallery-caption">Mount Installation</span>
+                    </div>
+                    <div class="gallery-item"
+                         data-full="images/fire/album/slides/IMG_1547_CC_crop.jpg"
+                         data-title="Dome Construction">
+                        <img src="images/fire/album/thumbs/IMG_1547_CC_crop.jpg" alt="Dome Construction">
+                        <span class="gallery-caption">Dome Construction</span>
+                    </div>
+                    <div class="gallery-item"
+                         data-full="images/fire/album/slides/shed IMG_2955_crop_sm.jpg"
+                         data-title="Completed Equipment Shed">
+                        <img src="images/fire/album/thumbs/shed IMG_2955_crop_sm.jpg" alt="Completed Shed">
+                        <span class="gallery-caption">Equipment Shed</span>
+                    </div>
+                </div>
+                <p class="gallery-link">
+                    <a href="images/fire/album/index.html" class="btn btn-outline">View All Rebuild Photos</a>
                 </p>
+            </div>
+        </section>
+
+        <!-- Member Astrophotography Gallery -->
+        <section class="mt-8">
+            <h3 class="subtitle">Member Astrophotography</h3>
+            <p>Our members capture stunning images of the cosmos. Click any image to view full size.</p>
+            <div class="photo-gallery" data-gallery="member-photos">
+                <div class="gallery-item"
+                     data-full="images/banners/03-Comet-ISON.jpg"
+                     data-title="Comet ISON by Ken Sperber">
+                    <img src="images/banners/03-Comet-ISON.jpg" alt="Comet ISON">
+                    <span class="gallery-caption">Comet ISON</span>
+                </div>
+                <div class="gallery-item"
+                     data-full="images/banners/04-Milky-Way.jpg"
+                     data-title="The Milky Way by Alex Mellinger">
+                    <img src="images/banners/04-Milky-Way.jpg" alt="The Milky Way">
+                    <span class="gallery-caption">The Milky Way</span>
+                </div>
+                <div class="gallery-item"
+                     data-full="images/banners/05-NGC-4631.jpg"
+                     data-title="The Whale Galaxy (NGC 4631) by Hilary Jones">
+                    <img src="images/banners/05-NGC-4631.jpg" alt="The Whale Galaxy">
+                    <span class="gallery-caption">Whale Galaxy</span>
+                </div>
+                <div class="gallery-item"
+                     data-full="images/banners/06-Horsehead-Nebula.jpg"
+                     data-title="Horsehead Nebula by Chuck Vaughn">
+                    <img src="images/banners/06-Horsehead-Nebula.jpg" alt="Horsehead Nebula">
+                    <span class="gallery-caption">Horsehead Nebula</span>
+                </div>
+                <div class="gallery-item"
+                     data-full="images/banners/07-Solar-Eclipse.jpg"
+                     data-title="Solar Eclipse by Gert Gottschalk">
+                    <img src="images/banners/07-Solar-Eclipse.jpg" alt="Solar Eclipse">
+                    <span class="gallery-caption">Solar Eclipse</span>
+                </div>
             </div>
         </section>
 
