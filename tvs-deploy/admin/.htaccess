@@ -1,32 +1,21 @@
 # TVS Admin Security Configuration
 
-# Deny access to sensitive files
-<FilesMatch "^\.">
-    Require all denied
-</FilesMatch>
-
-# Protect PHP files (allow only specified)
-<FilesMatch "\.php$">
-    Require all granted
-</FilesMatch>
-
-# Force HTTPS (uncomment in production)
-# RewriteEngine On
-# RewriteCond %{HTTPS} off
-# RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
 # Prevent directory browsing
 Options -Indexes
+
+# Block access to hidden files and sensitive extensions
+<FilesMatch "\.(sql|log|txt|md|htaccess)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
 
 # Set security headers
 <IfModule mod_headers.c>
     Header always set X-Content-Type-Options "nosniff"
     Header always set X-Frame-Options "SAMEORIGIN"
-    Header always set X-XSS-Protection "1; mode=block"
-    Header always set Referrer-Policy "strict-origin-when-cross-origin"
 </IfModule>
-
-# Limit file types that can be accessed
-<FilesMatch "\.(sql|log|txt|md)$">
-    Require all denied
-</FilesMatch>

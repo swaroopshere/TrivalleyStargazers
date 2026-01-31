@@ -369,6 +369,7 @@ $currentPage = getCurrentPage();
             <li><a href="contacts.php" <?= $currentPage === 'contacts' ? 'class="active"' : '' ?>>Contacts</a></li>
             <?php if (auth()->isAdmin()): ?>
             <li><a href="users.php" <?= $currentPage === 'users' ? 'class="active"' : '' ?>>Users</a></li>
+            <li><a href="migrations.php" <?= $currentPage === 'migrations' ? 'class="active"' : '' ?>>Migrations</a></li>
             <?php endif; ?>
         </ul>
     </nav>
