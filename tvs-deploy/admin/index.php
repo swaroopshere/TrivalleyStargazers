@@ -19,7 +19,6 @@ $upcomingCalendarCount = dbQueryOne("SELECT COUNT(*) as count FROM calendar_cach
 // Get current info
 $publicMeeting = getCurrentPublicMeeting();
 $boardMeeting = getCurrentBoardMeeting();
-$currentPresentation = getCurrentPresentation();
 $currentNewsletter = getCurrentNewsletter();
 
 // Get recent audit log
@@ -74,15 +73,19 @@ include __DIR__ . '/../includes/templates/admin_header.php';
 
     <div class="card">
         <h3>Current Presentation</h3>
-        <?php if ($currentPresentation): ?>
-            <p><strong>Month:</strong> <?= getMonthName($currentPresentation['month']) ?> <?= $currentPresentation['year'] ?></p>
-            <p><strong>Topic:</strong> <?= e(truncate($currentPresentation['topic'], 80)) ?></p>
-            <p><strong>Presenter:</strong> <?= e($currentPresentation['presenter_name']) ?></p>
+        <?php if ($publicMeeting && !empty($publicMeeting['presentation_topic'])): ?>
+            <?php
+            $meetingMonth = (int)date('n', strtotime($publicMeeting['meeting_date']));
+            $meetingYear = (int)date('Y', strtotime($publicMeeting['meeting_date']));
+            ?>
+            <p><strong>Month:</strong> <?= getMonthName($meetingMonth) ?> <?= $meetingYear ?></p>
+            <p><strong>Topic:</strong> <?= e(truncate($publicMeeting['presentation_topic'], 80)) ?></p>
+            <p><strong>Presenter:</strong> <?= e($publicMeeting['presenter_name']) ?></p>
             <br>
-            <a href="presentation.php" class="btn btn-small">Edit Presentation</a>
+            <a href="meetings.php" class="btn btn-small">Edit Meeting & Presentation</a>
         <?php else: ?>
-            <p>No presentation for this month</p>
-            <a href="presentation.php" class="btn btn-small">Add Presentation</a>
+            <p>No presentation set for current meeting</p>
+            <a href="meetings.php" class="btn btn-small">Add Presentation</a>
         <?php endif; ?>
     </div>
 </div>
@@ -147,8 +150,7 @@ include __DIR__ . '/../includes/templates/admin_header.php';
 <div class="card" style="margin-top: 20px;">
     <h3>Quick Actions</h3>
     <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-        <a href="meetings.php" class="btn">Update Meetings</a>
-        <a href="presentation.php" class="btn">Update Presentation</a>
+        <a href="meetings.php" class="btn">Update Meetings & Presentations</a>
         <a href="events.php" class="btn">Manage Events</a>
         <a href="newsletter.php" class="btn">Upload Newsletter</a>
         <a href="sync-calendar.php" class="btn btn-secondary">Sync Calendar</a>

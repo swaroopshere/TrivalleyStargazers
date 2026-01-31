@@ -137,16 +137,6 @@ function getCurrentBoardMeeting(): ?array {
 }
 
 /**
- * Get the current presentation
- */
-function getCurrentPresentation(): ?array {
-    return dbQueryOne(
-        "SELECT * FROM presentations WHERE year = ? AND month = ?",
-        [(int)date('Y'), (int)date('n')]
-    );
-}
-
-/**
  * Get visible events by type
  */
 function getVisibleEvents(string $type): array {

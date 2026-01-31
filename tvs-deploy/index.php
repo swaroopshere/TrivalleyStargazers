@@ -19,7 +19,6 @@ $showHero = true;
 // Get dynamic content from database
 $publicMeeting = getCurrentPublicMeeting();
 $boardMeeting = getCurrentBoardMeeting();
-$currentPresentation = getCurrentPresentation();
 $upcomingEvents = getUpcomingEvents(5);
 
 // Get all upcoming events for sidebar
@@ -34,7 +33,7 @@ $potluckEvents = dbQuery("SELECT * FROM events WHERE event_type = 'potluck' AND 
 
 // Determine which optional sections to show
 $showTalk = !empty($publicMeeting);
-$showTalkDetails = !empty($currentPresentation);
+$showTalkDetails = !empty($publicMeeting['presentation_topic']);
 $showH2o = !empty($h2oEvents);
 $showTesla = !empty($teslaEvents);
 $showAnnouncement = !empty($announcements);
@@ -85,12 +84,12 @@ include __DIR__ . '/includes/templates/header.php';
                         </p>
                     </div>
 
-                    <?php if ($currentPresentation): ?>
+                    <?php if (!empty($publicMeeting['presentation_topic'])): ?>
                     <div class="meeting-presenter">
-                        <strong>Topic:</strong> "<?= e($currentPresentation['topic']) ?>"<br>
-                        <strong>Presenter:</strong> <?= e($currentPresentation['presenter_name']) ?>
-                        <?php if ($currentPresentation['presenter_title']): ?>
-                            , <?= e($currentPresentation['presenter_title']) ?>
+                        <strong>Topic:</strong> "<?= e($publicMeeting['presentation_topic']) ?>"<br>
+                        <strong>Presenter:</strong> <?= e($publicMeeting['presenter_name']) ?>
+                        <?php if ($publicMeeting['presenter_title']): ?>
+                            , <?= e($publicMeeting['presenter_title']) ?>
                         <?php endif; ?>
                     </div>
                     <?php endif; ?>
@@ -154,12 +153,16 @@ include __DIR__ . '/includes/templates/header.php';
         <section class="mt-8">
             <h2 class="section-title">The Latest News &amp; Upcoming Events</h2>
 
-            <?php if ($showTalkDetails && $currentPresentation): ?>
+            <?php if ($showTalkDetails): ?>
             <!-- Monthly Presentation Details -->
             <div class="mb-6">
-                <h3 class="subtitle"><?= getMonthName((int)date('n')) ?> <?= date('Y') ?> Member Meeting Presentation</h3>
+                <?php
+                $presentationMonth = (int)date('n', strtotime($publicMeeting['meeting_date']));
+                $presentationYear = (int)date('Y', strtotime($publicMeeting['meeting_date']));
+                ?>
+                <h3 class="subtitle"><?= getMonthName($presentationMonth) ?> <?= $presentationYear ?> Member Meeting Presentation</h3>
 
-                <?php if ($publicMeeting && $publicMeeting['meeting_format'] !== 'in-person'): ?>
+                <?php if ($publicMeeting['meeting_format'] !== 'in-person'): ?>
                 <p>
                     This meeting will be live at the Unitarian church and will also be available using the video conference utility
                     <a href="https://zoom.us/" target="_blank">Zoom</a>.
@@ -173,12 +176,16 @@ include __DIR__ . '/includes/templates/header.php';
                 <div class="meeting-card">
                     <h3 class="meeting-header">Speaker Information</h3>
                     <div class="meeting-details">
-                        <p><strong>Topic:</strong> <?= e($currentPresentation['topic']) ?></p>
-                        <p><strong>Presenter:</strong> <?= e($currentPresentation['presenter_name']) ?><?php if ($currentPresentation['presenter_title']): ?>, <?= e($currentPresentation['presenter_title']) ?><?php endif; ?></p>
+                        <p><strong>Topic:</strong> <?= e($publicMeeting['presentation_topic']) ?></p>
+                        <p><strong>Presenter:</strong> <?= e($publicMeeting['presenter_name']) ?><?php if ($publicMeeting['presenter_title']): ?>, <?= e($publicMeeting['presenter_title']) ?><?php endif; ?></p>
                     </div>
                     <div class="meeting-description">
-                        <p><strong>Abstract:</strong> <?= e($currentPresentation['abstract']) ?></p>
-                        <p class="mb-0"><strong>Bio:</strong> <?= e($currentPresentation['bio']) ?></p>
+                        <?php if (!empty($publicMeeting['presentation_abstract'])): ?>
+                        <p><strong>Abstract:</strong> <?= e($publicMeeting['presentation_abstract']) ?></p>
+                        <?php endif; ?>
+                        <?php if (!empty($publicMeeting['presenter_bio'])): ?>
+                        <p class="mb-0"><strong>Bio:</strong> <?= e($publicMeeting['presenter_bio']) ?></p>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>

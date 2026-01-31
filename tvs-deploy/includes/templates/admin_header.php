@@ -363,9 +363,9 @@ $currentPage = getCurrentPage();
         <ul>
             <li><a href="index.php" <?= $currentPage === 'index' ? 'class="active"' : '' ?>>Dashboard</a></li>
             <li><a href="meetings.php" <?= $currentPage === 'meetings' ? 'class="active"' : '' ?>>Meetings</a></li>
-            <li><a href="presentation.php" <?= $currentPage === 'presentation' ? 'class="active"' : '' ?>>Presentation</a></li>
             <li><a href="events.php" <?= $currentPage === 'events' ? 'class="active"' : '' ?>>Events</a></li>
             <li><a href="newsletter.php" <?= $currentPage === 'newsletter' ? 'class="active"' : '' ?>>Newsletters</a></li>
+            <li><a href="documents.php" <?= $currentPage === 'documents' ? 'class="active"' : '' ?>>Documents</a></li>
             <li><a href="contacts.php" <?= $currentPage === 'contacts' ? 'class="active"' : '' ?>>Contacts</a></li>
             <?php if (auth()->isAdmin()): ?>
             <li><a href="users.php" <?= $currentPage === 'users' ? 'class="active"' : '' ?>>Users</a></li>

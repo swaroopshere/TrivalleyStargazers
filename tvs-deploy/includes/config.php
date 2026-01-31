@@ -6,6 +6,12 @@
  * Sensitive values should be set via environment variables in production.
  */
 
+// Load local config override if it exists (for development)
+$localConfig = __DIR__ . '/config.local.php';
+if (file_exists($localConfig)) {
+    require_once $localConfig;
+}
+
 // Error reporting (disable in production)
 error_reporting(E_ALL);
 ini_set('display_errors', 0);
@@ -38,11 +44,12 @@ define('NEWSLETTERS_PATH', ROOT_PATH . '/newsletters');
 
 // MySQL Database Configuration
 // Credentials loaded from environment variables (set in .htaccess)
-define('DB_HOST', getenv('TVS_DB_HOST') ?: 'localhost');
-define('DB_NAME', getenv('TVS_DB_NAME') ?: '');
-define('DB_USER', getenv('TVS_DB_USER') ?: '');
-define('DB_PASS', getenv('TVS_DB_PASS') ?: '');
-define('DB_CHARSET', 'utf8mb4');
+// Local config can override by defining these constants first
+if (!defined('DB_HOST')) define('DB_HOST', getenv('TVS_DB_HOST') ?: 'localhost');
+if (!defined('DB_NAME')) define('DB_NAME', getenv('TVS_DB_NAME') ?: '');
+if (!defined('DB_USER')) define('DB_USER', getenv('TVS_DB_USER') ?: '');
+if (!defined('DB_PASS')) define('DB_PASS', getenv('TVS_DB_PASS') ?: '');
+if (!defined('DB_CHARSET')) define('DB_CHARSET', 'utf8mb4');
 
 // Security
 define('SESSION_TIMEOUT', 30 * 60); // 30 minutes
