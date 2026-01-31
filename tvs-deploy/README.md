@@ -138,6 +138,60 @@ tvs-deploy/
 - **Calendar Sync**: Integration with Groups.io calendar
 - **Responsive**: Mobile-first design with breakpoints at 640px, 768px, 1024px
 
+## Testing
+
+The project includes comprehensive unit tests for both backend (PHP) and frontend (JavaScript) code.
+
+### Prerequisites
+
+```bash
+# Install PHP dependencies (PHPUnit)
+composer install
+
+# Install JavaScript dependencies (Jest)
+npm install
+```
+
+### Running PHP Tests
+
+```bash
+# Run unit tests (excludes database tests that require a connection)
+composer test
+
+# Run with test output details
+vendor/bin/phpunit --testdox
+
+# Run database tests (requires MySQL connection)
+vendor/bin/phpunit --testsuite "Database Tests"
+
+# Run all tests including database tests
+vendor/bin/phpunit --testsuite "All Tests"
+```
+
+### Running JavaScript Tests
+
+```bash
+# Run all JavaScript tests
+npm test
+
+# Run in watch mode (re-runs on file changes)
+npm run test:watch
+
+# Run with coverage report
+npm run test:coverage
+```
+
+### Test Coverage
+
+| Category | Test File | Coverage |
+|----------|-----------|----------|
+| Authentication | `tests/php/AuthTest.php` | Password validation, CSRF, sessions, roles |
+| Utilities | `tests/php/FunctionsTest.php` | Date/time formatting, escaping, pagination |
+| Validation | `tests/php/ValidationTest.php` | Input sanitization, XSS prevention |
+| Database | `tests/php/DatabaseTest.php` | PDO wrapper, queries, transactions |
+| Forms | `tests/php/FormHandlingTest.php` | Form processing, access control |
+| Frontend | `tests/js/tvs.test.js` | Banner animation, PayPal, lightbox, navigation |
+
 ## Support
 
 - **Bug Reports**: Open an issue on GitHub

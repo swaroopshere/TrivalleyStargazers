@@ -22,3 +22,14 @@ Thumbs.db
 # Logs
 *.log
 error_log
+
+# Dependencies
+node_modules/
+vendor/
+
+# Local config
+includes/config.local.php
+
+# Test coverage
+coverage/
+.phpunit.result.cache
