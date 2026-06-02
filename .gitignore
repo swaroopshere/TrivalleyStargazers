@@ -9,6 +9,12 @@ yarn-error.log*
 .env.local
 .env.*.local
 
+# Local config files
+config.local.php
+*.local.php
+.htaccess.local
+.htaccess.prod
+
 # IDE and editor files
 .idea/
 .vscode/

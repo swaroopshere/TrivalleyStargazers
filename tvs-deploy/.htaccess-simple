@@ -1,0 +1,18 @@
+# Basic TVS Configuration
+DirectoryIndex index.php index.html
+
+# Redirect .shtml to .php
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    RewriteRule ^(.*)\.shtml$ $1.php [R=301,L]
+</IfModule>
+
+# Set default charset
+AddDefaultCharset UTF-8
+
+# Protect data folder
+<IfModule mod_rewrite.c>
+    RewriteRule ^data/ - [F,L]
+    RewriteRule ^includes/ - [F,L]
+</IfModule>

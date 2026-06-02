@@ -1,0 +1,110 @@
+# TVS Beta Site Configuration
+# Copy this file to .htaccess and update the database credentials
+
+DirectoryIndex index.php index.html
+
+# =====================================================
+# DATABASE CREDENTIALS (Environment Variables)
+# =====================================================
+# IMPORTANT: Replace these placeholder values with actual credentials
+SetEnv TVS_DB_HOST "your_mysql_host"
+SetEnv TVS_DB_NAME "your_database_name"
+SetEnv TVS_DB_USER "your_username"
+SetEnv TVS_DB_PASS "your_password"
+
+# =====================================================
+# FORCE HTTPS
+# =====================================================
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Force HTTPS
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # Redirect .shtml to .php
+    RewriteRule ^(.*)\.shtml$ $1.php [R=301,L]
+</IfModule>
+
+# =====================================================
+# SECURITY HEADERS
+# =====================================================
+<IfModule mod_headers.c>
+    # Prevent MIME type sniffing
+    Header always set X-Content-Type-Options "nosniff"
+
+    # Prevent clickjacking
+    Header always set X-Frame-Options "SAMEORIGIN"
+
+    # XSS Protection
+    Header always set X-XSS-Protection "1; mode=block"
+
+    # Referrer Policy
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+    # Content Security Policy
+    Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.paypal.com https://www.paypalobjects.com https://www.google.com https://calendar.google.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-src 'self' https://www.paypal.com https://calendar.google.com https://www.google.com; connect-src 'self' https://search.freefind.com"
+
+    # HSTS (Strict Transport Security) - enforce HTTPS for 1 year
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+</IfModule>
+
+# =====================================================
+# RATE LIMITING (Basic)
+# =====================================================
+# Limit request size to prevent DoS
+LimitRequestBody 10485760
+
+# =====================================================
+# SECURITY - PROTECT SENSITIVE FILES/FOLDERS
+# =====================================================
+# Set default charset
+AddDefaultCharset UTF-8
+
+# =====================================================
+# MIME TYPES
+# =====================================================
+AddType application/javascript .js
+AddType text/css .css
+AddType image/svg+xml .svg
+
+# Protect sensitive folders
+<IfModule mod_rewrite.c>
+    RewriteRule ^data/ - [F,L]
+    RewriteRule ^includes/ - [F,L]
+</IfModule>
+
+# Block access to sensitive files
+<FilesMatch "\.(sql|log|ini|env|bak|config|dist|fla|inc|psd|sh|sqlite|db)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Block access to .htaccess itself
+<Files .htaccess>
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Block access to hidden files (starting with dot)
+<FilesMatch "^\.">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Prevent directory listing
+Options -Indexes
+
+# =====================================================
+# CACHE CONTROL
+# =====================================================
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpg "access plus 1 month"
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/gif "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType text/css "access plus 1 week"
+    ExpiresByType application/javascript "access plus 1 week"
+    ExpiresByType application/pdf "access plus 1 month"
+</IfModule>

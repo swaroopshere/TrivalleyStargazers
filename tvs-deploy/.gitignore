@@ -1,0 +1,35 @@
+# Sensitive files - DO NOT COMMIT
+.htaccess
+
+# Database files
+*.db
+data/tvs.db
+
+# Environment files
+.env
+.env.*
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+error_log
+
+# Dependencies
+node_modules/
+vendor/
+
+# Local config
+includes/config.local.php
+
+# Test coverage
+coverage/
+.phpunit.result.cache
