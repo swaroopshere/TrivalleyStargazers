@@ -122,7 +122,7 @@ function dbInsert(string $sql, array $params = []): int {
 function getCurrentPublicMeeting(): ?array {
     return dbQueryOne(
         "SELECT * FROM meetings WHERE meeting_type = 'public' AND is_active = 1
-         ORDER BY meeting_date DESC LIMIT 1"
+         AND meeting_date >= CURDATE() ORDER BY meeting_date ASC LIMIT 1"
     );
 }
 
@@ -132,7 +132,7 @@ function getCurrentPublicMeeting(): ?array {
 function getCurrentBoardMeeting(): ?array {
     return dbQueryOne(
         "SELECT * FROM meetings WHERE meeting_type = 'board' AND is_active = 1
-         ORDER BY meeting_date DESC LIMIT 1"
+         AND meeting_date >= CURDATE() ORDER BY meeting_date ASC LIMIT 1"
     );
 }
 
@@ -142,7 +142,7 @@ function getCurrentBoardMeeting(): ?array {
 function getVisibleEvents(string $type): array {
     return dbQuery(
         "SELECT * FROM events WHERE event_type = ? AND is_visible = 1
-         ORDER BY event_date ASC",
+         AND event_date >= CURDATE() ORDER BY event_date ASC",
         [$type]
     );
 }
@@ -255,6 +255,23 @@ function getAllUpcomingEvents(int $limit = 15): array {
 
     // Return limited results
     return array_slice($events, 0, $limit);
+}
+
+/**
+ * Get active contacts by category, ordered by sort_order
+ */
+function getContacts(string $category): array {
+    return dbQuery(
+        "SELECT * FROM contacts WHERE category = ? AND is_active = 1 ORDER BY sort_order ASC",
+        [$category]
+    );
+}
+
+/**
+ * Get a single contact by ID (used by admin)
+ */
+function getContactById(int $id): ?array {
+    return dbQueryOne("SELECT * FROM contacts WHERE id = ?", [$id]);
 }
 
 /**

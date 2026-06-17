@@ -10,6 +10,10 @@ require_once __DIR__ . '/includes/functions.php';
 $pageTitle = 'Tri-Valley Stargazers Contacts';
 $pageId = 'm_contacts';
 
+$officers     = getContacts('officer');
+$boardMembers = getContacts('board');
+$volunteers   = getContacts('volunteer');
+
 include __DIR__ . '/includes/templates/header.php';
 ?>
 
@@ -18,104 +22,42 @@ include __DIR__ . '/includes/templates/header.php';
 <div class="contacts-page">
 
     <h2 class="subtitle">Officers <?= date('Y') ?></h2>
+    <?php foreach ($officers as $c): ?>
     <div class="contact-row">
-        <div class="contact-title">President</div>
-        <div class="contact-name"><span class="contact-link" data-user="president" data-domain="trivalleystargazers.org">Eric Dueltgen</span></div>
+        <div class="contact-title"><?= e($c['position']) ?></div>
+        <div class="contact-name">
+            <?= $c['email_user']
+                ? contactLink($c['email_user'], $c['email_domain'], $c['name'])
+                : e($c['name']) ?>
+        </div>
     </div>
-    <div class="contact-row">
-        <div class="contact-title">Vice President</div>
-        <div class="contact-name"><span class="contact-link" data-user="vice_president" data-domain="trivalleystargazers.org">Aris Pope</span></div>
-    </div>
-    <div class="contact-row">
-        <div class="contact-title">Treasurer</div>
-        <div class="contact-name"><span class="contact-link" data-user="treasurer" data-domain="trivalleystargazers.org">John Forrest</span></div>
-    </div>
-    <div class="contact-row">
-        <div class="contact-title">Secretary</div>
-        <div class="contact-name"><span class="contact-link" data-user="secretary" data-domain="trivalleystargazers.org">Dave Lackey</span></div>
-    </div>
+    <?php endforeach; ?>
     <br><br>
 
     <h2 class="subtitle">Board Members</h2>
+    <?php foreach ($boardMembers as $c): ?>
     <div class="contact-row">
-        <div class="contact-title">Past President</div>
-        <div class="contact-name"><span class="contact-link" data-user="past_president" data-domain="trivalleystargazers.org">Ron Kane</span></div>
+        <div class="contact-title"><?= e($c['position']) ?></div>
+        <div class="contact-name">
+            <?= $c['email_user']
+                ? contactLink($c['email_user'], $c['email_domain'], $c['name'])
+                : e($c['name']) ?>
+        </div>
     </div>
-    <div class="contact-row">
-        <div class="contact-title">At Large</div>
-        <div class="contact-name"><span class="contact-link" data-user="astrophotography" data-domain="trivalleystargazers.org">Gert Gottschalk</span></div>
-    </div>
-    <div class="contact-row">
-        <div class="contact-title">At Large</div>
-        <div class="contact-name"><span class="contact-link" data-user="observatory" data-domain="trivalleystargazers.org">Chuck Grant</span></div>
-    </div>
-    <div class="contact-row">
-        <div class="contact-title">At Large</div>
-        <div class="contact-name"><span class="contact-link" data-user="webmaster" data-domain="trivalleystargazers.org">Swaroop Shere</span></div>
-    </div>
+    <?php endforeach; ?>
     <br><br>
 
     <h2 class="subtitle">Volunteer Positions</h2>
+    <?php foreach ($volunteers as $c): ?>
     <div class="contact-row">
-        <div class="contact-title">Astronomical League Representative</div>
-        <div class="contact-name"><span class="contact-link" data-user="alrep" data-domain="trivalleystargazers.org">Don Dossa</span></div>
+        <div class="contact-title"><?= e($c['position']) ?></div>
+        <div class="contact-name">
+            <?= $c['email_user']
+                ? contactLink($c['email_user'], $c['email_domain'], $c['name'])
+                : e($c['name']) ?>
+        </div>
     </div>
-    <div class="contact-row">
-        <div class="contact-title">Del Valle Coordinator</div>
-        <div class="contact-name"><span class="contact-link" data-user="delvalle" data-domain="trivalleystargazers.org">Dave Wilzius</span></div>
-    </div>
-    <div class="contact-row">
-        <div class="contact-title">Historian</div>
-        <div class="contact-name">Open</div>
-    </div>
-    <div class="contact-row">
-        <div class="contact-title">Librarian</div>
-        <div class="contact-name"><span class="contact-link" data-user="librarian" data-domain="trivalleystargazers.org">Ron Kane</span></div>
-    </div>
-    <div class="contact-row">
-        <div class="contact-title">Loaner Scope Manager</div>
-        <div class="contact-name"><span class="contact-link" data-user="telescopes" data-domain="trivalleystargazers.org">Ron Kane</span></div>
-    </div>
-    <div class="contact-row">
-        <div class="contact-title">Night Sky Network Representative</div>
-        <div class="contact-name"><span class="contact-link" data-user="nnsn" data-domain="trivalleystargazers.org">Ross Gaunt</span></div>
-    </div>
-    <div class="contact-row">
-        <div class="contact-title">Newsletter Editor</div>
-        <div class="contact-name"><span class="contact-link" data-user="newsletter" data-domain="trivalleystargazers.org">Scott Schneider</span></div>
-    </div>
-    <div class="contact-row">
-        <div class="contact-title">Observatory Director / Rebuild Chairman</div>
-        <div class="contact-name"><span class="contact-link" data-user="observatory" data-domain="trivalleystargazers.org">Chuck Grant</span></div>
-    </div>
-    <div class="contact-row">
-        <div class="contact-title">Observatory Co-Director</div>
-        <div class="contact-name"><span class="contact-link" data-user="H2O-Events" data-domain="trivalleystargazers.org">Ross Gaunt</span></div>
-    </div>
-    <div class="contact-row">
-        <div class="contact-title">Potluck Coordinator</div>
-        <div class="contact-name"><span class="contact-link" data-user="potluck" data-domain="trivalleystargazers.org">Ron Kane</span></div>
-    </div>
-    <div class="contact-row">
-        <div class="contact-title">Programs</div>
-        <div class="contact-name"><span class="contact-link" data-user="programs" data-domain="trivalleystargazers.org">Ron Kane</span></div>
-    </div>
-    <div class="contact-row">
-        <div class="contact-title">Publicity and Fundraising</div>
-        <div class="contact-name">Open</div>
-    </div>
-    <div class="contact-row">
-        <div class="contact-title">Refreshments</div>
-        <div class="contact-name">Open</div>
-    </div>
-    <div class="contact-row">
-        <div class="contact-title">Star Party Coordinator</div>
-        <div class="contact-name"><span class="contact-link" data-user="coordinator" data-domain="trivalleystargazers.org">Johnathan Bailey</span></div>
-    </div>
-    <div class="contact-row">
-        <div class="contact-title">Webmaster</div>
-        <div class="contact-name"><span class="contact-link" data-user="webmaster" data-domain="trivalleystargazers.org">Swaroop Shere</span></div>
-    </div>
+    <?php endforeach; ?>
     <br><br>
 
     <h2 class="subtitle">Member Astrophoto Links</h2>

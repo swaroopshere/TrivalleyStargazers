@@ -105,16 +105,18 @@ tvs-deploy/
 3. **Configure production environment**
    Create/edit `.htaccess` on the server with production credentials:
    ```apache
-   SetEnv TVS_DB_HOST "your_ipage_mysql_host"
-   SetEnv TVS_DB_NAME "your_database_name"
+   SetEnv TVS_DB_HOST "trivalleystargazerso.ipagemysql.com"
+   SetEnv TVS_DB_NAME "tvs_prod"
    SetEnv TVS_DB_USER "your_username"
    SetEnv TVS_DB_PASS "your_password"
    SetEnv GROUPS_IO_API_KEY "your_api_key"
    ```
+   > **Environments:** beta site uses database `tvs_beta`; production site uses `tvs_prod`.
 
 4. **Initialize database**
    - Access phpMyAdmin from iPage control panel
-   - Import `data/schema.sql`
+   - Import `data/schema.sql` (creates tables and inserts placeholder data)
+   - Import `data/seed.sql` (replaces placeholders with real data, seeds all newsletters)
 
 5. **Verify deployment**
    - Visit the public site

@@ -299,7 +299,7 @@ function presentation(month, day, presenter, title, link) {
 
 // Membership form setup
 function setupForm() {
-	document.application.action = "cgi-bin/apply.pl";
+	document.application.action = "apply.php";
 	document.getElementById("preset").value = "Preset";
 }
 

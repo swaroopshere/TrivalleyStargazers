@@ -30,8 +30,8 @@
             //showOptional("opt_announce");
             //showOptional("opt_potluck");
             //showOptional("opt_potluck_details");
-            //showOptional("opt_bbq");
-            //showOptional("opt_bbq_details");
+            showOptional("opt_bbq");
+            showOptional("opt_bbq_details");
         }
    //-->
   </script>
@@ -86,13 +86,13 @@ The Tri-Valley Stargazers Privacy Policy is available <a href="https://trivalley
       <h3 class="meeting-header">Next Public Meeting</h3>	
       <div class="optional" id="opt_talk">
        <div class="meeting-details">
-        <p class="meeting-time">Friday, January 16, 2026 at 7:30 p.m.</p>
+        <p class="meeting-time">Friday, May 15, 2026 at 7:30 p.m.</p>
         <p class="meeting-location">Unitarian Universalist Church<br>1893 N. Vasco Rd., Livermore</p>
        </div>
        
        <div class="meeting-presenter">
-        <strong>Topic:</strong> "Stars Without Nuclear Fusion -- Much of the physics without all of the confusion"<br>
-        <strong>Presenter:</strong> Dr. Kirk T. Korista, Professor of Astronomy and Graduate Programs Advisor, Department of Physics, Western Michigan University
+        <strong>Topic:</strong> "Nasa Mission Control"<br>
+        <strong>Presenter:</strong> "Ben Hayman"<br>
        </div>
 
        <div class="meeting-description">
@@ -105,7 +105,7 @@ The Tri-Valley Stargazers Privacy Policy is available <a href="https://trivalley
       <div class="meeting-card">
        <h3 class="meeting-header">Summer Barbecue</h3>
        <div class="meeting-details">
-        <p class="meeting-time">Friday, June 20, 2024</p>
+        <p class="meeting-time">Friday, June 20, 2026</p>
         <p>Set up at 6:00 p.m.<br>Dinner starts at 7:30 p.m.</p>
         <p class="meeting-location">Unitarian Universalist Church<br>1893 N. Vasco Rd., Livermore</p>
        </div>
@@ -135,7 +135,7 @@ The Tri-Valley Stargazers Privacy Policy is available <a href="https://trivalley
      <div class="meeting-card">
       <h3 class="meeting-header">Next Board Meeting</h3>
       <div class="meeting-details">
-       <p class="meeting-time">Monday, January 19, 2026, 7:30 p.m.</p>
+       <p class="meeting-time">Monday, May 18, 2026, 7:30 p.m.</p>
        <p class="meeting-description">Board meetings are usually held using video conferencing. Members are always welcome at board meetings.</p>
       </div>
      </div>
@@ -168,7 +168,7 @@ Please visit:  <a href="https://eastbayastro.org/events/" target="_blank">East B
 <br><br> -->
 
   <div class="optional" id="opt_talk_details">
-   <h3 class="subtitle">January 2026 Member Meeting Presentation</h3>
+   <h3 class="subtitle">May 2026 Meeting Presentation</h3>
    <br><br>
  
    This meeting will be live at the Unitarian church and will also be available using the video conference utility 
@@ -183,10 +183,10 @@ Please visit:  <a href="https://eastbayastro.org/events/" target="_blank">East B
 
    <script type="text/javascript">
      currentSpeaker(
-       "Stars Without Nuclear Fusion -- Much of the physics without all of the confusion",
-       "Dr. Kirk T. Korista, Professor of Astronomy and Graduate Programs Advisor, Department of Physics, Western Michigan University",
-       "The phenomenon of nuclear fusion influences the structure and evolution of stars in many important ways, but several key physical processes in and behaviors of stars are ubiquitously mis-attributed to nuclear fusion. These serve as major misconceptions that lead to widespread confusion about how stars work.  Nuclear fusion does not support stars against the force of gravity and gravitational collapse, nor does it generate significant radiation pressure to do so as is mysteriously invoked. In fact, radiation pressure rarely contributes significantly to supporting stars at all. In point of fact, stars do not require nuclear fusion in order to exist as hot, luminous objects that are in force balance against gravity. In order to illuminate their fundamental natures, we explore stars without nuclear processes and compare their evolutionary behavior to stars with nuclear fusion",
-       "Dr. Kirk T. Korista is a Professor of Astronomy and Graduate Programs Advisor, Department of Physics, Western Michigan University."
+       "Nasa Mission Control",
+       "Ben Hayman",
+       "NASA’s human spaceflight programs are global endeavor that bring together cutting edge engineering, international partnerships, and decades of operational expertise to explore low Earth orbit, the Moon, and beyond. This presentation offers an inside look at how Mission Control in Houston directs the daily operation of spacecraft such as the International Space Station (ISS), Boeing’s CST-100 Starliner, and future lunar missions under the Artemis and Moon2Mars architecture.",
+       "Ben Heyman is a NASA contractor working as a Station Power, ARticulation, Thermal, and ANalysis (SPARTAN) Front room Flight Controller (FCR) and Instructor for the International Space Station (ISS) Program, and Mechanical and Power Officer (MPO) Exploration Flight Controller providing technical expertise and insight into lunar exploration systems for the Moon to Mars (M2M) Program and Extravehicular Activity and Human Surface Mobility Program (EHP), with previous experience flying Boeing’s CST-100 Starliner spacecraft."
      );
    
    </script>
