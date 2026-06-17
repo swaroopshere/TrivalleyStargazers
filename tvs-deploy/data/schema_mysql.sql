@@ -128,6 +128,24 @@ CREATE TABLE IF NOT EXISTS official_documents (
     FOREIGN KEY (uploaded_by) REFERENCES users(id)
 );
 
+-- Contacts (officers, board, volunteers, astrophoto links)
+CREATE TABLE IF NOT EXISTS contacts (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    category ENUM('officer', 'board', 'volunteer', 'astrophoto') NOT NULL,
+    position VARCHAR(100) NOT NULL,
+    name VARCHAR(100) NOT NULL,
+    email_user VARCHAR(50) DEFAULT NULL,
+    email_domain VARCHAR(100) DEFAULT 'trivalleystargazers.org',
+    title VARCHAR(200) DEFAULT NULL,
+    website_url VARCHAR(255) DEFAULT NULL,
+    website_title VARCHAR(100) DEFAULT NULL,
+    sort_order INT DEFAULT 0,
+    is_active TINYINT(1) DEFAULT 1,
+    updated_by INT DEFAULT NULL,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 -- Create indexes for better performance
 CREATE INDEX idx_meetings_type_active ON meetings(meeting_type, is_active);
 CREATE INDEX idx_newsletters_year_month ON newsletters(year, month);
@@ -137,6 +155,8 @@ CREATE INDEX idx_calendar_cache_date ON calendar_cache(event_date);
 CREATE INDEX idx_audit_log_user ON audit_log(user_id);
 CREATE INDEX idx_login_attempts_ip ON login_attempts(ip_address);
 CREATE INDEX idx_documents_active ON official_documents(is_active, sort_order);
+CREATE INDEX idx_contacts_category ON contacts(category);
+CREATE INDEX idx_contacts_active ON contacts(is_active);
 
 -- =====================================================
 -- INITIAL DATA

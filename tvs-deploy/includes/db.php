@@ -258,6 +258,23 @@ function getAllUpcomingEvents(int $limit = 15): array {
 }
 
 /**
+ * Get active contacts by category, ordered by sort_order
+ */
+function getContacts(string $category): array {
+    return dbQuery(
+        "SELECT * FROM contacts WHERE category = ? AND is_active = 1 ORDER BY sort_order ASC",
+        [$category]
+    );
+}
+
+/**
+ * Get a single contact by ID (used by admin)
+ */
+function getContactById(int $id): ?array {
+    return dbQueryOne("SELECT * FROM contacts WHERE id = ?", [$id]);
+}
+
+/**
  * Log an audit event
  */
 function logAudit(int $userId, string $action, string $tableName = '', int $recordId = 0, string $oldValue = '', string $newValue = ''): void {
