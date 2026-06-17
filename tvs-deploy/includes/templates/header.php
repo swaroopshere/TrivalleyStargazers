@@ -44,7 +44,7 @@ $showHero = $showHero ?? ($pageId === 'm_home');
     <link href="tvs.css" rel="stylesheet" type="text/css">
 
     <!-- JavaScript -->
-    <script src="tvs.js" type="text/javascript"></script>
+    <script src="tvs.js" type="text/javascript" defer></script>
 
     <script type="text/javascript">
         var lastUpdateDate = "<?= e($lastUpdateDate) ?>";

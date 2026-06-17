@@ -293,7 +293,7 @@ include __DIR__ . '/../includes/templates/admin_header.php';
                         <td><?= formatDate($meeting['meeting_date']) ?></td>
                         <td><?= formatTime($meeting['meeting_time']) ?></td>
                         <td><?= e($meeting['location']) ?></td>
-                        <td><?= $meeting['meeting_type'] === 'public' && !empty($meeting['presentation_topic']) ? e(substr($meeting['presentation_topic'], 0, 40)) . '...' : '-' ?></td>
+                        <td><?= $meeting['meeting_type'] === 'public' && !empty($meeting['presentation_topic']) ? e(truncate($meeting['presentation_topic'], 40)) : '-' ?></td>
                         <td><?= $meeting['is_active'] ? '<span style="color: green;">Active</span>' : '<span style="color: gray;">Past</span>' ?></td>
                     </tr>
                 <?php endforeach; ?>

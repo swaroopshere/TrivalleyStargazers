@@ -154,7 +154,7 @@ include __DIR__ . '/../includes/templates/admin_header.php';
                 <div class="form-group">
                     <label>Year</label>
                     <select name="year" required>
-                        <?php for ($y = date('Y') + 1; $y >= 2020; $y--): ?>
+                        <?php for ($y = date('Y') + 1; $y >= 1996; $y--): ?>
                             <option value="<?= $y ?>" <?= $y == date('Y') ? 'selected' : '' ?>><?= $y ?></option>
                         <?php endfor; ?>
                     </select>

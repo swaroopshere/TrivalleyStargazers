@@ -6,16 +6,17 @@
  * Sensitive values should be set via environment variables in production.
  */
 
+// Error reporting: log everything, never display to users in production.
+// Override display_errors = 1 in includes/config.local.php for local development.
+error_reporting(E_ALL);
+ini_set('display_errors', 0);
+ini_set('log_errors', 1);
+
 // Load local config override if it exists (for development)
 $localConfig = __DIR__ . '/config.local.php';
 if (file_exists($localConfig)) {
     require_once $localConfig;
 }
-
-// Error reporting (disable in production)
-error_reporting(E_ALL);
-ini_set('display_errors', 0);
-ini_set('log_errors', 1);
 
 // Session configuration
 ini_set('session.cookie_httponly', 1);

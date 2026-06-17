@@ -15,7 +15,7 @@ include __DIR__ . '/includes/templates/header.php';
 
 <script type="text/javascript">
 <!--
-    window.onload=setupForm;
+    document.addEventListener('DOMContentLoaded', setupForm);
 //-->
 </script>
 
@@ -47,7 +47,7 @@ form below with your latest information before paying your
 Member agrees to hold Tri-Valley Stargazers, and any cooperating organizations or landowners, harmless from all
 claims of liability for any injury or loss sustained at a TVS function. TVS will not share information with anyone
 except as detailed in our
-<a href="TVS Privacy Policy (September 2022).pdf" title="Read our privacy policy">Privacy Policy</a>.<br><br>
+<a href="privacy.pdf" title="Read our privacy policy">Privacy Policy</a>.<br><br>
 
 <form class="application" name="application" action="">
   <p>

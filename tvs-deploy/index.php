@@ -114,8 +114,12 @@ include __DIR__ . '/includes/templates/header.php';
                     <h3 class="meeting-header">Summer Barbecue</h3>
                     <div class="meeting-details">
                         <p class="meeting-time"><?= formatDate($bbqEvents[0]['event_date'], 'l, F j, Y') ?></p>
+                        <?php if (!empty($bbqEvents[0]['description'])): ?>
+                        <?= nl2br(e($bbqEvents[0]['description'])) ?>
+                        <?php else: ?>
                         <p>Set up at 6:00 p.m.<br>Dinner starts at 7:30 p.m.</p>
                         <p class="meeting-location">Unitarian Universalist Church<br>1893 N. Vasco Rd., Livermore</p>
+                        <?php endif; ?>
                     </div>
                 </div>
                 <?php endif; ?>
@@ -126,8 +130,12 @@ include __DIR__ . '/includes/templates/header.php';
                     <h3 class="meeting-header">Winter Solstice Potluck</h3>
                     <div class="meeting-details">
                         <p class="meeting-time"><?= formatDate($potluckEvents[0]['event_date'], 'l, F j, Y') ?></p>
+                        <?php if (!empty($potluckEvents[0]['description'])): ?>
+                        <?= nl2br(e($potluckEvents[0]['description'])) ?>
+                        <?php else: ?>
                         <p>Set up at 6:30 p.m.<br>Dinner starts at 7:00 p.m.</p>
                         <p class="meeting-location">Unitarian Universalist Church<br>1893 N. Vasco Rd., Livermore</p>
+                        <?php endif; ?>
                     </div>
                 </div>
                 <?php endif; ?>
