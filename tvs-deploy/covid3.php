@@ -15,7 +15,7 @@ $pageId = 'm_home';
 include __DIR__ . '/includes/templates/header.php';
 ?>
 
-<h1 class="title" style="width: 200px;">Staying Healthy Rules</h1>
+<h1 class="title">Staying Healthy Rules</h1>
 
 <p>Due to the COVID-19 health crisis and because we're all more aware of disease spread, we ask that you consider the following for observing sites at Del Valle and H2O:</p>
 

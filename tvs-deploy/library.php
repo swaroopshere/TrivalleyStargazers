@@ -15,7 +15,7 @@ include __DIR__ . '/includes/templates/header.php';
 
 <h1 class="title">Library</h1>
 
-<div class="content" style="width:930px;">
+<div class="content">
     <h2 class="subtitle">TVS Lending Library</h2>
 
     <p>

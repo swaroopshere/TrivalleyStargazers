@@ -18,7 +18,7 @@ include __DIR__ . '/includes/templates/header.php';
 <a name="Anchor"></a>
 <h1 class="title">Contributions</h1>
 
-<div class="content" style="width:930px;">
+<div class="content">
     <h2 class="subtitle">Member Contributions</h2>
 
     <p>

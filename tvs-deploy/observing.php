@@ -15,7 +15,7 @@ $pageId = 'm_activities';
 include __DIR__ . '/includes/templates/header.php';
 ?>
 
-<h1 class="title" style="width: 500px;">Observing Programs</h1>
+<h1 class="title">Observing Programs</h1>
 
 <h2 class="subtitle">Overview</h2>
 <p>

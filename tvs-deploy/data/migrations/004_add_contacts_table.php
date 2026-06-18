@@ -1,6 +1,6 @@
 <?php
 /**
- * Migration: 001_add_contacts_table
+ * Migration: 004_add_contacts_table
  * Description: Create contacts table and seed initial data from contacts.php
  */
 

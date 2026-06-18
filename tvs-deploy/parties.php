@@ -13,10 +13,10 @@ $pageId = 'm_activities';
 include __DIR__ . '/includes/templates/header.php';
 ?>
 
-<div style="border-style: solid; background-color:#003354; color:white; padding: 12px;">
+<div class="covid-notice">
   Please read the latest about our COVID-19 rules:
   <a href="covid3.php" title="Click me to read the rules">
-    <button style="margin-left: 10px; border-radius: 6px; background-color: white; color: black;">Rules</button>
+    <button class="covid-notice-link">Rules</button>
   </a>
 </div>
 

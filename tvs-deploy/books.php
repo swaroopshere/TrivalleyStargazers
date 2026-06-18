@@ -18,7 +18,7 @@ include __DIR__ . '/includes/templates/header.php';
 <a name="Anchor"></a>
 <h1 class="title">Reading</h1>
 
-<div class="content" style="width:930px;">
+<div class="content">
     <h2 class="subtitle">Recommended Books</h2>
 
     <p><i>Skywatching</i>. David Levy, introduction by Robert Burnham. One of the Nature Company Guides published by Time-Life Books.</p>

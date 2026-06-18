@@ -13,7 +13,7 @@ $pageId = 'm_activities';
 include __DIR__ . '/includes/templates/header.php';
 ?>
 
-<h1 class="title" style="width:250px;">Log File Descriptions</h1>
+<h1 class="title">Log File Descriptions</h1>
 
 <p>
     Our programs require that you document your observations. It's also a chance to make notes about what you see as

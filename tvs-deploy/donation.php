@@ -14,7 +14,7 @@ include __DIR__ . '/includes/templates/header.php';
 ?>
 
 <div id="regular">
-    <h1 class="title" style="width: 600px;">Donate to the Tri-Valley Stargazers</h1>
+    <h1 class="title">Donate to the Tri-Valley Stargazers</h1>
 
     <p>
         The Tri-Valley Stargazers is a 501(c)(3) nonprofit organization, so all donations
@@ -24,10 +24,10 @@ include __DIR__ . '/includes/templates/header.php';
         damaged in a recent wild fire. These photos by Jannette Bennett show some of the damage:
     </p>
 
-    <img src="images/fire/img_1547.jpg" alt="Fire damage" title="Fire damage" style="float:left; width:25%; padding-left:200px;">
-    <img src="images/fire/img_1506.jpg" alt="Fire damage" title="Fire damage" style="float:right;width:25%; padding-right:200px;">
-    <br><br>
-    <span style="clear:left; display:block;"><br><br></span>
+    <div style="display:flex; gap:2rem; justify-content:center; align-items:flex-start; flex-wrap:wrap;">
+        <img src="images/fire/img_1547.jpg" alt="Fire damage" title="Fire damage" style="width:25%;">
+        <img src="images/fire/img_1506.jpg" alt="Fire damage" title="Fire damage" style="width:25%;">
+    </div>
 </div>
 
 <table class="items">

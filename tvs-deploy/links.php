@@ -23,7 +23,7 @@ include __DIR__ . '/includes/templates/header.php';
 
     <span>Topic</span>
     <div class="links_details" style="display:block; top:0px;">Details</div><br>
-    <hr style="width:800px; margin-left:0px;">
+    <hr>
 
     <span id="overview" class="links_topic" onclick="showLinksDetails(this);" style="font-weight:bold;">Overview</span>
     <div id="D_overview" class="links_details" style="display:block;">

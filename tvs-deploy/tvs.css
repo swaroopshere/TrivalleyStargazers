@@ -1315,7 +1315,7 @@ h1.title {
     padding-bottom: var(--space-3);
     margin-bottom: var(--space-6);
     border-bottom: 3px solid var(--color-accent);
-    display: inline-block;
+    display: block;
 }
 
 h2.subtitle, .subtitle {
@@ -2076,4 +2076,24 @@ div.footer table {
 .gallery-link {
     display: inline-block;
     margin-top: var(--space-4);
+}
+
+/* COVID notice banner */
+.covid-notice {
+    border: 1px solid;
+    background-color: #003354;
+    color: white;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+}
+
+.covid-notice-link {
+    display: inline-block;
+    margin-left: 0.625rem;
+    background-color: white;
+    color: black;
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    text-decoration: none;
 }

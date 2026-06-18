@@ -13,7 +13,7 @@ $pageId = 'm_home';
 include __DIR__ . '/includes/templates/header.php';
 ?>
 
-<h1 class="title" style="width:600px;">Donations to TVS Reconstruction</h1>
+<h1 class="title">Donations to TVS Reconstruction</h1>
 <p>
     In the wake of the SCU Lightning Complex Wildfire that destroyed the H2O main observatory there was an outpouring of
     generosity to TVS from astronomy enthusiasts worldwide. The most immediately noticeable outpouring came in the form
@@ -35,7 +35,7 @@ include __DIR__ . '/includes/templates/header.php';
 </p>
 
 
-<h1 class="title" style="width:600px;">TVS H2O Fire Rebuild Donor Recognition</h1>
+<h1 class="title">TVS H2O Fire Rebuild Donor Recognition</h1>
 <p>
     TVS wants to thank and recognize the individuals and businesses who have made donations designated to help the club
     rebuild the H2O observatory that was lost by wildfire in Aug 2020. The lists below reveal the strength and passion of

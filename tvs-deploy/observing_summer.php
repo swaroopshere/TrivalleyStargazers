@@ -13,7 +13,7 @@ $pageId = 'm_activities';
 include __DIR__ . '/includes/templates/header.php';
 ?>
 
-<h1 class="title" style="width:500px;">Summer Observing Program</h1>
+<h1 class="title">Summer Observing Program</h1>
 
 <h2 class="subtitle">Introduction</h2>
 <p>

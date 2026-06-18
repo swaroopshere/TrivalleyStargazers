@@ -13,17 +13,17 @@ $pageId = 'm_sites';
 include __DIR__ . '/includes/templates/header.php';
 ?>
 
-<div style="border-style: solid; background-color:#003354; color:white; padding: 12px;">
+<div class="covid-notice">
   Please read the latest about our COVID-19 rules:
   <a href="covid3.php" title="Click me to read the rules">
-    <button style="margin-left: 10px; border-radius: 6px; background-color: white; color: black;">Rules</button>
+    <button class="covid-notice-link">Rules</button>
   </a>
 </div>
 
 <a name="Anchor"></a>
-<h1 class="title" style="width: 400px;">H2O (Hidden Hill Observatory)</h1>
+<h1 class="title">H2O (Hidden Hill Observatory)</h1>
 
-  <div class="content" style="width:930px;">
+  <div class="content">
 
     <h2 class="subtitle">TVS Club Observatory and Dark Observing Site</h2>
 

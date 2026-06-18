@@ -16,9 +16,9 @@ include __DIR__ . '/includes/templates/header.php';
 ?>
 
 <a name="Anchor"></a>
-<h1 class="title" style="width: 552px;">H2O (Hidden Hill Observatory) User Agreement</h1>
+<h1 class="title">H2O (Hidden Hill Observatory) User Agreement</h1>
 
-<div class="content" style="width:930px;">
+<div class="content">
 
     <div align="left">
         <a class="topLinks" href="#access">H2O Access</a><br>

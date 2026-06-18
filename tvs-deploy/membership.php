@@ -19,7 +19,7 @@ include __DIR__ . '/includes/templates/header.php';
 //-->
 </script>
 
-<h1 class="title" style="width: 460px;">Membership Application and Renewal</h1>
+<h1 class="title">Membership Application and Renewal</h1>
 
 Membership is open to anyone with an interest in astronomy. Amateurs and professionals are
 equally welcome; skilled amateurs comprise a majority of the membership.  You do not
@@ -105,12 +105,11 @@ except as detailed in our
     <input id="new" name="new" type="hidden" readonly value="unset">
   </p>
 
-  <p style="padding-top:20px;">
-   <input type="submit" id="submit1" value="New member" style="color: #000088; font-weight:bold; float:left; margin-left:214px;"
+  <p style="padding-top:20px; display:flex; gap:1rem; justify-content:center;">
+   <input type="submit" id="submit1" value="New member" class="btn btn-primary"
       onclick="document.getElementById('new').value = 'Yes';">
-   <input type="submit" id="submit2" value="Returning member" style="color: #000088; font-weight:bold; float:right; margin-right:151px;"
+   <input type="submit" id="submit2" value="Returning member" class="btn btn-outline"
       onclick="document.getElementById('new').value = 'No';">
-   <br><br>
   </p>
 
 </form>

@@ -37,7 +37,7 @@ document.body.onbeforeunload = "";
 
 <?php if (!$isApplicant): ?>
 <div id="regular">
-    <h1 class="title" style="width: 280px;">Pay your TVS dues here</h1>
+    <h1 class="title">Pay your TVS dues here</h1>
 
     <p>Joining the TVS is a two step process. If you haven't already done so, you must first fill out the
     <a href="membership.php" title="Apply for TVS membership">application form</a>,
@@ -52,7 +52,7 @@ document.body.onbeforeunload = "";
 </div>
 <?php else: ?>
 <div id="applicant">
-    <h1 class="title" style="width: 490px;">Complete your application by paying dues</h1>
+    <h1 class="title">Complete your application by paying dues</h1>
 
     <p>Thank you for submitting your membership application form. Before your application is complete,
     you must still pay dues. You can do this by filling out the form below, where you can also
@@ -62,7 +62,7 @@ document.body.onbeforeunload = "";
     to download an application form in PDF format. Then mail the form along with a
     check to Tri-Valley Stargazers, P.O. Box 2476, Livermore, CA 94551-2476.</p>
 
-    <h2 style="color: #A8311B;">Warning: your application will not be processed until we receive your payment!</h2>
+    <h2>Warning: your application will not be processed until we receive your payment!</h2>
     <br>
 </div>
 <?php endif; ?>
@@ -137,7 +137,7 @@ document.body.onbeforeunload = "";
             <label for="other">Other:&nbsp;&nbsp;&nbsp;</label>
             <input type="text" id="other" value="0" size="5" style="width:4em;" onchange="updateTotal();">
             &nbsp;&nbsp;&nbsp;<label for="explanation">Explanation:&nbsp;&nbsp;&nbsp;</label>
-            <input type="text" id="explanation" value="" style="width:400px;" title="Explain this item">
+            <input type="text" id="explanation" value="" title="Explain this item">
         </span>
         <div class="itemDetails">
             Use this to pay for other things that aren't covered above. For example you can pay here for

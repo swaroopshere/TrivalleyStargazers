@@ -14,7 +14,7 @@ include __DIR__ . '/includes/templates/header.php';
 ?>
 
 <a name="Anchor"></a>
-<h1 class="title" style="width: 275px;">Membership Benefits</h1>
+<h1 class="title">Membership Benefits</h1>
 <table width="743" border="0" cellpadding="0" cellspacing="0">
  <tr>
   <td width="1" rowspan="2"></td>

@@ -18,7 +18,7 @@ include __DIR__ . '/includes/templates/header.php';
 <a name="Anchor"></a>
 <h1 class="title">Resources</h1>
 
-<div class="content" style="width:930px;">
+<div class="content">
     <p>Here are some resources that you might want to look at:</p>
     <ul>
         <li><a href="loanerscope.php" title="Learn about our loaner scope program">Loaner Scopes</a></li>

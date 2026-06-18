@@ -65,7 +65,7 @@ include __DIR__ . '/includes/templates/header.php';
     <a name="orgs"></a>
     <h2 class="subtitle">TVS supports the following organizations</h2>
 
-    <div align="center">
+    <div style="text-align:center;">
         <p>
             <a title="Astronomical League" href="http://www.astroleague.org/" target="_blank">
                 <img src="images/ALLogo.gif" alt="Astronomical League" width="100" border="0" height="100">

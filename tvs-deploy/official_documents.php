@@ -15,9 +15,9 @@ $pageId = 'm_about';
 include __DIR__ . '/includes/templates/header.php';
 ?>
 
-<h1 class="title" style="width: 300px;">Official TVS Documents</h1>
+<h1 class="title">Official TVS Documents</h1>
 
-<div class="content" style="width:930px;">
+<div class="content">
     <p>
         On this page you will find several official documents detailing the Tri-Valley Stargazer's bylaws,
         formation, and application for status as a 501(c)(3) charitable organization.

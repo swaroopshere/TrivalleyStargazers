@@ -13,7 +13,7 @@ $pageId = 'm_activities';
 include __DIR__ . '/includes/templates/header.php';
 ?>
 
-<h1 class="title" style="width:300px;">Observing Techniques</h1>
+<h1 class="title">Observing Techniques</h1>
 
 <p>
     Seeing and Transparency are values that an observer uses to compare the quality of the sky from night
