@@ -30,8 +30,8 @@
             //showOptional("opt_announce");
             //showOptional("opt_potluck");
             //showOptional("opt_potluck_details");
-            showOptional("opt_bbq");
-            showOptional("opt_bbq_details");
+            //showOptional("opt_bbq");
+            //showOptional("opt_bbq_details");
         }
    //-->
   </script>
@@ -135,7 +135,7 @@ The Tri-Valley Stargazers Privacy Policy is available <a href="https://trivalley
      <div class="meeting-card">
       <h3 class="meeting-header">Next Board Meeting</h3>
       <div class="meeting-details">
-       <p class="meeting-time">Monday, May 18, 2026, 7:30 p.m.</p>
+       <p class="meeting-time">Monday, August 25, 2026, 7:30 p.m.</p>
        <p class="meeting-description">Board meetings are usually held using video conferencing. Members are always welcome at board meetings.</p>
       </div>
      </div>
@@ -168,7 +168,7 @@ Please visit:  <a href="https://eastbayastro.org/events/" target="_blank">East B
 <br><br> -->
 
   <div class="optional" id="opt_talk_details">
-   <h3 class="subtitle">May 2026 Meeting Presentation</h3>
+   <h3 class="subtitle">August 2026 Meeting Presentation</h3>
    <br><br>
  
    This meeting will be live at the Unitarian church and will also be available using the video conference utility 
@@ -183,10 +183,10 @@ Please visit:  <a href="https://eastbayastro.org/events/" target="_blank">East B
 
    <script type="text/javascript">
      currentSpeaker(
-       "Nasa Mission Control",
-       "Ben Hayman",
-       "NASA’s human spaceflight programs are global endeavor that bring together cutting edge engineering, international partnerships, and decades of operational expertise to explore low Earth orbit, the Moon, and beyond. This presentation offers an inside look at how Mission Control in Houston directs the daily operation of spacecraft such as the International Space Station (ISS), Boeing’s CST-100 Starliner, and future lunar missions under the Artemis and Moon2Mars architecture.",
-       "Ben Heyman is a NASA contractor working as a Station Power, ARticulation, Thermal, and ANalysis (SPARTAN) Front room Flight Controller (FCR) and Instructor for the International Space Station (ISS) Program, and Mechanical and Power Officer (MPO) Exploration Flight Controller providing technical expertise and insight into lunar exploration systems for the Moon to Mars (M2M) Program and Extravehicular Activity and Human Surface Mobility Program (EHP), with previous experience flying Boeing’s CST-100 Starliner spacecraft."
+       "Citizen Science - Contribute to the Science",
+       "Ron Kane",
+       "The August talk will describe opportunities for you to participate in astronomy projects.  We've seen the Occultation Timing Program IOTA)  in a previous meeting where volunteers take equipment to the field to get timing to aid in determining the shape of asteroids.  There's the variable star observer program (AAVSO) and others that use volunteers and their computers for image processing. These are activities where you can participate and learn more about the science involved.  I raise this topic now because TVS has received 3 Unistellar smart telescopes that can be used to contribute to Citizen Science and the Unistellar projects make this easy by providing details on types of observations, how to set up your telescope parameters, downloading data and sending it to Unistellar to be added to the program.  Unistellar supports exoplanet research, asteroid occultation timing, Comets, satellites and more.  Other science organizations, such as NASA, want you to participate as well but the Unistellar approach may be the easiest to start with. So, this program is to get you thinking about what else you can do with your telescope and maybe get you recognized as a contributor as well. ",
+       "Ron has been a member for more than 10 years and has supported a number of roles within the TVS organization."
      );
    
    </script>
