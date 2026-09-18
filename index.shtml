@@ -86,13 +86,13 @@ The Tri-Valley Stargazers Privacy Policy is available <a href="https://trivalley
       <h3 class="meeting-header">Next Public Meeting</h3>	
       <div class="optional" id="opt_talk">
        <div class="meeting-details">
-        <p class="meeting-time">Friday, August 21, 2026 at 7:30 p.m.</p>
+        <p class="meeting-time">Friday, September 19, 2026 at 7:30 p.m.</p>
         <p class="meeting-location">Unitarian Universalist Church<br>1893 N. Vasco Rd., Livermore</p>
        </div>
        
        <div class="meeting-presenter">
-        <strong>Topic:</strong> "Citizen Science - Contribute to the Science"<br>
-        <strong>Presenter:</strong> "Ron Kane"<br>
+        <strong>Topic:</strong> "Anecdotes of Recent Eclipses"<br>
+        <strong>Presenter:</strong> "Gert Gottschalk"<br>
        </div>
 
        <div class="meeting-description">
@@ -135,7 +135,7 @@ The Tri-Valley Stargazers Privacy Policy is available <a href="https://trivalley
      <div class="meeting-card">
       <h3 class="meeting-header">Next Board Meeting</h3>
       <div class="meeting-details">
-       <p class="meeting-time">Monday, August 24, 2026, 7:30 p.m.</p>
+       <p class="meeting-time">Monday, September 22, 2026, 7:30 p.m.</p>
        <p class="meeting-description">Board meetings are usually held using video conferencing. Members are always welcome at board meetings.</p>
       </div>
      </div>
@@ -183,10 +183,10 @@ Please visit:  <a href="https://eastbayastro.org/events/" target="_blank">East B
 
    <script type="text/javascript">
      currentSpeaker(
-       "Citizen Science - Contribute to the Science",
-       "Ron Kane",
-       "The August talk will describe opportunities for you to participate in astronomy projects.  We've seen the Occultation Timing Program IOTA)  in a previous meeting where volunteers take equipment to the field to get timing to aid in determining the shape of asteroids.  There's the variable star observer program (AAVSO) and others that use volunteers and their computers for image processing. These are activities where you can participate and learn more about the science involved.  I raise this topic now because TVS has received 3 Unistellar smart telescopes that can be used to contribute to Citizen Science and the Unistellar projects make this easy by providing details on types of observations, how to set up your telescope parameters, downloading data and sending it to Unistellar to be added to the program.  Unistellar supports exoplanet research, asteroid occultation timing, Comets, satellites and more.  Other science organizations, such as NASA, want you to participate as well but the Unistellar approach may be the easiest to start with. So, this program is to get you thinking about what else you can do with your telescope and maybe get you recognized as a contributor as well. ",
-       "Ron has been a member for more than 10 years and has supported a number of roles within the TVS organization."
+       "Anecdotes of Recent Eclipses",
+       "Gert Gottschalk",
+       "The September talk will cover the result of Gert's solar eclipse travels. We know that Gert was successful and he'll show images and describe his adventure but the lunar activity here was mostly a bust.  However, If you did attempt to observe the local eclipse we still want to hear from you.",
+       "Gert has been a member for more than 10 years and has supported a number of roles within the TVS organization."
      );
    
    </script>
