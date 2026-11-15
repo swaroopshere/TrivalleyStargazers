@@ -1,0 +1,6 @@
+# Keep the permit-holder procedure out of search results and directory listings.
+# Do not Disallow this PDF in robots.txt: crawlers need to read the noindex header.
+Options -Indexes
+<Files "delvallenotify.pdf">
+    Header always set X-Robots-Tag "noindex, nofollow, noarchive, nosnippet"
+</Files>
