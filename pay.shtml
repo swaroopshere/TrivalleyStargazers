@@ -41,11 +41,11 @@
    <div id="applicant">
     <h1 class="title" style="width: 490px;">Complete your application by paying dues</h1>
 
-    Thank you for submitting your membership application form.  Before your application is complete,
+    <strong>Your membership application has been received. Please do not submit it again.</strong> Before your application is complete,
     you must still pay dues.  You can do this by filling out the form below, where you can also
     arrange for access to H2O, and/or make a contribution to the TVS.
     If you would rather not use PayPal,  you can click
-    <a title="TVS Membership Application" href="TVSapplication.pdf" target="_blank">here</a>
+    <a title="TVS Membership Application" href="pdfs/TVSapplication.pdf" target="_blank">here</a>
     to download an application form in PDF format.  Then mail the form along with a 
     check to Tri-Valley Stargazers, P.O. Box 2476, Livermore, CA 94551-2476.<br>
 

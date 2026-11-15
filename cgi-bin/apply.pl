@@ -1,171 +1,154 @@
-#! /usr/bin/perl -w
-#
-# apply.pl: process a TVS membership application form
-#
-# Last change: 11/21/19
-#
-# Note: in theory a user could submit a form that has no email, mailing address, or phone, so that we
-# would have no way to contact him.  The script doesn't check for that because it doesn't seem likely
-# that users would actually do this and expect to hear from us.
-#
-
+#!/usr/bin/perl
+use strict;
+use warnings;
 use CGI;
+use Digest::SHA qw(sha256_hex);
+use Fcntl qw(:DEFAULT :flock);
+use File::Spec;
+use File::Path qw(make_path);
+use IO::Handle;
 
+# Configuration is supplied by the server, never by form fields.
+my $sendmail = $ENV{TVS_MEMBERSHIP_SENDMAIL} || '/usr/sbin/sendmail';
+my $state_dir = $ENV{TVS_MEMBERSHIP_STATE_DIR}
+    || File::Spec->catdir(File::Spec->tmpdir(), "tvs-membership-$<");
+my $payment = 'https://www.trivalleystargazers.org/pay.shtml?applicant=true';
+my $ttl = 3600;
+my $timeout = $ENV{TVS_MEMBERSHIP_MAIL_TIMEOUT} || 20;
+my @fields = qw(name address city state zip phone email comments blank preset new);
 
-# Variables that control how this script runs:
-
-my $from = 'webmaster@trivalleystargazers.org';         # Who all email messages appear to come from
-my @handlers = ('membership@trivalleystargazers.org', 'treasurer@trivalleystargazers.org');     # The people who handle membership applications
-my $sendmail = "/usr/sbin/sendmail -t -i";
-my $spam_reader = 'spam@trivalleystargazers.org';       # The person that gets email about spam
-my $testing = 0;                                        # 0 for production, 1 for testing
-
-
-# Extract data from form fields
-
-my $query = new CGI;
-
-my $name = $query->param('name');             # Person's name
-my $address = $query->param('address');       # Person's street address
-my $city = $query->param('city');             # Person's city
-my $state = $query->param('state');           # Person's state
-my $zip = $query->param('zip');               # Person's zip code
-my $phone = $query->param('phone');           # Person's phone number
-my $email = $query->param('email');           # Person's email
-my $comments = $query->param('comments');     # Person's comments, if any
-my $blank = $query->param('blank');           # Blank field for spambot detection
-my $preset = $query->param('preset');         # Non-blank field for spambot detection
-my $new = $query->param('new');               # Flag for returning vs. new members
-
-# Compose the message body
-
-my $eol;
-if ( $testing ) {
-    $eol = "<br>";
-}
-else {
-    $eol = "\n";
+sub escape_html {
+    my ($text) = @_;
+    $text =~ s/&/&amp;/g;
+    $text =~ s/</&lt;/g;
+    $text =~ s/>/&gt;/g;
+    $text =~ s/"/&quot;/g;
+    return $text;
 }
 
-my $time = localtime;
-my $body = "The following membership application data was received at iPage on $time:$eol$eol";
-$body = "${body}Name:         $name $eol";
-$body = "${body}Address:      $address $eol";
-$body = "${body}City:         $city $eol";
-$body = "${body}State:        $state $eol";
-$body = "${body}Zip:          $zip $eol";
-$body = "${body}Phone:        $phone $eol";
-$body = "${body}Email:        $email $eol";
-if ( $new eq "Yes" ) {
-    $body = "${body}Status:       New member $eol";
-}
-else {
-    $body = "${body}Status:       Returning member $eol";
-}
-$body = "${body}Comments:$eol$eol$comments $eol";
-
-
-# Check for spambots.  Die if the blank or preset fields are wrong.
-
-if ($blank ne "" || $preset ne "Preset" || $new eq "unset") {
-    spam("Probable spam because fields are wrong: blank = $blank, preset = $preset, new = $new.${eol}Full message follows:$eol$eol$body");
-    die("Spam: field error: blank = $blank, preset = $preset.");
-}
-
-
-# Check for all blank fields.  This could be a spambot, but I've never seen it
-# happen.  More likely the user just hit the submit button by mistake.  In any
-# case we warn the user, but we don't annoy the spm reader, since it doesn't
-# happen often enough to be a concern.
-
-if ( $name eq "" && $address eq "" && $city eq "" && $state eq "" && $zip eq ""
-     && $phone eq "" && $email eq "" && $comments eq "") {
-
-    ### spam("All fields blank.  Could be user error or spam.");
-    print "Content-type: text/html\n\n";
-    print "<h1 style='text-align:center;'>Blank message ignored</h1>";
+sub response {
+    my ($status, $title, $message) = @_;
+    print "Status: $status\r\nContent-Type: text/html; charset=UTF-8\r\n";
+    print "Cache-Control: no-store\r\n\r\n";
+    print '<!doctype html><html lang="en"><head><meta charset="utf-8"><title>',
+        escape_html($title), '</title></head><body><h1>', escape_html($title),
+        '</h1><p>', escape_html($message), '</p>',
+        '<p><a href="/membership.shtml">Return to the membership form</a></p>',
+        '<p><a href="mailto:secretary@trivalleystargazers.org">Contact the TVS secretary</a></p></body></html>';
     exit;
 }
 
-
-# Check for valid email address.
-
-$email =~ s/^\s+|\s+$//g;           # trim leading and trailing blanks...
-if ( $email =~ m/^[ ]*$/ ) {        # ... so old test might be redundant now
-    $email = "";
-} 
-elsif ( $email !~ m/^[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/ ) {
-    spam("Invalid email ($email) could be spam.${eol}Full message follows:$eol$eol$body");
-    print "Content-type: text/html\n\n";
-    print "<h1 style='text-align:center;'>Invalid email address: $email</h1>";
+sub received {
+    print "Status: 303 See Other\r\nLocation: $payment\r\n";
+    print "Content-Type: text/html; charset=UTF-8\r\nCache-Control: no-store\r\n\r\n";
+    print '<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Application received</title></head><body>',
+        '<h1>Your membership application has been received</h1><p>Please do not submit it again.</p>',
+        '<p><a href="', $payment, '">Continue to payment</a></p></body></html>';
     exit;
 }
 
-
-if ( $testing ) {
-    print "Content-type: text/html\n\n";
-    print "This is just a test<br>";
-    print "$body";
-    exit;
+if (($ENV{REQUEST_METHOD} || '') ne 'POST') {
+    print "Allow: POST\r\n";
+    response('405 Method Not Allowed', 'Please use the membership form',
+        'Applications must be submitted from the membership form. No application was sent.');
+}
+if (($ENV{CONTENT_LENGTH} || 0) > 65536) {
+    response('413 Content Too Large', 'Application too large', 'Please shorten the comments and try again.');
+}
+my $query = CGI->new;
+my %data;
+for my $field (@fields) {
+    $data{$field} = scalar($query->param($field)) // '';
+    $data{$field} =~ s/^\s+|\s+$//g;
+}
+if ($data{blank} ne '' || $data{preset} ne 'Preset'
+        || ($data{new} ne 'Yes' && $data{new} ne 'No')) {
+    response('400 Bad Request', 'Application could not be submitted',
+        'Please return to the membership form, enable JavaScript, and try again. No application was sent.');
+}
+if (!grep { length $data{$_} } qw(name address city state zip phone email comments)) {
+    response('400 Bad Request', 'Blank application', 'Please fill out your membership information. No application was sent.');
+}
+# Preserve optional email, while accepting plus-addresses and modern top-level domains.
+if ($data{email} ne '' && $data{email} !~ /^[A-Za-z0-9.!#\$%&'*+\/=?^_`{|}~-]+\@[A-Za-z0-9.-]+\.[A-Za-z]{2,63}$/) {
+    response('400 Bad Request', 'Invalid email address', 'Please correct your email address. No application was sent.');
 }
 
-
-# Find who to send the message to.
-
-my $to;
-if ($phone eq "Hilary") {			# Test messages always go to me
-    @handlers = ('hilary@muffycat.org',  'hdjones@pacbell.net');  # It's OK to hardwire these addresses
+# A private, persistent fingerprint prevents retries across tabs and browsers from
+# sending more email. Store no applicant information in the state files.
+my @identity = map { $_ eq 'email' ? lc($data{$_}) : $data{$_} }
+    qw(name address city state zip phone email comments new);
+my $fingerprint = sha256_hex(join('', map { length($_) . ':' . $_ } @identity));
+my $state;
+my $state_ok = eval {
+    make_path($state_dir, {mode => 0700}) unless -d $state_dir;
+    die "unsafe state directory" if -l $state_dir || !-d $state_dir;
+    my @dir_stat = stat($state_dir);
+    die "unsafe state directory permissions" if $dir_stat[4] != $< || ($dir_stat[2] & 0077);
+    my $path = File::Spec->catfile($state_dir, "$fingerprint.state");
+    die "unsafe state file" if -l $path;
+    sysopen($state, $path, O_RDWR | O_CREAT, 0600) or die "state open failed";
+    1;
+};
+if (!$state_ok) {
+    warn "TVS membership: state unavailable\n";
+    response('503 Service Unavailable', 'Application service temporarily unavailable',
+        'No application was sent. Please try again later or contact the TVS secretary.');
 }
-
-
-# Send message.  Note that we don't CC back to the user.  That would reveal the our email address,
-# allowing him to spam us.  The message must also not appear to come from the applicant, since
-# that makes it look like we are sending out spam with a forged return address.  In turn that
-# can cause our site to be blacklisted.
-
-foreach my $to (@handlers) {
-
-    open(SENDMAIL, "|$sendmail") or die "Cannot open $sendmail. $!";
-
-    print SENDMAIL "From: $from\n";
-    print SENDMAIL "To: $to\n";
-    print SENDMAIL "Reply-to: $email\n";
-    print SENDMAIL "Subject: TVS membership application\n";
-    print SENDMAIL "Content-Type: text/html; charset=ISO-8859-1\n";
-    print SENDMAIL "\n";		# Tell sendmail that headers are done and message body follows
-
-    print SENDMAIL "<pre>$body</pre>\n";
-    close(SENDMAIL);
+if (!flock($state, LOCK_EX | LOCK_NB)) {
+    response('409 Conflict', 'Application is being processed',
+        'An identical application is already being processed. Please wait for the original submission; do not submit it again.');
 }
-
-
-
-# Send user to the PayPal page to make sure he pays his dues too
-print "Location: http://$ENV{'HTTP_HOST'}/pay.shtml?applicant=true\n\n";
-
-
-# Function to notify the spam reader when the script detects spam
-
-sub spam {
-    my $msg = shift;
-
-    if ( $testing ) {
-      print "Content-type: text/html\n\n";
-      print "Testing function spam:$eol";
-      print "$msg";
-      exit;
+my $record = do { local $/; <$state> } || '';
+if ($record =~ /^(\d+) (sent|pending)\n/ && time - $1 < $ttl) {
+    if ($2 eq 'sent') {
+        warn "TVS membership: duplicate suppressed\n";
+        received();
     }
-
-    open(SENDMAIL, "|$sendmail") or die "Cannot open $sendmail. $!";
-
-    print SENDMAIL "From: $from\n";
-    print SENDMAIL "To: $spam_reader\n";
-    print SENDMAIL "Subject: Spam TVS membership application\n";
-    print SENDMAIL "Content-Type: text/html; charset=ISO-8859-1\n";
-    print SENDMAIL "\n";		# Tell sendmail that headers are done and message body follows
-
-    print SENDMAIL "<pre>$msg</pre>\n";
-    close(SENDMAIL);
-    return;
+    response('503 Service Unavailable', 'Please check your application status',
+        'An identical submission was started, but receipt could not be confirmed. Please contact the TVS secretary before submitting again.');
+}
+sub save_state {
+    my ($status) = @_;
+    seek($state, 0, 0) or die "state seek failed";
+    truncate($state, 0) or die "state truncate failed";
+    print {$state} time . " $status\n" or die "state write failed";
+    $state->flush or die "state flush failed";
 }
 
+my $status = $data{new} eq 'Yes' ? 'New member' : 'Returning member';
+my $body = "The following membership application data was received at iPage on " . localtime() . ":\n\n";
+for my $field (qw(name address city state zip phone email)) {
+    $body .= sprintf("%-14s%s\n", ucfirst($field) . ':', $data{$field});
+}
+$body .= "Status:       $status\nComments:\n\n$data{comments}\n";
+my ($mail, $pid);
+my $queued = eval {
+    save_state('pending');
+    local $SIG{ALRM} = sub { die "mail timeout\n" };
+    local $SIG{PIPE} = 'IGNORE';
+    alarm($timeout);
+    $pid = open($mail, '|-', $sendmail, '-t', '-i') or die "mail open failed\n";
+    print {$mail} "From: webmaster\@trivalleystargazers.org\n",
+        "To: membership\@trivalleystargazers.org, treasurer\@trivalleystargazers.org\n",
+        ($data{email} ne '' ? "Reply-To: $data{email}\n" : ''),
+        "Subject: TVS membership application\n",
+        "Content-Type: text/html; charset=ISO-8859-1\n\n",
+        '<pre>', escape_html($body), "</pre>\n" or die "mail write failed\n";
+    close($mail) or die "mail handoff failed\n";
+    undef $pid;
+    alarm(0);
+    save_state('sent');
+    1;
+};
+alarm(0);
+if (!$queued) {
+    # A timeout or failed exit may still have queued mail. Retain pending state
+    # and ask for a status check rather than risk duplicate delivery on retry.
+    if ($pid) { kill 'KILL', $pid; waitpid($pid, 0); }
+    warn "TVS membership: mail handoff not confirmed\n";
+    response('503 Service Unavailable', 'Please check your application status',
+        'We could not confirm receipt. Please contact the TVS secretary before submitting again; your application may already have been received.');
+}
+warn "TVS membership: mail queued\n";
+received();

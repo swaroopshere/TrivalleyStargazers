@@ -1,0 +1,30 @@
+name: Membership regression tests
+on:
+  pull_request:
+    paths:
+      - 'cgi-bin/apply.pl'
+      - 'membership.shtml'
+      - 'membership.js'
+      - 'pay.shtml'
+      - 'tvs.js'
+      - 'tests/membership/**'
+      - '.github/workflows/membership-tests.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install CGI parser for Perl
+        run: sudo apt-get update && sudo apt-get install -y libcgi-pm-perl
+      - name: Check handler syntax
+        run: perl -c cgi-bin/apply.pl
+      - name: Test handler with captured mail
+        run: python3 tests/membership/test_handler.py -v
+      - name: Test form feedback and PayPal cart without payment requests
+        run: node --test tests/membership/frontend.test.cjs
