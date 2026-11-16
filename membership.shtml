@@ -11,6 +11,7 @@
   <link href="tvs.css" rel="stylesheet" type="text/css">
 
   <script src="tvs.js" type="text/javascript"></script>
+  <script src="membership.js?v=20261115" type="text/javascript" defer></script>
 
   <script type="text/javascript">
    <!--
@@ -56,7 +57,7 @@
    except as detailed in our
    <a href="TVS Privacy Policy (September 2022).pdf" title="Read our privacy policy">Privacy Policy</a>.<br><br>
 
-   <form class="application" name="application" action="">
+   <form class="application" name="application" action="cgi-bin/apply.pl" method="post">
      <p>
       <label for="name">Name:</label>
       <input type="text" id="name" name="name" title="Enter your name here"
@@ -120,6 +121,8 @@
       <br><br>
      </p>
 
+     <p id="applicationStatus" role="status" aria-live="polite"></p>
+     <noscript><p>Please enable JavaScript to submit the online application, or use the PDF application linked above.</p></noscript>
    </form>
    <br><br>
 
