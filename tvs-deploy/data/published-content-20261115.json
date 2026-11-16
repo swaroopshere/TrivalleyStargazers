@@ -1,0 +1,396 @@
+{
+  "source": "Current TVS production website and approved October 2026 newsletter/Del Valle PDFs",
+  "source_date": "2026-11-15",
+  "contacts_source_date": "2026-06-21",
+  "newsletters": [
+    {
+      "year": 2026,
+      "month": 1,
+      "filename": "tvsnews0126.pdf",
+      "file_path": "newsletters/2026/tvsnews0126.pdf",
+      "file_type": "pdf",
+      "file_size": 4108270,
+      "sha256": "271e2ca17c3da46681823c636af067642c94c3d16a40275f857aa85a60938738"
+    },
+    {
+      "year": 2026,
+      "month": 2,
+      "filename": "tvsnews0226.pdf",
+      "file_path": "newsletters/2026/tvsnews0226.pdf",
+      "file_type": "pdf",
+      "file_size": 6788738,
+      "sha256": "e742fb7f35c1190db44193dc4c815d22dca834800b2ee802815e41686a870a56"
+    },
+    {
+      "year": 2026,
+      "month": 3,
+      "filename": "tvsnews0326.pdf",
+      "file_path": "newsletters/2026/tvsnews0326.pdf",
+      "file_type": "pdf",
+      "file_size": 2955671,
+      "sha256": "d84c979b43142afcb812870cb9e6fa0c3fbc828053030b954e6d3670332c3438"
+    },
+    {
+      "year": 2026,
+      "month": 4,
+      "filename": "tvsnews0426.pdf",
+      "file_path": "newsletters/2026/tvsnews0426.pdf",
+      "file_type": "pdf",
+      "file_size": 3953837,
+      "sha256": "ee71165958683da75f0f5f1736027393e6192e95dbfcc93db05d0ed3e75c2158"
+    },
+    {
+      "year": 2026,
+      "month": 5,
+      "filename": "tvsnews0526.pdf",
+      "file_path": "newsletters/2026/tvsnews0526.pdf",
+      "file_type": "pdf",
+      "file_size": 9186905,
+      "sha256": "9988cb5c8cd63a4c2c24177f987e2ee13e4df26666ebd8f39a22d6b52258011c"
+    },
+    {
+      "year": 2026,
+      "month": 6,
+      "filename": "tvsnews0626.pdf",
+      "file_path": "newsletters/2026/tvsnews0626.pdf",
+      "file_type": "pdf",
+      "file_size": 5152661,
+      "sha256": "8751179bc7a15688d7a30c0e8dba080718c60328b49f942835fb068431ba796b"
+    },
+    {
+      "year": 2026,
+      "month": 7,
+      "filename": "tvsnews0726.pdf",
+      "file_path": "newsletters/2026/tvsnews0726.pdf",
+      "file_type": "pdf",
+      "file_size": 4811935,
+      "sha256": "81e43bae4ba1f1367afd974b1423f13cda9d8e9868545dce5461798b30317687"
+    },
+    {
+      "year": 2026,
+      "month": 8,
+      "filename": "tvsnews0826.pdf",
+      "file_path": "newsletters/2026/tvsnews0826.pdf",
+      "file_type": "pdf",
+      "file_size": 3391126,
+      "sha256": "1838876926d9e26b0669c38ca7dfb71f89721d8cd34dab237bbafc9959f125e5"
+    },
+    {
+      "year": 2026,
+      "month": 9,
+      "filename": "tvsnews0926.pdf",
+      "file_path": "newsletters/2026/tvsnews0926.pdf",
+      "file_type": "pdf",
+      "file_size": 7252332,
+      "sha256": "8f8cc7fce6edbd333632a1f61e0f1f93b2ede63d9b6b910ba39979d72a2c8ac4"
+    },
+    {
+      "year": 2026,
+      "month": 10,
+      "filename": "tvsnews1026.pdf",
+      "file_path": "newsletters/2026/tvsnews1026.pdf",
+      "file_type": "pdf",
+      "file_size": 10321423,
+      "sha256": "693c13fa12bc9a31e1694055ef795648b9071402c55e2633fb44320aed11fce3"
+    }
+  ],
+  "documents": [
+    {
+      "doc_type": "bylaws",
+      "title": "Bylaws",
+      "file_path": "pdfs/bylaws.pdf",
+      "filename": "bylaws.pdf",
+      "file_size": 2442513,
+      "sha256": "c0e14e84b45c1e083f087af51cdc17bc15c927b649f9ccdd56b7a9af2a724f5b"
+    },
+    {
+      "doc_type": "articles",
+      "title": "Articles of Incorporation",
+      "file_path": "pdfs/articles-of-incorporation.pdf",
+      "filename": "articles-of-incorporation.pdf",
+      "file_size": 1400120,
+      "sha256": "f4c382471a11a8843cfb3c9d510a13ee2fbfb7e5089c59f241ba76b62949025e"
+    },
+    {
+      "doc_type": "501c3",
+      "title": "501(c)(3) Status",
+      "file_path": "pdfs/determination_letter.pdf",
+      "filename": "determination_letter.pdf",
+      "file_size": 1194957,
+      "sha256": "450764eb55b2736e6e974348cb1e5a5e16a0e368580c3ca7956ac7d19f919d74"
+    },
+    {
+      "doc_type": "delvalle-site-guide",
+      "title": "Del Valle Site Guide",
+      "file_path": "pdfs/delvalle.pdf",
+      "filename": "delvalle.pdf",
+      "file_size": 799262,
+      "sha256": "e55f10f32962e1bb75e5f1847bc50e3400de9115ca49bc9d079af455001f0541"
+    },
+    {
+      "doc_type": "privacy",
+      "title": "Privacy Policy",
+      "file_path": "privacy.pdf",
+      "filename": "privacy.pdf",
+      "file_size": 634347,
+      "sha256": "d5b17c7c81e8fd4ccae2f1f70c01a37be1a08ff36aa816076659d8be546bba4c"
+    },
+    {
+      "doc_type": "membership-application",
+      "title": "Membership Application",
+      "file_path": "pdfs/TVSapplication.pdf",
+      "filename": "TVSapplication.pdf",
+      "file_size": 58534,
+      "sha256": "7e940554575921bed318c2bed38f2ef09b075ee4c41dfd3e4d36735375500a56"
+    },
+    {
+      "doc_type": "club-brochure",
+      "title": "TVS Brochure",
+      "file_path": "pdfs/TVSbrochure.pdf",
+      "filename": "TVSbrochure.pdf",
+      "file_size": 445439,
+      "sha256": "1778e3efade6d39bd147e2b4f4ad118fbe2d685cd19978f60e40cd1831f5b2eb"
+    }
+  ],
+  "contacts": [
+    {
+      "category": "officer",
+      "email_user": "president",
+      "email_domain": "trivalleystargazers.org",
+      "name": "Eric Dueltgen",
+      "position": "President",
+      "sort_order": 1
+    },
+    {
+      "category": "officer",
+      "email_user": "vice_president",
+      "email_domain": "trivalleystargazers.org",
+      "name": "Aris Pope",
+      "position": "Vice President",
+      "sort_order": 2
+    },
+    {
+      "category": "officer",
+      "email_user": "treasurer",
+      "email_domain": "trivalleystargazers.org",
+      "name": "John Forrest",
+      "position": "Treasurer",
+      "sort_order": 3
+    },
+    {
+      "category": "officer",
+      "email_user": "secretary",
+      "email_domain": "trivalleystargazers.org",
+      "name": "Dave Lackey",
+      "position": "Secretary",
+      "sort_order": 4
+    },
+    {
+      "category": "board",
+      "email_user": "past_president",
+      "email_domain": "trivalleystargazers.org",
+      "name": "Ron Kane",
+      "position": "Past President",
+      "sort_order": 5
+    },
+    {
+      "category": "board",
+      "email_user": "astrophotography",
+      "email_domain": "trivalleystargazers.org",
+      "name": "Gert Gottschalk",
+      "position": "At Large",
+      "sort_order": 6
+    },
+    {
+      "category": "board",
+      "email_user": "observatory",
+      "email_domain": "trivalleystargazers.org",
+      "name": "Chuck Grant",
+      "position": "At Large",
+      "sort_order": 7
+    },
+    {
+      "category": "board",
+      "email_user": "webmaster",
+      "email_domain": "trivalleystargazers.org",
+      "name": "Swaroop Shere",
+      "position": "At Large",
+      "sort_order": 8
+    },
+    {
+      "category": "volunteer",
+      "email_user": "alrep",
+      "email_domain": "trivalleystargazers.org",
+      "name": "Don Dossa",
+      "position": "Astronomical League Representative",
+      "sort_order": 9
+    },
+    {
+      "category": "volunteer",
+      "email_user": "delvalle",
+      "email_domain": "trivalleystargazers.org",
+      "name": "Dave Wilzius",
+      "position": "Del Valle Coordinator",
+      "sort_order": 10
+    },
+    {
+      "category": "volunteer",
+      "email_user": "historian",
+      "email_domain": "trivalleystargazers.org",
+      "name": "Open",
+      "position": "Historian",
+      "sort_order": 11
+    },
+    {
+      "category": "volunteer",
+      "email_user": "librarian",
+      "email_domain": "trivalleystargazers.org",
+      "name": "Ron Kane",
+      "position": "Librarian",
+      "sort_order": 12
+    },
+    {
+      "category": "volunteer",
+      "email_user": "telescopes",
+      "email_domain": "trivalleystargazers.org",
+      "name": "Ron Kane",
+      "position": "Loaner Scope Manager",
+      "sort_order": 13
+    },
+    {
+      "category": "volunteer",
+      "email_user": "nnsn",
+      "email_domain": "trivalleystargazers.org",
+      "name": "Ross Gaunt",
+      "position": "Night Sky Network Representative",
+      "sort_order": 14
+    },
+    {
+      "category": "volunteer",
+      "email_user": "newsletter",
+      "email_domain": "trivalleystargazers.org",
+      "name": "Scott Schneider",
+      "position": "Newsletter Editor",
+      "sort_order": 15
+    },
+    {
+      "category": "volunteer",
+      "email_user": "observatory",
+      "email_domain": "trivalleystargazers.org",
+      "name": "Chuck Grant",
+      "position": "Observatory Director / Rebuild Chairman",
+      "sort_order": 16
+    },
+    {
+      "category": "volunteer",
+      "email_user": "H2O-Events",
+      "email_domain": "trivalleystargazers.org",
+      "name": "Ross Gaunt",
+      "position": "Observatory Co-Director",
+      "sort_order": 17
+    },
+    {
+      "category": "volunteer",
+      "email_user": "potluck",
+      "email_domain": "trivalleystargazers.org",
+      "name": "Ron Kane",
+      "position": "Potluck Coordinator",
+      "sort_order": 18
+    },
+    {
+      "category": "volunteer",
+      "email_user": "programs",
+      "email_domain": "trivalleystargazers.org",
+      "name": "Ron Kane",
+      "position": "Programs",
+      "sort_order": 19
+    },
+    {
+      "category": "volunteer",
+      "email_user": "publicity",
+      "email_domain": "trivalleystargazers.org",
+      "name": "Open",
+      "position": "Publicity and Fundraising",
+      "sort_order": 20
+    },
+    {
+      "category": "volunteer",
+      "email_user": null,
+      "email_domain": "trivalleystargazers.org",
+      "name": "Open",
+      "position": "Refreshments",
+      "sort_order": 21
+    },
+    {
+      "category": "volunteer",
+      "email_user": "coordinator",
+      "email_domain": "trivalleystargazers.org",
+      "name": "Johnathan Bailey",
+      "position": "Star Party Coordinator",
+      "sort_order": 22
+    },
+    {
+      "category": "volunteer",
+      "email_user": "webmaster",
+      "email_domain": "trivalleystargazers.org",
+      "name": "Swaroop Shere",
+      "position": "Webmaster",
+      "sort_order": 23
+    }
+  ],
+  "calendar": [
+    {
+      "date": "2026-08-01",
+      "title": "Outreach Star Party at Camp Arroyo",
+      "description": "Set up 7:45 pm, sun sets at 8:15. &nbsp;Outreach star party for The Nephrotic Syndrome Foundation.\nwww.nephroticsyndromefoundation.org\n&nbsp;\n\nWhen you arrive on&nbsp;Saturday, August 1, please enter through the main camp gate and proceed to the roundabout by the Dining Hall to check in with our Med Team. We kindly ask that you&nbsp;arrive by 7:30 p.m.&nbsp;to allow time for a quick COVID test before setting up.\nFor the safety of our immunocompromised campers, the test will be administered while you remain in your vehicle.&nbsp;Please stay in your car and refrain from interacting with other vendors, campers, or staff until your negative test result is confirmed&nbsp;(typically within 15&ndash;20 minutes).\nWe ask that you&nbsp;do not begin unloading or setting up until you've been cleared&nbsp;by our Med Team. Thank you for planning a little extra time into your arrival and for helping us maintain a safe and healthy environment for all of our Camp NSF families.\nRequired Forms*:\nWhile waiting for your test results, please hand the Med Team:\n\n\nVendor Release Waiver\n\n\nCOVID/Health Waiver\n\n\n*Each person attending as part of your team must submit their&nbsp;own&nbsp;forms.\n&nbsp;\nAfter Check-In:\nOnce cleared, you may head to the lawn, to setup.&nbsp;\n&nbsp;\nIMPORTANT Health Reminder:\nPlease attend&nbsp;only if you are 100% healthy.&nbsp;Even a mild illness can pose a serious risk to our medically vulnerable campers. If you or anyone on your team has been exposed to COVID within a week of camp or are feeling unwell, please do not attend. The COVID waiver includes a required disclosure of recent exposures.If you have questions or need to talk through anything, please don&rsquo;t hesitate to reach out.\n\nThe location is across the road from the Arroyo Road Staging Area. There is a locked gate at the entrance to the site, so you must let me know ahead of time if you plan to come, so we can make sure you have access.\n&nbsp;\n&nbsp;",
+      "location": "5535 Arroyo Rd Livermore, CA 94550",
+      "time": "7:30 PM"
+    },
+    {
+      "date": "2026-08-15",
+      "title": "Club/public star party at Del Valle Arroyo Road Staging Area",
+      "description": "We have scheduled a&nbsp;Del&nbsp;Valle&nbsp;public outreach/club star party for August 15, 2026. &nbsp;Sunset is about 8:00. Set up starts at 7:30. The public portion of the event will go from 8:00 to 10:00 to accommodate the park closing time.\n&nbsp;\nThe star party will be at the Arroyo Road Staging Area, just past 5055 Arroyo Road. This location is NOT at the&nbsp;Del&nbsp;Valle main entrance, but is on Arroyo Road (an extension of L Street), past the golf course and turnoff to Veterans Hospital.\n&nbsp;\nWeather permitting, we should have good views of the Moon (a small crescent that sets about 9:30) and the usual Summer deep sky objects.&nbsp; The location is fairly dark for being so close to Livermore.\n&nbsp;\nI hope we get several club members with scopes or binoculars. If you don&rsquo;t have a telescope or binoculars you want to share, please come out to enjoy the views.Please let me know if you plan to bring a telescope or binoculars, so I know how many to expect. We need several scopes to make this a successful event.&nbsp;\nThanks.&nbsp;\nCoordinates:(37.6196638, -121.7528899)",
+      "location": "Arroyo Road Staging Area, just past 5055 Arroyo Road",
+      "time": "8:00 PM"
+    },
+    {
+      "date": "2026-08-21",
+      "title": "TVS Club Meeting",
+      "description": "TVS Club meetings are open to all members and the public.&nbsp;\nZoom link: https://us02web.zoom.us/j/87569140049&nbsp;\n&nbsp;",
+      "location": "Zoom meeting",
+      "time": "7:30 PM"
+    },
+    {
+      "date": "2026-08-22",
+      "title": "Club/public star party at Del Valle Arroyo Road Staging Area",
+      "description": "We have scheduled a&nbsp;Del&nbsp;Valle&nbsp;public outreach/club star party for August 22, 2026. &nbsp;Sunset is about 7:50. Set up starts at 7:20.&nbsp;The public portion of the event will go from 8:00 to 10:00 to accommodate the park closing time.\n&nbsp;\nThe star party will be at the Arroyo Road Staging Area, just past 5055 Arroyo Road. This location is NOT at the&nbsp;Del&nbsp;Valle&nbsp;main entrance, but is on Arroyo Road (an extension of L Street), past the golf course and turnoff to Veterans Hospital.\n&nbsp;\nWeather permitting, we should have good views of the Moon (two days past 1st quarter) and the usual Summer deep sky objects.&nbsp; The location is fairly dark for being so close to Livermore.\n&nbsp;\nI hope we get several club members with scopes or binoculars. If you don&rsquo;t have a telescope or binoculars you want to share, please come out to enjoy the views.Please let me know if you plan to bring a telescope or binoculars, so I know how many to expect. We need several scopes to make this a successful event.&nbsp;\nThanks.&nbsp;\nCoordinates:(37.6196638, -121.7528899)",
+      "location": "Arroyo Road Staging Area, just past 5055 Arroyo Road",
+      "time": "8:00 PM"
+    },
+    {
+      "date": "2026-09-05",
+      "title": "H2O open house",
+      "description": "A trip for club members and the public to TVS&rsquo;s dark observing site. Meet at the corner of Mines and Tesla Roads. The caravan to the site leaves at 5:30 pm sharp. Bring $3 for site admission.&nbsp; Make sure you have a full tank/charge in your car.\n&nbsp;\nThis is also an opportunity for members who want access but have not completed site orientation to do so.&nbsp;",
+      "location": "Meet at the corner of Mines and Tesla Roads",
+      "time": "5:30 PM"
+    },
+    {
+      "date": "2026-09-18",
+      "title": "TVS Club Meeting",
+      "description": "TVS Club meetings are open to all members and the public.&nbsp;\nThe link to the Zoom meeting will be added to this calendar entry about 5 days before the event.",
+      "location": "Zoom meeting",
+      "time": "7:30 PM"
+    }
+  ],
+  "meeting": {
+    "meeting_type": "public",
+    "meeting_date": "2026-10-16",
+    "meeting_time": "19:30:00",
+    "location": "Unitarian Church",
+    "location_address": "1893 North Vasco Road, Livermore",
+    "meeting_format": "hybrid",
+    "presentation_topic": "A Bit More About Wolf-Rayet Stars",
+    "presenter_name": "Dr. Kathryn Neugent (recorded presentation)",
+    "description": "Recorded presentation described in the October 2026 Prime Focus newsletter; doors at 7pm, meeting at 7:30pm, lecture at 8pm."
+  }
+}
