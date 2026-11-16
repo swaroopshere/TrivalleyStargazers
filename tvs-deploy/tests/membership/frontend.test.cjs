@@ -57,7 +57,7 @@ test('form remains a native POST and payment confirmation keeps a PDF fallback',
     assert.match(html, /action="apply.php" method="post"/);
     assert.doesNotMatch(html, /DOMContentLoaded[^\n]*setupForm/);
     const handler = fs.readFileSync(path.join(root,'apply.php'),'utf8');
-    assert.match(handler, /https:\/\/beta\.trivalleystargazers\.org\/pay\.php\?applicant=true/);
+    assert.match(handler, /membershipPaymentUrl/);
     const pay = fs.readFileSync(path.join(root,'pay.php'),'utf8');
     assert.match(pay,/application has been received/);
     assert.doesNotMatch(pay,/href="TVSapplication.pdf"/);

@@ -1,4 +1,10 @@
 <?php
+function membershipPaymentUrl(string $host): string {
+    $origin = strtolower(explode(':', $host)[0]) === 'beta.trivalleystargazers.org'
+        ? 'https://beta.trivalleystargazers.org' : 'https://www.trivalleystargazers.org';
+    return $origin . '/pay.php?applicant=true';
+}
+
 /** Retry-safe membership processing; $send is injectable for mail-free tests. */
 function processMembershipApplication(array $post, callable $send, string $directory, ?int $now = null): array {
     $now = $now ?? time();

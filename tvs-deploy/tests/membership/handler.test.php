@@ -1,6 +1,12 @@
 <?php
 require __DIR__ . '/../../includes/membership_submission.php';
 $tests = 0;
+if (membershipPaymentUrl('beta.trivalleystargazers.org') !== 'https://beta.trivalleystargazers.org/pay.php?applicant=true'
+    || membershipPaymentUrl('www.trivalleystargazers.org') !== 'https://www.trivalleystargazers.org/pay.php?applicant=true'
+    || membershipPaymentUrl('untrusted.example') !== 'https://www.trivalleystargazers.org/pay.php?applicant=true') {
+    throw new RuntimeException('Payment origin regression');
+}
+echo "PASS beta/production payment origin allowlist\n";
 function check($condition, string $message): void {
     if (!$condition) throw new RuntimeException($message);
 }

@@ -41,10 +41,10 @@ $showHero = $showHero ?? ($pageId === 'm_home');
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Stylesheets -->
-    <link href="tvs.css" rel="stylesheet" type="text/css">
+    <link href="tvs.css?v=20261115" rel="stylesheet" type="text/css">
 
     <!-- JavaScript -->
-    <script src="tvs.js" type="text/javascript" defer></script>
+    <script src="tvs.js?v=20261115" type="text/javascript" defer></script>
 
     <script type="text/javascript">
         var lastUpdateDate = "<?= e($lastUpdateDate) ?>";
@@ -74,7 +74,7 @@ $showHero = $showHero ?? ($pageId === 'm_home');
     <?php endif; ?>
 </head>
 
-<body<?php if (isset($onload)): ?> onload="<?= e($onload) ?>"<?php endif; ?>>
+<body<?php if (isset($onload)): ?> onload="<?= e($onload) ?>"<?php endif; ?><?php if (!empty($onbeforeunload)): ?> onbeforeunload="<?= e($onbeforeunload) ?>"<?php endif; ?>>
 
 <div class="page-wrapper">
 

@@ -23,3 +23,10 @@ jobs:
       - run: php -l tvs-deploy/apply.php && php -l tvs-deploy/includes/membership_submission.php && php -l tvs-deploy/membership.php && php -l tvs-deploy/pay.php
       - run: php tvs-deploy/tests/membership/handler.test.php
       - run: node --test tvs-deploy/tests/membership/frontend.test.cjs
+      - run: find tvs-deploy -name '*.php' -not -path '*/vendor/*' -print0 | xargs -0 -n1 php -l
+      - run: php tvs-deploy/tests/membership/newsletter.test.php
+      - name: Existing PHP unit suite
+        working-directory: tvs-deploy
+        run: |
+          composer install --no-interaction --prefer-dist --no-progress
+          vendor/bin/phpunit --testsuite 'Unit Tests'
