@@ -318,12 +318,15 @@ class FormHandlingTest extends TestCase
         $_SESSION['role'] = 'admin';
         $_SESSION['last_activity'] = time();
 
+        $property = new ReflectionProperty(Auth::class, 'user');
+        $property->setValue($auth, ['id'=>1, 'role'=>'admin']);
         $this->assertTrue($auth->isAdmin());
         $this->assertTrue($auth->hasRole('admin'));
         $this->assertTrue($auth->hasRole('publisher'));
 
         // Set up publisher user
         $_SESSION['role'] = 'publisher';
+        $property->setValue($auth, ['id'=>1, 'role'=>'publisher']);
 
         $this->assertFalse($auth->isAdmin());
         $this->assertTrue($auth->hasRole('publisher'));

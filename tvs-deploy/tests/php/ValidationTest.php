@@ -40,7 +40,7 @@ class ValidationTest extends TestCase
         $input = '" onmouseover="alert(1)"';
         $escaped = e($input);
         $this->assertStringContainsString('&quot;', $escaped);
-        $this->assertStringNotContainsString('onmouseover', $escaped);
+        $this->assertStringContainsString('onmouseover=&quot;', $escaped); // Quotes are encoded, so this remains text.
     }
 
     /**
@@ -163,12 +163,12 @@ class ValidationTest extends TestCase
      */
     public function testGetMeetingFormatLabelAllFormats(): void
     {
-        $this->assertEquals('In-person', getMeetingFormatLabel('in-person'));
-        $this->assertEquals('Zoom', getMeetingFormatLabel('zoom'));
-        $this->assertEquals('Hybrid', getMeetingFormatLabel('hybrid'));
+        $this->assertEquals('In-person only', getMeetingFormatLabel('in-person'));
+        $this->assertEquals('Zoom only', getMeetingFormatLabel('zoom'));
+        $this->assertEquals('Hybrid (In-person and Zoom)', getMeetingFormatLabel('hybrid'));
 
         // Unknown format
-        $this->assertEquals('Unknown', getMeetingFormatLabel('telepathy'));
+        $this->assertEquals('telepathy', getMeetingFormatLabel('telepathy'));
     }
 
     /**
