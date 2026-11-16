@@ -1,0 +1,25 @@
+name: Beta membership regression tests
+on:
+  pull_request:
+    paths:
+      - 'tvs-deploy/apply.php'
+      - 'tvs-deploy/membership*'
+      - 'tvs-deploy/pay.php'
+      - 'tvs-deploy/tvs.js'
+      - 'tvs-deploy/includes/membership_submission.php'
+      - 'tvs-deploy/tests/membership/**'
+      - '.github/workflows/beta-membership-tests.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: php -l tvs-deploy/apply.php && php -l tvs-deploy/includes/membership_submission.php && php -l tvs-deploy/membership.php && php -l tvs-deploy/pay.php
+      - run: php tvs-deploy/tests/membership/handler.test.php
+      - run: node --test tvs-deploy/tests/membership/frontend.test.cjs

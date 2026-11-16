@@ -54,7 +54,7 @@ document.body.onbeforeunload = "";
 <div id="applicant">
     <h1 class="title">Complete your application by paying dues</h1>
 
-    <p>Thank you for submitting your membership application form. Before your application is complete,
+    <p><strong>Your membership application has been received. Please do not submit it again.</strong> Before your application is complete,
     you must still pay dues. You can do this by filling out the form below, where you can also
     arrange for access to H2O, and/or make a contribution to the TVS.
     If you would rather not use PayPal, you can click
