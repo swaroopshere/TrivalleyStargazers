@@ -392,5 +392,2513 @@
     "presentation_topic": "A Bit More About Wolf-Rayet Stars",
     "presenter_name": "Dr. Kathryn Neugent (recorded presentation)",
     "description": "Recorded presentation described in the October 2026 Prime Focus newsletter; doors at 7pm, meeting at 7:30pm, lecture at 8pm."
-  }
+  },
+  "legacy_archive": [
+    {
+      "year": 2025,
+      "month": 12,
+      "file_path": "newsletters/2025/tvsnews1225.pdf",
+      "filename": "tvsnews1225.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2025,
+      "month": 11,
+      "file_path": "newsletters/2025/tvsnews1125.pdf",
+      "filename": "tvsnews1125.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2025,
+      "month": 10,
+      "file_path": "newsletters/2025/tvsnews1025.pdf",
+      "filename": "tvsnews1025.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2025,
+      "month": 9,
+      "file_path": "newsletters/2025/tvsnews0925.pdf",
+      "filename": "tvsnews0925.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2025,
+      "month": 8,
+      "file_path": "newsletters/2025/tvsnews0825.pdf",
+      "filename": "tvsnews0825.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2025,
+      "month": 7,
+      "file_path": "newsletters/2025/tvsnews0725.pdf",
+      "filename": "tvsnews0725.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2025,
+      "month": 6,
+      "file_path": "newsletters/2025/tvsnews0625.pdf",
+      "filename": "tvsnews0625.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2025,
+      "month": 5,
+      "file_path": "newsletters/2025/tvsnews0525.pdf",
+      "filename": "tvsnews0525.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2025,
+      "month": 4,
+      "file_path": "newsletters/2025/tvsnews0425.pdf",
+      "filename": "tvsnews0425.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2025,
+      "month": 3,
+      "file_path": "newsletters/2025/tvsnews0325.pdf",
+      "filename": "tvsnews0325.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2025,
+      "month": 2,
+      "file_path": "newsletters/2025/tvsnews0225.pdf",
+      "filename": "tvsnews0225.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2025,
+      "month": 1,
+      "file_path": "newsletters/2025/tvsnews0125.pdf",
+      "filename": "tvsnews0125.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2024,
+      "month": 12,
+      "file_path": "newsletters/2024/tvsnews1224.pdf",
+      "filename": "tvsnews1224.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2024,
+      "month": 11,
+      "file_path": "newsletters/2024/tvsnews1124.pdf",
+      "filename": "tvsnews1124.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2024,
+      "month": 10,
+      "file_path": "newsletters/2024/tvsnews1024.pdf",
+      "filename": "tvsnews1024.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2024,
+      "month": 9,
+      "file_path": "newsletters/2024/tvsnews0924.pdf",
+      "filename": "tvsnews0924.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2024,
+      "month": 8,
+      "file_path": "newsletters/2024/tvsnews0824.pdf",
+      "filename": "tvsnews0824.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2024,
+      "month": 7,
+      "file_path": "newsletters/2024/tvsnews0724.pdf",
+      "filename": "tvsnews0724.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2024,
+      "month": 6,
+      "file_path": "newsletters/2024/tvsnews0624.pdf",
+      "filename": "tvsnews0624.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "file_path": "newsletters/2024/tvsnews0524.pdf",
+      "filename": "tvsnews0524.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2024,
+      "month": 4,
+      "file_path": "newsletters/2024/tvsnews0424.pdf",
+      "filename": "tvsnews0424.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2024,
+      "month": 3,
+      "file_path": "newsletters/2024/tvsnews0324.pdf",
+      "filename": "tvsnews0324.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2024,
+      "month": 2,
+      "file_path": "newsletters/2024/tvsnews0224.pdf",
+      "filename": "tvsnews0224.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2024,
+      "month": 1,
+      "file_path": "newsletters/2024/tvsnews0124.pdf",
+      "filename": "tvsnews0124.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2023,
+      "month": 12,
+      "file_path": "newsletters/2023/tvsnews1223.pdf",
+      "filename": "tvsnews1223.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2023,
+      "month": 11,
+      "file_path": "newsletters/2023/tvsnews1123.pdf",
+      "filename": "tvsnews1123.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2023,
+      "month": 10,
+      "file_path": "newsletters/2023/tvsnews1023.pdf",
+      "filename": "tvsnews1023.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2023,
+      "month": 9,
+      "file_path": "newsletters/2023/tvsnews0923.pdf",
+      "filename": "tvsnews0923.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2023,
+      "month": 8,
+      "file_path": "newsletters/2023/tvsnews0823.pdf",
+      "filename": "tvsnews0823.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2023,
+      "month": 7,
+      "file_path": "newsletters/2023/tvsnews0723.pdf",
+      "filename": "tvsnews0723.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2023,
+      "month": 6,
+      "file_path": "newsletters/2023/tvsnews0623.pdf",
+      "filename": "tvsnews0623.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2023,
+      "month": 5,
+      "file_path": "newsletters/2023/tvsnews0523.pdf",
+      "filename": "tvsnews0523.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2023,
+      "month": 4,
+      "file_path": "newsletters/2023/tvsnews0423.pdf",
+      "filename": "tvsnews0423.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2023,
+      "month": 3,
+      "file_path": "newsletters/2023/tvsnews0323.pdf",
+      "filename": "tvsnews0323.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2023,
+      "month": 2,
+      "file_path": "newsletters/2023/tvsnews0223.pdf",
+      "filename": "tvsnews0223.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2023,
+      "month": 1,
+      "file_path": "newsletters/2023/tvsnews0123.pdf",
+      "filename": "tvsnews0123.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2022,
+      "month": 12,
+      "file_path": "newsletters/2022/tvsnews1222.pdf",
+      "filename": "tvsnews1222.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2022,
+      "month": 11,
+      "file_path": "newsletters/2022/tvsnews1122.pdf",
+      "filename": "tvsnews1122.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2022,
+      "month": 10,
+      "file_path": "newsletters/2022/tvsnews1022.pdf",
+      "filename": "tvsnews1022.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2022,
+      "month": 9,
+      "file_path": "newsletters/2022/tvsnews0922.pdf",
+      "filename": "tvsnews0922.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2022,
+      "month": 8,
+      "file_path": "newsletters/2022/tvsnews0822.pdf",
+      "filename": "tvsnews0822.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2022,
+      "month": 7,
+      "file_path": "newsletters/2022/tvsnews0722.pdf",
+      "filename": "tvsnews0722.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2022,
+      "month": 6,
+      "file_path": "newsletters/2022/tvsnews0622.pdf",
+      "filename": "tvsnews0622.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2022,
+      "month": 5,
+      "file_path": "newsletters/2022/tvsnews0522.pdf",
+      "filename": "tvsnews0522.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2022,
+      "month": 4,
+      "file_path": "newsletters/2022/tvsnews0422.pdf",
+      "filename": "tvsnews0422.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2022,
+      "month": 3,
+      "file_path": "newsletters/2022/tvsnews0322.pdf",
+      "filename": "tvsnews0322.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2022,
+      "month": 2,
+      "file_path": "newsletters/2022/tvsnews0222.pdf",
+      "filename": "tvsnews0222.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2022,
+      "month": 1,
+      "file_path": "newsletters/2022/tvsnews0122.pdf",
+      "filename": "tvsnews0122.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2021,
+      "month": 12,
+      "file_path": "newsletters/2021/tvsnews1221.pdf",
+      "filename": "tvsnews1221.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2021,
+      "month": 11,
+      "file_path": "newsletters/2021/tvsnews1121.pdf",
+      "filename": "tvsnews1121.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2021,
+      "month": 10,
+      "file_path": "newsletters/2021/tvsnews1021.pdf",
+      "filename": "tvsnews1021.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2021,
+      "month": 9,
+      "file_path": "newsletters/2021/tvsnews0921.pdf",
+      "filename": "tvsnews0921.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2021,
+      "month": 8,
+      "file_path": "newsletters/2021/tvsnews0821.pdf",
+      "filename": "tvsnews0821.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2021,
+      "month": 7,
+      "file_path": "newsletters/2021/tvsnews0721.pdf",
+      "filename": "tvsnews0721.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2021,
+      "month": 6,
+      "file_path": "newsletters/2021/tvsnews0621.pdf",
+      "filename": "tvsnews0621.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2021,
+      "month": 5,
+      "file_path": "newsletters/2021/tvsnews0521.pdf",
+      "filename": "tvsnews0521.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2021,
+      "month": 4,
+      "file_path": "newsletters/2021/tvsnews0421.pdf",
+      "filename": "tvsnews0421.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2021,
+      "month": 3,
+      "file_path": "newsletters/2021/tvsnews0321.pdf",
+      "filename": "tvsnews0321.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2021,
+      "month": 2,
+      "file_path": "newsletters/2021/tvsnews0221.pdf",
+      "filename": "tvsnews0221.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2021,
+      "month": 1,
+      "file_path": "newsletters/2021/tvsnews0121.pdf",
+      "filename": "tvsnews0121.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2020,
+      "month": 12,
+      "file_path": "newsletters/2020/tvsnews1220.pdf",
+      "filename": "tvsnews1220.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2020,
+      "month": 11,
+      "file_path": "newsletters/2020/tvsnews1120.pdf",
+      "filename": "tvsnews1120.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2020,
+      "month": 10,
+      "file_path": "newsletters/2020/tvsnews1020.pdf",
+      "filename": "tvsnews1020.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2020,
+      "month": 9,
+      "file_path": "newsletters/2020/tvsnews0920.pdf",
+      "filename": "tvsnews0920.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2020,
+      "month": 8,
+      "file_path": "newsletters/2020/tvsnews0820.pdf",
+      "filename": "tvsnews0820.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2020,
+      "month": 7,
+      "file_path": "newsletters/2020/tvsnews0720.pdf",
+      "filename": "tvsnews0720.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2020,
+      "month": 6,
+      "file_path": "newsletters/2020/tvsnews0620.pdf",
+      "filename": "tvsnews0620.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2020,
+      "month": 5,
+      "file_path": "newsletters/2020/tvsnews0520.pdf",
+      "filename": "tvsnews0520.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2020,
+      "month": 4,
+      "file_path": "newsletters/2020/tvsnews0420.pdf",
+      "filename": "tvsnews0420.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2020,
+      "month": 3,
+      "file_path": "newsletters/2020/tvsnews0320.pdf",
+      "filename": "tvsnews0320.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2020,
+      "month": 2,
+      "file_path": "newsletters/2020/tvsnews0220.pdf",
+      "filename": "tvsnews0220.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2020,
+      "month": 1,
+      "file_path": "newsletters/2020/tvsnews0120.pdf",
+      "filename": "tvsnews0120.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2019,
+      "month": 12,
+      "file_path": "newsletters/2019/tvsnews1219.pdf",
+      "filename": "tvsnews1219.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2019,
+      "month": 11,
+      "file_path": "newsletters/2019/tvsnews1119.pdf",
+      "filename": "tvsnews1119.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2019,
+      "month": 10,
+      "file_path": "newsletters/2019/tvsnews1019.pdf",
+      "filename": "tvsnews1019.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2019,
+      "month": 9,
+      "file_path": "newsletters/2019/tvsnews0919.pdf",
+      "filename": "tvsnews0919.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2019,
+      "month": 8,
+      "file_path": "newsletters/2019/tvsnews0819.pdf",
+      "filename": "tvsnews0819.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2019,
+      "month": 7,
+      "file_path": "newsletters/2019/tvsnews0719.pdf",
+      "filename": "tvsnews0719.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2019,
+      "month": 6,
+      "file_path": "newsletters/2019/tvsnews0619.pdf",
+      "filename": "tvsnews0619.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2019,
+      "month": 5,
+      "file_path": "newsletters/2019/tvsnews0519.pdf",
+      "filename": "tvsnews0519.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2019,
+      "month": 4,
+      "file_path": "newsletters/2019/tvsnews0419.pdf",
+      "filename": "tvsnews0419.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2019,
+      "month": 3,
+      "file_path": "newsletters/2019/tvsnews0319.pdf",
+      "filename": "tvsnews0319.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2019,
+      "month": 2,
+      "file_path": "newsletters/2019/tvsnews0219.pdf",
+      "filename": "tvsnews0219.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2019,
+      "month": 1,
+      "file_path": "newsletters/2019/tvsnews0119.pdf",
+      "filename": "tvsnews0119.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2018,
+      "month": 12,
+      "file_path": "newsletters/2018/tvsnews1218.pdf",
+      "filename": "tvsnews1218.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2018,
+      "month": 11,
+      "file_path": "newsletters/2018/tvsnews1118.pdf",
+      "filename": "tvsnews1118.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2018,
+      "month": 10,
+      "file_path": "newsletters/2018/tvsnews1018.pdf",
+      "filename": "tvsnews1018.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2018,
+      "month": 9,
+      "file_path": "newsletters/2018/tvsnews0918.pdf",
+      "filename": "tvsnews0918.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2018,
+      "month": 8,
+      "file_path": "newsletters/2018/tvsnews0818.pdf",
+      "filename": "tvsnews0818.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2018,
+      "month": 7,
+      "file_path": "newsletters/2018/tvsnews0718.pdf",
+      "filename": "tvsnews0718.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2018,
+      "month": 6,
+      "file_path": "newsletters/2018/tvsnews0618.pdf",
+      "filename": "tvsnews0618.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2018,
+      "month": 5,
+      "file_path": "newsletters/2018/tvsnews0518.pdf",
+      "filename": "tvsnews0518.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2018,
+      "month": 4,
+      "file_path": "newsletters/2018/tvsnews0418.pdf",
+      "filename": "tvsnews0418.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2018,
+      "month": 3,
+      "file_path": "newsletters/2018/tvsnews0318.pdf",
+      "filename": "tvsnews0318.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2018,
+      "month": 2,
+      "file_path": "newsletters/2018/tvsnews0218.pdf",
+      "filename": "tvsnews0218.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2018,
+      "month": 1,
+      "file_path": "newsletters/2018/tvsnews0118.pdf",
+      "filename": "tvsnews0118.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2017,
+      "month": 12,
+      "file_path": "newsletters/2017/tvsnews1217.pdf",
+      "filename": "tvsnews1217.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2017,
+      "month": 11,
+      "file_path": "newsletters/2017/tvsnews1117.pdf",
+      "filename": "tvsnews1117.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2017,
+      "month": 10,
+      "file_path": "newsletters/2017/tvsnews1017.pdf",
+      "filename": "tvsnews1017.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2017,
+      "month": 9,
+      "file_path": "newsletters/2017/tvsnews0917.pdf",
+      "filename": "tvsnews0917.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2017,
+      "month": 8,
+      "file_path": "newsletters/2017/tvsnews0817.pdf",
+      "filename": "tvsnews0817.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2017,
+      "month": 7,
+      "file_path": "newsletters/2017/tvsnews0717.pdf",
+      "filename": "tvsnews0717.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2017,
+      "month": 6,
+      "file_path": "newsletters/2017/tvsnews0617.pdf",
+      "filename": "tvsnews0617.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2017,
+      "month": 5,
+      "file_path": "newsletters/2017/tvsnews0517.pdf",
+      "filename": "tvsnews0517.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2017,
+      "month": 4,
+      "file_path": "newsletters/2017/tvsnews0417.pdf",
+      "filename": "tvsnews0417.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2017,
+      "month": 3,
+      "file_path": "newsletters/2017/tvsnews0317.pdf",
+      "filename": "tvsnews0317.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2017,
+      "month": 2,
+      "file_path": "newsletters/2017/tvsnews0217.pdf",
+      "filename": "tvsnews0217.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2017,
+      "month": 1,
+      "file_path": "newsletters/2017/tvsnews0117.pdf",
+      "filename": "tvsnews0117.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2016,
+      "month": 12,
+      "file_path": "newsletters/2016/tvsnews1216.pdf",
+      "filename": "tvsnews1216.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2016,
+      "month": 11,
+      "file_path": "newsletters/2016/tvsnews1116.pdf",
+      "filename": "tvsnews1116.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2016,
+      "month": 10,
+      "file_path": "newsletters/2016/tvsnews1016.pdf",
+      "filename": "tvsnews1016.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2016,
+      "month": 9,
+      "file_path": "newsletters/2016/tvsnews0916.pdf",
+      "filename": "tvsnews0916.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2016,
+      "month": 8,
+      "file_path": "newsletters/2016/tvsnews0816.pdf",
+      "filename": "tvsnews0816.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2016,
+      "month": 7,
+      "file_path": "newsletters/2016/tvsnews0716.pdf",
+      "filename": "tvsnews0716.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2016,
+      "month": 6,
+      "file_path": "newsletters/2016/tvsnews0616.pdf",
+      "filename": "tvsnews0616.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2016,
+      "month": 5,
+      "file_path": "newsletters/2016/tvsnews0516.pdf",
+      "filename": "tvsnews0516.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2016,
+      "month": 4,
+      "file_path": "newsletters/2016/tvsnews0416.pdf",
+      "filename": "tvsnews0416.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2016,
+      "month": 3,
+      "file_path": "newsletters/2016/tvsnews0316.pdf",
+      "filename": "tvsnews0316.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2016,
+      "month": 2,
+      "file_path": "newsletters/2016/tvsnews0216.pdf",
+      "filename": "tvsnews0216.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2016,
+      "month": 1,
+      "file_path": "newsletters/2016/tvsnews0116.pdf",
+      "filename": "tvsnews0116.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2015,
+      "month": 12,
+      "file_path": "newsletters/2015/tvsnews1215.pdf",
+      "filename": "tvsnews1215.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2015,
+      "month": 11,
+      "file_path": "newsletters/2015/tvsnews1115.pdf",
+      "filename": "tvsnews1115.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2015,
+      "month": 10,
+      "file_path": "newsletters/2015/tvsnews1015.pdf",
+      "filename": "tvsnews1015.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2015,
+      "month": 9,
+      "file_path": "newsletters/2015/tvsnews0915.pdf",
+      "filename": "tvsnews0915.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2015,
+      "month": 8,
+      "file_path": "newsletters/2015/tvsnews0815.pdf",
+      "filename": "tvsnews0815.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2015,
+      "month": 7,
+      "file_path": "newsletters/2015/tvsnews0715.pdf",
+      "filename": "tvsnews0715.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2015,
+      "month": 6,
+      "file_path": "newsletters/2015/tvsnews0615.pdf",
+      "filename": "tvsnews0615.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2015,
+      "month": 5,
+      "file_path": "newsletters/2015/tvsnews0515.pdf",
+      "filename": "tvsnews0515.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2015,
+      "month": 4,
+      "file_path": "newsletters/2015/tvsnews0415.pdf",
+      "filename": "tvsnews0415.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2015,
+      "month": 3,
+      "file_path": "newsletters/2015/tvsnews0315.pdf",
+      "filename": "tvsnews0315.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2015,
+      "month": 2,
+      "file_path": "newsletters/2015/tvsnews0215.pdf",
+      "filename": "tvsnews0215.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2015,
+      "month": 1,
+      "file_path": "newsletters/2015/tvsnews0115.pdf",
+      "filename": "tvsnews0115.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2014,
+      "month": 12,
+      "file_path": "newsletters/2014/tvsnews1214.pdf",
+      "filename": "tvsnews1214.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2014,
+      "month": 11,
+      "file_path": "newsletters/2014/tvsnews1114.pdf",
+      "filename": "tvsnews1114.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2014,
+      "month": 10,
+      "file_path": "newsletters/2014/tvsnews1014.pdf",
+      "filename": "tvsnews1014.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2014,
+      "month": 9,
+      "file_path": "newsletters/2014/tvsnews0914.pdf",
+      "filename": "tvsnews0914.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2014,
+      "month": 8,
+      "file_path": "newsletters/2014/tvsnews0814.pdf",
+      "filename": "tvsnews0814.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2014,
+      "month": 7,
+      "file_path": "newsletters/2014/tvsnews0714.pdf",
+      "filename": "tvsnews0714.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2014,
+      "month": 6,
+      "file_path": "newsletters/2014/tvsnews0614.pdf",
+      "filename": "tvsnews0614.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2014,
+      "month": 5,
+      "file_path": "newsletters/2014/tvsnews0514.pdf",
+      "filename": "tvsnews0514.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2014,
+      "month": 4,
+      "file_path": "newsletters/2014/tvsnews0414.pdf",
+      "filename": "tvsnews0414.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2014,
+      "month": 3,
+      "file_path": "newsletters/2014/tvsnews0314.pdf",
+      "filename": "tvsnews0314.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2014,
+      "month": 2,
+      "file_path": "newsletters/2014/tvsnews0214.pdf",
+      "filename": "tvsnews0214.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2014,
+      "month": 1,
+      "file_path": "newsletters/2014/tvsnews0114.pdf",
+      "filename": "tvsnews0114.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2013,
+      "month": 12,
+      "file_path": "newsletters/2013/tvsnews1213.pdf",
+      "filename": "tvsnews1213.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2013,
+      "month": 11,
+      "file_path": "newsletters/2013/tvsnews1113.pdf",
+      "filename": "tvsnews1113.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2013,
+      "month": 10,
+      "file_path": "newsletters/2013/tvsnews1013.pdf",
+      "filename": "tvsnews1013.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2013,
+      "month": 9,
+      "file_path": "newsletters/2013/tvsnews0913.pdf",
+      "filename": "tvsnews0913.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2013,
+      "month": 8,
+      "file_path": "newsletters/2013/tvsnews0813.pdf",
+      "filename": "tvsnews0813.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2013,
+      "month": 7,
+      "file_path": "newsletters/2013/tvsnews0713.pdf",
+      "filename": "tvsnews0713.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2013,
+      "month": 6,
+      "file_path": "newsletters/2013/tvsnews0613.pdf",
+      "filename": "tvsnews0613.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2013,
+      "month": 5,
+      "file_path": "newsletters/2013/tvsnews0513.pdf",
+      "filename": "tvsnews0513.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2013,
+      "month": 4,
+      "file_path": "newsletters/2013/tvsnews0413.pdf",
+      "filename": "tvsnews0413.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2013,
+      "month": 3,
+      "file_path": "newsletters/2013/tvsnews0313.pdf",
+      "filename": "tvsnews0313.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2013,
+      "month": 2,
+      "file_path": "newsletters/2013/tvsnews0213.pdf",
+      "filename": "tvsnews0213.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2013,
+      "month": 1,
+      "file_path": "newsletters/2013/tvsnews0113.pdf",
+      "filename": "tvsnews0113.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2012,
+      "month": 12,
+      "file_path": "newsletters/2012/tvsnews1212.pdf",
+      "filename": "tvsnews1212.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2012,
+      "month": 11,
+      "file_path": "newsletters/2012/tvsnews1112.pdf",
+      "filename": "tvsnews1112.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2012,
+      "month": 10,
+      "file_path": "newsletters/2012/tvsnews1012.pdf",
+      "filename": "tvsnews1012.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2012,
+      "month": 9,
+      "file_path": "newsletters/2012/tvsnews0912.pdf",
+      "filename": "tvsnews0912.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2012,
+      "month": 8,
+      "file_path": "newsletters/2012/tvsnews0812.pdf",
+      "filename": "tvsnews0812.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2012,
+      "month": 7,
+      "file_path": "newsletters/2012/tvsnews0712.pdf",
+      "filename": "tvsnews0712.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2012,
+      "month": 6,
+      "file_path": "newsletters/2012/tvsnews0612.pdf",
+      "filename": "tvsnews0612.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2012,
+      "month": 5,
+      "file_path": "newsletters/2012/tvsnews0512.pdf",
+      "filename": "tvsnews0512.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2012,
+      "month": 4,
+      "file_path": "newsletters/2012/tvsnews0412.pdf",
+      "filename": "tvsnews0412.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2012,
+      "month": 3,
+      "file_path": "newsletters/2012/tvsnews0312.pdf",
+      "filename": "tvsnews0312.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2012,
+      "month": 2,
+      "file_path": "newsletters/2012/tvsnews0212.pdf",
+      "filename": "tvsnews0212.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2012,
+      "month": 1,
+      "file_path": "newsletters/2012/tvsnews0112.pdf",
+      "filename": "tvsnews0112.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2011,
+      "month": 12,
+      "file_path": "newsletters/2011/tvsnews1211.pdf",
+      "filename": "tvsnews1211.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2011,
+      "month": 11,
+      "file_path": "newsletters/2011/tvsnews1111.pdf",
+      "filename": "tvsnews1111.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2011,
+      "month": 10,
+      "file_path": "newsletters/2011/tvsnews1011.pdf",
+      "filename": "tvsnews1011.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2011,
+      "month": 9,
+      "file_path": "newsletters/2011/tvsnews0911.pdf",
+      "filename": "tvsnews0911.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2011,
+      "month": 8,
+      "file_path": "newsletters/2011/tvsnews0811.pdf",
+      "filename": "tvsnews0811.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2011,
+      "month": 7,
+      "file_path": "newsletters/2011/tvsnews0711.pdf",
+      "filename": "tvsnews0711.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2011,
+      "month": 6,
+      "file_path": "newsletters/2011/tvsnews0611.pdf",
+      "filename": "tvsnews0611.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2011,
+      "month": 5,
+      "file_path": "newsletters/2011/tvsnews0511.pdf",
+      "filename": "tvsnews0511.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2011,
+      "month": 4,
+      "file_path": "newsletters/2011/tvsnews0411.pdf",
+      "filename": "tvsnews0411.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2011,
+      "month": 3,
+      "file_path": "newsletters/2011/tvsnews0311.pdf",
+      "filename": "tvsnews0311.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2011,
+      "month": 2,
+      "file_path": "newsletters/2011/tvsnews0211.pdf",
+      "filename": "tvsnews0211.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2011,
+      "month": 1,
+      "file_path": "newsletters/2011/tvsnews0111.pdf",
+      "filename": "tvsnews0111.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2010,
+      "month": 12,
+      "file_path": "newsletters/2010/tvsnews1210.pdf",
+      "filename": "tvsnews1210.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2010,
+      "month": 11,
+      "file_path": "newsletters/2010/tvsnews1110.pdf",
+      "filename": "tvsnews1110.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2010,
+      "month": 10,
+      "file_path": "newsletters/2010/tvsnews1010.pdf",
+      "filename": "tvsnews1010.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2010,
+      "month": 9,
+      "file_path": "newsletters/2010/tvsnews0910.pdf",
+      "filename": "tvsnews0910.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2010,
+      "month": 8,
+      "file_path": "newsletters/2010/tvsnews0810.pdf",
+      "filename": "tvsnews0810.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2010,
+      "month": 7,
+      "file_path": "newsletters/2010/tvsnews0710.pdf",
+      "filename": "tvsnews0710.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2010,
+      "month": 6,
+      "file_path": "newsletters/2010/tvsnews0610.pdf",
+      "filename": "tvsnews0610.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2010,
+      "month": 5,
+      "file_path": "newsletters/2010/tvsnews0510.pdf",
+      "filename": "tvsnews0510.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2010,
+      "month": 4,
+      "file_path": "newsletters/2010/tvsnews0410.pdf",
+      "filename": "tvsnews0410.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2010,
+      "month": 3,
+      "file_path": "newsletters/2010/tvsnews0310.pdf",
+      "filename": "tvsnews0310.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2010,
+      "month": 2,
+      "file_path": "newsletters/2010/tvsnews0210.pdf",
+      "filename": "tvsnews0210.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2010,
+      "month": 1,
+      "file_path": "newsletters/2010/tvsnews0110.pdf",
+      "filename": "tvsnews0110.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2009,
+      "month": 12,
+      "file_path": "newsletters/2009/tvsnews1209.pdf",
+      "filename": "tvsnews1209.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2009,
+      "month": 11,
+      "file_path": "newsletters/2009/tvsnews1109.pdf",
+      "filename": "tvsnews1109.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2009,
+      "month": 10,
+      "file_path": "newsletters/2009/tvsnews1009.pdf",
+      "filename": "tvsnews1009.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2009,
+      "month": 9,
+      "file_path": "newsletters/2009/tvsnews0909.pdf",
+      "filename": "tvsnews0909.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2009,
+      "month": 8,
+      "file_path": "newsletters/2009/tvsnews0809.pdf",
+      "filename": "tvsnews0809.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2009,
+      "month": 7,
+      "file_path": "newsletters/2009/tvsnews0709.pdf",
+      "filename": "tvsnews0709.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2009,
+      "month": 6,
+      "file_path": "newsletters/2009/tvsnews0609.pdf",
+      "filename": "tvsnews0609.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2009,
+      "month": 5,
+      "file_path": "newsletters/2009/tvsnews0509.pdf",
+      "filename": "tvsnews0509.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2009,
+      "month": 4,
+      "file_path": "newsletters/2009/tvsnews0409.pdf",
+      "filename": "tvsnews0409.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2009,
+      "month": 3,
+      "file_path": "newsletters/2009/tvsnews0309.pdf",
+      "filename": "tvsnews0309.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2009,
+      "month": 2,
+      "file_path": "newsletters/2009/tvsnews0209.pdf",
+      "filename": "tvsnews0209.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2009,
+      "month": 1,
+      "file_path": "newsletters/2009/tvsnews0109.pdf",
+      "filename": "tvsnews0109.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2008,
+      "month": 12,
+      "file_path": "newsletters/2008/tvsnews1208.pdf",
+      "filename": "tvsnews1208.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2008,
+      "month": 11,
+      "file_path": "newsletters/2008/tvsnews1108.pdf",
+      "filename": "tvsnews1108.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2008,
+      "month": 10,
+      "file_path": "newsletters/2008/tvsnews1008.pdf",
+      "filename": "tvsnews1008.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2008,
+      "month": 9,
+      "file_path": "newsletters/2008/tvsnews0908.pdf",
+      "filename": "tvsnews0908.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2008,
+      "month": 8,
+      "file_path": "newsletters/2008/tvsnews0808.pdf",
+      "filename": "tvsnews0808.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2008,
+      "month": 7,
+      "file_path": "newsletters/2008/tvsnews0708.pdf",
+      "filename": "tvsnews0708.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2008,
+      "month": 6,
+      "file_path": "newsletters/2008/tvsnews0608.pdf",
+      "filename": "tvsnews0608.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2008,
+      "month": 5,
+      "file_path": "newsletters/2008/tvsnews0508.pdf",
+      "filename": "tvsnews0508.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2008,
+      "month": 4,
+      "file_path": "newsletters/2008/tvsnews0408.pdf",
+      "filename": "tvsnews0408.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2008,
+      "month": 3,
+      "file_path": "newsletters/2008/tvsnews0308.pdf",
+      "filename": "tvsnews0308.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2008,
+      "month": 2,
+      "file_path": "newsletters/2008/tvsnews0208.pdf",
+      "filename": "tvsnews0208.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2008,
+      "month": 1,
+      "file_path": "newsletters/2008/tvsnews0108.pdf",
+      "filename": "tvsnews0108.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2007,
+      "month": 12,
+      "file_path": "newsletters/2007/tvsnews1207.pdf",
+      "filename": "tvsnews1207.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2007,
+      "month": 11,
+      "file_path": "newsletters/2007/tvsnews1107.pdf",
+      "filename": "tvsnews1107.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2007,
+      "month": 10,
+      "file_path": "newsletters/2007/tvsnews1007.pdf",
+      "filename": "tvsnews1007.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2007,
+      "month": 9,
+      "file_path": "newsletters/2007/tvsnews0907.pdf",
+      "filename": "tvsnews0907.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2007,
+      "month": 8,
+      "file_path": "newsletters/2007/tvsnews0807.pdf",
+      "filename": "tvsnews0807.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2007,
+      "month": 7,
+      "file_path": "newsletters/2007/tvsnews0707.pdf",
+      "filename": "tvsnews0707.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2007,
+      "month": 6,
+      "file_path": "newsletters/2007/tvsnews0607.pdf",
+      "filename": "tvsnews0607.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2007,
+      "month": 5,
+      "file_path": "newsletters/2007/tvsnews0507.pdf",
+      "filename": "tvsnews0507.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2007,
+      "month": 4,
+      "file_path": "newsletters/2007/tvsnews0407.pdf",
+      "filename": "tvsnews0407.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2007,
+      "month": 3,
+      "file_path": "newsletters/2007/tvsnews0307.pdf",
+      "filename": "tvsnews0307.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2007,
+      "month": 2,
+      "file_path": "newsletters/2007/tvsnews0207.pdf",
+      "filename": "tvsnews0207.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2007,
+      "month": 1,
+      "file_path": "newsletters/2007/tvsnews0107.pdf",
+      "filename": "tvsnews0107.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2006,
+      "month": 12,
+      "file_path": "newsletters/2006/tvsnews1206.pdf",
+      "filename": "tvsnews1206.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2006,
+      "month": 11,
+      "file_path": "newsletters/2006/tvsnews1106.pdf",
+      "filename": "tvsnews1106.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2006,
+      "month": 10,
+      "file_path": "newsletters/2006/tvsnews1006.pdf",
+      "filename": "tvsnews1006.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2006,
+      "month": 9,
+      "file_path": "newsletters/2006/tvsnews0906.pdf",
+      "filename": "tvsnews0906.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2006,
+      "month": 8,
+      "file_path": "newsletters/2006/tvsnews0806.pdf",
+      "filename": "tvsnews0806.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2006,
+      "month": 7,
+      "file_path": "newsletters/2006/tvsnews0706.pdf",
+      "filename": "tvsnews0706.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2006,
+      "month": 6,
+      "file_path": "newsletters/2006/tvsnews0606.pdf",
+      "filename": "tvsnews0606.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2006,
+      "month": 5,
+      "file_path": "newsletters/2006/tvsnews0506.pdf",
+      "filename": "tvsnews0506.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2006,
+      "month": 4,
+      "file_path": "newsletters/2006/tvsnews0406.pdf",
+      "filename": "tvsnews0406.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2006,
+      "month": 3,
+      "file_path": "newsletters/2006/tvsnews0306.pdf",
+      "filename": "tvsnews0306.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2006,
+      "month": 2,
+      "file_path": "newsletters/2006/tvsnews0206.pdf",
+      "filename": "tvsnews0206.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2006,
+      "month": 1,
+      "file_path": "newsletters/2006/tvsnews0106.pdf",
+      "filename": "tvsnews0106.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2005,
+      "month": 12,
+      "file_path": "newsletters/2005/tvsnews1205.pdf",
+      "filename": "tvsnews1205.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2005,
+      "month": 11,
+      "file_path": "newsletters/2005/tvsnews1105.pdf",
+      "filename": "tvsnews1105.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2005,
+      "month": 10,
+      "file_path": "newsletters/2005/tvsnews1005.pdf",
+      "filename": "tvsnews1005.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2005,
+      "month": 9,
+      "file_path": "newsletters/2005/tvsnews0905.pdf",
+      "filename": "tvsnews0905.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2005,
+      "month": 8,
+      "file_path": "newsletters/2005/tvsnews0805.pdf",
+      "filename": "tvsnews0805.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2005,
+      "month": 7,
+      "file_path": "newsletters/2005/tvsnews0705.pdf",
+      "filename": "tvsnews0705.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2005,
+      "month": 6,
+      "file_path": "newsletters/2005/tvsnews0605.pdf",
+      "filename": "tvsnews0605.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2005,
+      "month": 5,
+      "file_path": "newsletters/2005/tvsnews0505.pdf",
+      "filename": "tvsnews0505.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2005,
+      "month": 4,
+      "file_path": "newsletters/2005/tvsnews0405.pdf",
+      "filename": "tvsnews0405.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2005,
+      "month": 3,
+      "file_path": "newsletters/2005/tvsnews0305.pdf",
+      "filename": "tvsnews0305.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2005,
+      "month": 2,
+      "file_path": "newsletters/2005/tvsnews0205.pdf",
+      "filename": "tvsnews0205.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2005,
+      "month": 1,
+      "file_path": "newsletters/2005/tvsnews0105.pdf",
+      "filename": "tvsnews0105.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2004,
+      "month": 12,
+      "file_path": "newsletters/2004/tvsnews1204.pdf",
+      "filename": "tvsnews1204.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2004,
+      "month": 11,
+      "file_path": "newsletters/2004/tvsnews1104.pdf",
+      "filename": "tvsnews1104.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2004,
+      "month": 10,
+      "file_path": "newsletters/2004/tvsnews1004.pdf",
+      "filename": "tvsnews1004.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2004,
+      "month": 9,
+      "file_path": "newsletters/2004/tvsnews0904.pdf",
+      "filename": "tvsnews0904.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2004,
+      "month": 8,
+      "file_path": "newsletters/2004/tvsnews0804.pdf",
+      "filename": "tvsnews0804.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2004,
+      "month": 7,
+      "file_path": "newsletters/2004/tvsnews0704.pdf",
+      "filename": "tvsnews0704.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2004,
+      "month": 6,
+      "file_path": "newsletters/2004/tvsnews0604.pdf",
+      "filename": "tvsnews0604.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2004,
+      "month": 5,
+      "file_path": "newsletters/2004/tvsnews0504.pdf",
+      "filename": "tvsnews0504.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2004,
+      "month": 4,
+      "file_path": "newsletters/2004/tvsnews0404.pdf",
+      "filename": "tvsnews0404.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2004,
+      "month": 3,
+      "file_path": "newsletters/2004/tvsnews0304.pdf",
+      "filename": "tvsnews0304.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2004,
+      "month": 2,
+      "file_path": "newsletters/2004/tvsnews0204.pdf",
+      "filename": "tvsnews0204.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2004,
+      "month": 1,
+      "file_path": "newsletters/2004/tvsnews0104.pdf",
+      "filename": "tvsnews0104.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2003,
+      "month": 12,
+      "file_path": "newsletters/2003/tvsnews1203.pdf",
+      "filename": "tvsnews1203.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2003,
+      "month": 11,
+      "file_path": "newsletters/2003/tvsnews1103.pdf",
+      "filename": "tvsnews1103.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2003,
+      "month": 10,
+      "file_path": "newsletters/2003/tvsnews1003.pdf",
+      "filename": "tvsnews1003.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2003,
+      "month": 9,
+      "file_path": "newsletters/2003/tvsnews0903.pdf",
+      "filename": "tvsnews0903.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2003,
+      "month": 8,
+      "file_path": "newsletters/2003/tvsnews0803.pdf",
+      "filename": "tvsnews0803.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2003,
+      "month": 7,
+      "file_path": "newsletters/2003/tvsnews0703.pdf",
+      "filename": "tvsnews0703.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2003,
+      "month": 6,
+      "file_path": "newsletters/2003/tvsnews0603.pdf",
+      "filename": "tvsnews0603.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2003,
+      "month": 5,
+      "file_path": "newsletters/2003/tvsnews0503.pdf",
+      "filename": "tvsnews0503.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2003,
+      "month": 4,
+      "file_path": "newsletters/2003/tvsnews0403.pdf",
+      "filename": "tvsnews0403.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2003,
+      "month": 3,
+      "file_path": "newsletters/2003/tvsnews0303.pdf",
+      "filename": "tvsnews0303.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2003,
+      "month": 2,
+      "file_path": "newsletters/2003/tvsnews0203.pdf",
+      "filename": "tvsnews0203.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2003,
+      "month": 1,
+      "file_path": "newsletters/2003/tvsnews0103.pdf",
+      "filename": "tvsnews0103.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2002,
+      "month": 12,
+      "file_path": "newsletters/2002/tvsnews1202.pdf",
+      "filename": "tvsnews1202.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2002,
+      "month": 11,
+      "file_path": "newsletters/2002/tvsnews1102.pdf",
+      "filename": "tvsnews1102.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2002,
+      "month": 10,
+      "file_path": "newsletters/2002/tvsnews1002.pdf",
+      "filename": "tvsnews1002.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2002,
+      "month": 9,
+      "file_path": "newsletters/2002/tvsnews0902.pdf",
+      "filename": "tvsnews0902.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2002,
+      "month": 8,
+      "file_path": "newsletters/2002/tvsnews0802.pdf",
+      "filename": "tvsnews0802.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2002,
+      "month": 7,
+      "file_path": "newsletters/2002/tvsnews0702.pdf",
+      "filename": "tvsnews0702.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2002,
+      "month": 6,
+      "file_path": "newsletters/2002/tvsnews0602.pdf",
+      "filename": "tvsnews0602.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2002,
+      "month": 5,
+      "file_path": "newsletters/2002/tvsnews0502.pdf",
+      "filename": "tvsnews0502.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2002,
+      "month": 4,
+      "file_path": "newsletters/2002/tvsnews0402.pdf",
+      "filename": "tvsnews0402.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2002,
+      "month": 3,
+      "file_path": "newsletters/2002/tvsnews0302.pdf",
+      "filename": "tvsnews0302.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2002,
+      "month": 2,
+      "file_path": "newsletters/2002/tvsnews0202.pdf",
+      "filename": "tvsnews0202.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2002,
+      "month": 1,
+      "file_path": "newsletters/2002/tvsnews0102.pdf",
+      "filename": "tvsnews0102.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2001,
+      "month": 12,
+      "file_path": "newsletters/2001/tvsnews1201.pdf",
+      "filename": "tvsnews1201.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2001,
+      "month": 11,
+      "file_path": "newsletters/2001/tvsnews1101.pdf",
+      "filename": "tvsnews1101.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2001,
+      "month": 10,
+      "file_path": "newsletters/2001/tvsnews1001.pdf",
+      "filename": "tvsnews1001.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2001,
+      "month": 9,
+      "file_path": "newsletters/2001/tvsnews0901.pdf",
+      "filename": "tvsnews0901.pdf",
+      "file_type": "pdf"
+    },
+    {
+      "year": 2001,
+      "month": 8,
+      "file_path": "newsletters/2001/0801/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 2001,
+      "month": 7,
+      "file_path": "newsletters/2001/0701/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 2001,
+      "month": 6,
+      "file_path": "newsletters/2001/0601/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 2001,
+      "month": 5,
+      "file_path": "newsletters/2001/0501/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 2001,
+      "month": 4,
+      "file_path": "newsletters/2001/0401/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 2001,
+      "month": 3,
+      "file_path": "newsletters/2001/0301/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 2001,
+      "month": 2,
+      "file_path": "newsletters/2001/0201/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 2001,
+      "month": 1,
+      "file_path": "newsletters/2001/0101/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 2000,
+      "month": 12,
+      "file_path": "newsletters/2000/1200/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 2000,
+      "month": 11,
+      "file_path": "newsletters/2000/1100/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 2000,
+      "month": 10,
+      "file_path": "newsletters/2000/1000/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 2000,
+      "month": 9,
+      "file_path": "newsletters/2000/0900/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 2000,
+      "month": 8,
+      "file_path": "newsletters/2000/0800/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 2000,
+      "month": 7,
+      "file_path": "newsletters/2000/0700/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 2000,
+      "month": 6,
+      "file_path": "newsletters/2000/0600/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 2000,
+      "month": 5,
+      "file_path": "newsletters/2000/0500/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 2000,
+      "month": 4,
+      "file_path": "newsletters/2000/0400/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 2000,
+      "month": 3,
+      "file_path": "newsletters/2000/0300/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 2000,
+      "month": 2,
+      "file_path": "newsletters/2000/0200/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 2000,
+      "month": 1,
+      "file_path": "newsletters/2000/0100/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 1999,
+      "month": 12,
+      "file_path": "newsletters/1999/1299/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 1999,
+      "month": 11,
+      "file_path": "newsletters/1999/1199/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 1999,
+      "month": 10,
+      "file_path": "newsletters/1999/1099/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 1999,
+      "month": 9,
+      "file_path": "newsletters/1999/0999/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 1999,
+      "month": 8,
+      "file_path": "newsletters/1999/0899/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 1999,
+      "month": 7,
+      "file_path": "newsletters/1999/0799/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 1999,
+      "month": 6,
+      "file_path": "newsletters/1999/0699/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 1999,
+      "month": 5,
+      "file_path": "newsletters/1999/0599/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 1999,
+      "month": 4,
+      "file_path": "newsletters/1999/0499/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 1999,
+      "month": 3,
+      "file_path": "newsletters/1999/0399/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 1999,
+      "month": 2,
+      "file_path": "newsletters/1999/0299/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 1999,
+      "month": 1,
+      "file_path": "newsletters/1999/0199/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 1998,
+      "month": 12,
+      "file_path": "newsletters/1998/1298/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 1998,
+      "month": 11,
+      "file_path": "newsletters/1998/1198/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 1998,
+      "month": 10,
+      "file_path": "newsletters/1998/1098/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 1998,
+      "month": 9,
+      "file_path": "newsletters/1998/0998/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 1998,
+      "month": 8,
+      "file_path": "newsletters/1998/0898/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 1998,
+      "month": 7,
+      "file_path": "newsletters/1998/0798/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 1998,
+      "month": 6,
+      "file_path": "newsletters/1998/0698/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 1998,
+      "month": 5,
+      "file_path": "newsletters/1998/0598/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 1998,
+      "month": 4,
+      "file_path": "newsletters/1998/0498/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 1998,
+      "month": 3,
+      "file_path": "newsletters/1998/0398/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 1998,
+      "month": 2,
+      "file_path": "newsletters/1998/0298/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 1998,
+      "month": 1,
+      "file_path": "newsletters/1998/0198/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 1997,
+      "month": 12,
+      "file_path": "newsletters/1997/1297/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 1997,
+      "month": 11,
+      "file_path": "newsletters/1997/1197/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 1997,
+      "month": 10,
+      "file_path": "newsletters/1997/1097/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 1997,
+      "month": 9,
+      "file_path": "newsletters/1997/0997/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 1997,
+      "month": 8,
+      "file_path": "newsletters/1997/0897/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 1997,
+      "month": 7,
+      "file_path": "newsletters/1997/0797/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 1997,
+      "month": 6,
+      "file_path": "newsletters/1997/0697/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 1997,
+      "month": 5,
+      "file_path": "newsletters/1997/0597/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 1997,
+      "month": 4,
+      "file_path": "newsletters/1997/0497/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 1997,
+      "month": 3,
+      "file_path": "newsletters/1997/0397/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 1997,
+      "month": 2,
+      "file_path": "newsletters/1997/0297/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 1997,
+      "month": 1,
+      "file_path": "newsletters/1997/0197/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 1996,
+      "month": 12,
+      "file_path": "newsletters/1996/1296/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 1996,
+      "month": 11,
+      "file_path": "newsletters/1996/1196/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 1996,
+      "month": 10,
+      "file_path": "newsletters/1996/1096/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 1996,
+      "month": 9,
+      "file_path": "newsletters/1996/0996/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 1996,
+      "month": 8,
+      "file_path": "newsletters/1996/0896/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 1996,
+      "month": 7,
+      "file_path": "newsletters/1996/0796/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 1996,
+      "month": 6,
+      "file_path": "newsletters/1996/0696/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 1996,
+      "month": 5,
+      "file_path": "newsletters/1996/0596/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 1996,
+      "month": 4,
+      "file_path": "newsletters/1996/0496/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    },
+    {
+      "year": 1996,
+      "month": 3,
+      "file_path": "newsletters/1996/0396/index.html",
+      "filename": "index.html",
+      "file_type": "html"
+    }
+  ]
 }

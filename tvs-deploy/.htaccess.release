@@ -13,6 +13,10 @@ AddHandler server-parsed .shtml
     RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
     RewriteRule ^(?:data|includes|tools|tests|docs|vendor|node_modules)/ - [F,L]
     RewriteRule ^cgi-bin/(?:info\.php|_test_.*|include\.shtml|a\.shtml)$ - [F,L]
+    # Beta previews existing production archive/downloads without duplicating them.
+    RewriteCond %{HTTP_HOST} ^beta\.trivalleystargazers\.org$ [NC]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(newsletters|pdfs)/(.+)$ https://www.trivalleystargazers.org/$1/$2 [R=302,L]
     # Only redirect legacy pages with a real PHP replacement.
     RewriteCond %{DOCUMENT_ROOT}/$1.php -f
     RewriteRule ^(.+)\.shtml$ /$1.php [R=302,L]

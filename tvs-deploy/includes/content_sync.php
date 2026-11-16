@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__.'/newsletter_archive.php';
 /** Controlled beta content import. No user accounts or membership data are read. */
 function contentSyncSnapshot(PDO $pdo): array {
     $snapshot = [];
@@ -31,7 +32,8 @@ function syncPublishedContent(PDO $pdo, array $manifest, string $root, bool $app
     }
     if (!hash_equals($fingerprint, $expected)) throw new RuntimeException('Database content changed after backup; plan again');
     $counts = ['newsletters_inserted'=>0, 'documents_updated'=>0, 'contacts_inserted'=>0,
-        'contacts_updated'=>0, 'contacts_preserved_newer'=>0, 'calendar_inserted'=>0, 'meetings_inserted'=>0];
+        'contacts_updated'=>0, 'contacts_preserved_newer'=>0, 'calendar_inserted'=>0, 'meetings_inserted'=>0,
+        'legacy_archive_inserted'=>0, 'legacy_archive_missing'=>0];
     $inserted = [];
     $select = function (string $sql, array $params) use ($pdo) {
         $stmt=$pdo->prepare($sql); $stmt->execute($params); return $stmt->fetch(PDO::FETCH_ASSOC);
@@ -49,6 +51,13 @@ function syncPublishedContent(PDO $pdo, array $manifest, string $root, bool $app
                 unset($row['sha256']); $row['is_current']=0;
                 $insert('newsletters',$row); $counts['newsletters_inserted']++;
             }
+        }
+        foreach ($manifest['legacy_archive'] ?? [] as $row) {
+            if ($select('SELECT id FROM newsletters WHERE year=? AND month=?',[$row['year'],$row['month']])) continue;
+            $file=publishedNewsletterFile($root,$row['file_path']);
+            if (!$file) { $counts['legacy_archive_missing']++; continue; }
+            $row['file_size']=filesize($file); $row['is_current']=0;
+            $insert('newsletters',$row); $counts['legacy_archive_inserted']++;
         }
         $latest=$manifest['newsletters'];
         usort($latest,function ($a,$b) { return ($b['year']*100+$b['month']) <=> ($a['year']*100+$a['month']); });
