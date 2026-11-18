@@ -237,20 +237,31 @@ function getAllUpcomingEvents(int $limit = 15): array {
     );
     $events = array_merge($events, $teslaEvents);
 
-    // Get general star parties from calendar cache
+    // Include all public calendar events, preserving their actual start times.
     $starParties = dbQuery(
-        "SELECT 'starparty' as event_type, title, event_date,
-                '20:00:00' as event_time, location, title as description
+        "SELECT 'calendar' as event_type, title, event_date,
+                event_time, location, description
          FROM calendar_cache
-         WHERE event_date >= ? AND (title LIKE '%star party%' OR title LIKE '%Star Party%')
-         ORDER BY event_date ASC LIMIT 5",
+         WHERE event_date >= ?
+         ORDER BY event_date ASC, event_time ASC",
         [$today]
     );
-    $events = array_merge($events, $starParties);
+    foreach ($starParties as $event) {
+        // A curated meeting announcement takes precedence over its recurring calendar entry.
+        $duplicate = false;
+        foreach ($events as $published) {
+            if ($published['event_date'] === $event['event_date']
+                && ($published['title'] === $event['title']
+                    || ($published['event_type'] === 'meeting' && preg_match('/club meeting/i', $event['title'])))) {
+                $duplicate = true; break;
+            }
+        }
+        if (!$duplicate) $events[] = $event;
+    }
 
     // Sort all events by date
     usort($events, function($a, $b) {
-        return strcmp($a['event_date'], $b['event_date']);
+        return strcmp($a['event_date'].' '.($a['event_time'] ?? ''), $b['event_date'].' '.($b['event_time'] ?? ''));
     });
 
     // Return limited results
