@@ -95,7 +95,9 @@ include __DIR__ . '/includes/templates/header.php';
                     <?php endif; ?>
 
                     <div class="meeting-description">
-                        <?php if ($publicMeeting['meeting_format'] === 'hybrid'): ?>
+                        <?php if (!empty($publicMeeting['description'])): ?>
+                            <?= nl2br(e($publicMeeting['description'])) ?>
+                        <?php elseif ($publicMeeting['meeting_format'] === 'hybrid'): ?>
                             This will be a hybrid meeting. The meeting will be held in person at the <?= e($publicMeeting['location']) ?> and will also be available via Zoom.
                         <?php elseif ($publicMeeting['meeting_format'] === 'zoom'): ?>
                             This meeting will be held via Zoom only.

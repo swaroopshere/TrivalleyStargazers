@@ -16,7 +16,7 @@
 
   <script type="text/javascript">
    <!--
-    lastUpdateDate = "November 16, 2025";
+    lastUpdateDate = "November 18, 2026";
    //-->
   </script>
 
@@ -86,17 +86,17 @@ The Tri-Valley Stargazers Privacy Policy is available <a href="https://trivalley
       <h3 class="meeting-header">Next Public Meeting</h3>	
       <div class="optional" id="opt_talk">
        <div class="meeting-details">
-        <p class="meeting-time">Friday, September 19, 2026 at 7:30 p.m.</p>
+        <p class="meeting-time">Friday, November 20, 2026 at 7:30 p.m.<br>Doors open at 7:00 p.m.</p>
         <p class="meeting-location">Unitarian Universalist Church<br>1893 N. Vasco Rd., Livermore</p>
        </div>
        
        <div class="meeting-presenter">
-        <strong>Topic:</strong> "Anecdotes of Recent Eclipses"<br>
-        <strong>Presenter:</strong> "Gert Gottschalk"<br>
+        <strong>Topic:</strong> "StackingWizard and AstroWizard Intro and Application"<br>
+        <strong>Presenter:</strong> Eric Holland (in person)<br>
        </div>
 
        <div class="meeting-description">
-        This will be a hybrid meeting. The meeting will be held in person at the Unitarian Church and will also be available via Zoom.
+        Club meetings are open to members and guests. Please join us in person if you are able. The meeting will also be available via Zoom.
        </div>
       </div>
      </div>
@@ -135,8 +135,8 @@ The Tri-Valley Stargazers Privacy Policy is available <a href="https://trivalley
      <div class="meeting-card">
       <h3 class="meeting-header">Next Board Meeting</h3>
       <div class="meeting-details">
-       <p class="meeting-time">Monday, September 22, 2026, 7:30 p.m.</p>
-       <p class="meeting-description">Board meetings are usually held using video conferencing. Members are always welcome at board meetings.</p>
+       <p class="meeting-time">Monday, November 23, 2026 at 7:30 p.m.</p>
+       <p class="meeting-description">Board meetings take place at 7:30 PM on the Monday following the Club Meeting. This month&#x27;s board meeting is Monday, November 23, via Zoom. Board meetings are open to TVS members in good standing.</p>
       </div>
      </div>
     </td>
@@ -168,7 +168,7 @@ Please visit:  <a href="https://eastbayastro.org/events/" target="_blank">East B
 <br><br> -->
 
   <div class="optional" id="opt_talk_details">
-   <h3 class="subtitle">August 2026 Meeting Presentation</h3>
+   <h3 class="subtitle">November 2026 Meeting Presentation</h3>
    <br><br>
  
    This meeting will be live at the Unitarian church and will also be available using the video conference utility 
@@ -183,10 +183,10 @@ Please visit:  <a href="https://eastbayastro.org/events/" target="_blank">East B
 
    <script type="text/javascript">
      currentSpeaker(
-       "Anecdotes of Recent Eclipses",
-       "Gert Gottschalk",
-       "The September talk will cover the result of Gert's solar eclipse travels. We know that Gert was successful and he'll show images and describe his adventure but the lunar activity here was mostly a bust.  However, If you did attempt to observe the local eclipse we still want to hear from you.",
-       "Gert has been a member for more than 10 years and has supported a number of roles within the TVS organization."
+       "StackingWizard and AstroWizard Intro and Application",
+       "Eric Holland",
+       "Our featured, in-person presenter this month is Eric Holland. His topic will focus on the demonstration of two fairly new applications called StackingWizard and AstroWizard. Both really simplify the image processing side of astrophotography, suit those new to the hobby, and are a nice complement to smart telescopes. Still, the advanced imager can benefit from these applications, and they are not just for smart scopes. He will briefly discuss the need for stacking and why we do it. He doesn't plan to discuss the image acquisition side of astrophotography but, if there is time, he will take questions on both sides.",
+       "Eric is a graduate of UC Davis with a degree in Computer Engineering. He currently works in Information Services as a Systems Engineer. His main duties pertain to Oracle CNC and DBA work. Eric became serious about astronomy in college and has been active as an amateur astronomer ever since, going on for 24 years. He has been a member of the Stockton Astronomical Society for about 16 years, was president for five of those years, and is currently editor of the club Valley Skies newsletter."
      );
    
    </script>
