@@ -32,18 +32,20 @@ test('a failed fetch keeps the previous calendar file intact',async()=>{
   assert.equal(fs.readFileSync(path.join(root,'calendar-data.json'),'utf8'),'existing');
  }finally{fs.rmSync(root,{recursive:true,force:true});}
 });
-test('homepage shows January events and same-day events without timezone or month filtering loss',async()=>{
- const code=fs.readFileSync(path.join(__dirname,'../tvs.js'),'utf8');
+test('homepage excludes club meetings, past dates and earlier same-day events while retaining future outreach',async()=>{
+ const code=fs.readFileSync(process.env.TVS_EVENTS_SCRIPT || path.join(__dirname,'../tvs.js'),'utf8');
  const body=code.slice(code.indexOf('async function displayUpcomingEvents()'),code.indexOf('function currentSpeaker('));
  class Element {constructor(){this.children=[];this.textContent='';}appendChild(e){this.children.push(e);}set innerHTML(v){this.markup=v;this.children=[];}get innerHTML(){return this.markup;}}
  const container=new Element();
  class Clock extends Date {constructor(...a){super(...(a.length?a:['2026-11-18T23:00:00Z']));}}
  const context={Date:Clock,Intl,console,fetch:async()=>({ok:true,json:async()=>({events:[
-  {date:'2026-11-18',title:'Today',description:'',location:'Here'},
+  {date:'2026-11-18',startDate:'2026-11-18T23:30:00Z',title:'Today',description:'',location:'Here'},
+  {date:'2026-11-18',startDate:'2026-11-18T22:00:00Z',title:'Earlier today',description:'',location:''},
+  {date:'2026-12-18',title:'TVS Club Meeting',description:'',location:''},
   {date:'2027-01-14',title:'STEAM Night',description:'',location:'School'},
   {date:'2026-11-17',title:'Past',description:'',location:''},
   {date:'2026-12-01',title:'Board Meeting',description:'',location:''}]})}),document:{head:new Element(),getElementById:()=>container,createElement:()=>new Element()}};
  vm.createContext(context);vm.runInContext(body,context);await context.displayUpcomingEvents();
- assert(container.markup.includes('Upcoming Club Events'));
+ assert(container.markup.includes('Upcoming Star Parties'));
  const table=container.children[0];assert.equal(table.children[1].children.length,2);
 });

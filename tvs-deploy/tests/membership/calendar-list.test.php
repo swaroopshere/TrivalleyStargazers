@@ -11,9 +11,12 @@ $pdo->exec("INSERT INTO calendar_cache VALUES('2026-11-20','19:30:00','TVS Club 
 $pdo->exec("INSERT INTO calendar_cache VALUES('2027-01-14','18:00:00','Outreach STEAM Night','School','Volunteers')");
 $pdo->exec("INSERT INTO calendar_cache VALUES('2026-12-08','18:00:00','School Star Party','School','Telescopes')");
 $pdo->exec("INSERT INTO calendar_cache VALUES('2026-11-01','20:00:00','Past Star Party','Park','Past')");
+$pdo->exec("INSERT INTO calendar_cache VALUES('2026-11-18','10:00:00','Earlier Today','Park','Past')");
+$pdo->exec("INSERT INTO calendar_cache VALUES('2026-11-18','16:00:00','Later Today','Park','Upcoming')");
+$pdo->exec("INSERT INTO calendar_cache VALUES('2026-11-23','19:30:00','TVS Board Meeting','Zoom','Board')");
 $reflection=new ReflectionClass(Database::class);$db=$reflection->newInstanceWithoutConstructor();
 $property=$reflection->getProperty('pdo');$property->setValue($db,$pdo);
 $property=$reflection->getProperty('instance');$property->setValue(null,$db);
-$events=getAllUpcomingEvents(100);
-if(count($events)!==3 || $events[0]['location']!=='Church' || $events[1]['event_time']!=='18:00:00' || $events[2]['title']!=='Outreach STEAM Night') throw new RuntimeException('Upcoming calendar merge, real start times, or curated meeting precedence regressed');
-echo "PASS all public events, school outreach, actual times, past-event exclusion and curated meeting deduplication\n";
+$events=getAllUpcomingEvents(100,new DateTimeImmutable('2026-11-18 15:00:00',new DateTimeZone('America/Los_Angeles')));
+if(count($events)!==3 || $events[0]['title']!=='Later Today' || $events[1]['event_time']!=='18:00:00' || $events[2]['title']!=='Outreach STEAM Night') throw new RuntimeException('Upcoming-only outreach list regressed');
+echo "PASS meeting exclusion, past dates, elapsed same-day events and future outreach times\n";

@@ -340,12 +340,13 @@ async function displayUpcomingEvents() {
         const eventsDiv = document.getElementById('upcoming-events');
         if (!eventsDiv) return;
         
-        const today = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Los_Angeles', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
+        const now = new Date();
+        const today = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Los_Angeles', year: 'numeric', month: '2-digit', day: '2-digit' }).format(now);
         const upcomingEvents = data.events
             .filter(event => {
-                const restricted = /\bboard\b|\bmembers?[ -]+only\b|tesla vintner/i.test(event.title || '') ||
+                const restricted = /\bboard\b|\bclub meeting\b|\bmembers?[ -]+only\b|tesla vintner/i.test(event.title || '') ||
                     /\bmembers?[ -]+only\b/i.test(event.description || '');
-                return event.date >= today && !event.is_canceled && !event.is_private && !event.is_member_only && !restricted;
+                return event.date >= today && (!event.startDate || new Date(event.startDate) >= now) && !event.is_canceled && !event.is_private && !event.is_member_only && !restricted;
             })
             .sort((a, b) => new Date(a.date) - new Date(b.date));
             
@@ -402,7 +403,7 @@ async function displayUpcomingEvents() {
         table.appendChild(tbody);
         
         // Add table to the page
-        eventsDiv.innerHTML = '<h3 class="subtitle">Upcoming Club Events</h3><p>School outreach listings coordinate TVS volunteers; follow the calendar participation instructions.</p>';
+        eventsDiv.innerHTML = '<h3 class="subtitle">Upcoming Star Parties &amp; Outreach</h3><p>School outreach listings coordinate TVS volunteers; follow the calendar participation instructions.</p>';
         eventsDiv.appendChild(table);
         
         // Add some basic styling for the table
