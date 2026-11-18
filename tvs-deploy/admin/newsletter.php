@@ -10,6 +10,46 @@ require_once __DIR__ . '/../includes/functions.php';
 
 $pageTitle = 'Newsletters';
 
+$scanResults = null;
+$scanSummary = null;
+$scanError   = null;
+$rootReal    = realpath(ROOT_PATH);
+
+// Directory browser state (GET)
+$browseRaw = $_GET['browse'] ?? '';
+if (strpos($browseRaw, '..') !== false) {
+    $browseRaw = '';
+}
+if ($browseRaw !== '') {
+    $browseAbs = realpath(ROOT_PATH . '/' . ltrim($browseRaw, '/\\'));
+    if ($browseAbs === false || strpos($browseAbs . DIRECTORY_SEPARATOR, $rootReal . DIRECTORY_SEPARATOR) !== 0) {
+        $browseAbs = $rootReal;
+        $browseRaw = '';
+    }
+} else {
+    $browseAbs = $rootReal;
+}
+$browseRelative = str_replace(
+    DIRECTORY_SEPARATOR,
+    '/',
+    trim(substr($browseAbs, strlen($rootReal)), DIRECTORY_SEPARATOR)
+);
+$browseListing = array_values(array_filter(
+    glob($browseAbs . DIRECTORY_SEPARATOR . '*', GLOB_ONLYDIR) ?: [],
+    fn($d) => basename($d)[0] !== '.'
+));
+sort($browseListing);
+
+$breadcrumbs = [['label' => 'Site Root', 'path' => '']];
+if ($browseRelative !== '') {
+    $parts       = explode('/', $browseRelative);
+    $accumulated = '';
+    foreach ($parts as $part) {
+        $accumulated       = $accumulated !== '' ? $accumulated . '/' . $part : $part;
+        $breadcrumbs[]     = ['label' => $part, 'path' => $accumulated];
+    }
+}
+
 // Handle form submissions
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     requireCSRF();
@@ -111,6 +151,132 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 redirect('newsletter.php', 'Newsletter entry deleted.');
             }
             break;
+
+        case 'scan_directory':
+            $rawDir = trim($_POST['scan_dir'] ?? '');
+            $dryRun = isset($_POST['dry_run']);
+
+            if ($rawDir === '') {
+                $scanError = 'No directory selected.';
+                break;
+            }
+            if (strpos($rawDir, '..') !== false) {
+                $scanError = 'Invalid directory path.';
+                break;
+            }
+
+            $absPath = realpath(ROOT_PATH . '/' . ltrim($rawDir, '/\\'));
+
+            if ($absPath === false || !is_dir($absPath)) {
+                $scanError = 'Directory not found: ' . e($rawDir);
+                break;
+            }
+            if (strpos($absPath . DIRECTORY_SEPARATOR, $rootReal . DIRECTORY_SEPARATOR) !== 0) {
+                $scanError = 'Directory must be within the site root.';
+                break;
+            }
+
+            $scanResults = [];
+            $inserted    = 0;
+            $skipped     = 0;
+            $failed      = 0;
+
+            $yearDirs = glob($absPath . DIRECTORY_SEPARATOR . '*', GLOB_ONLYDIR) ?: [];
+            sort($yearDirs);
+
+            foreach ($yearDirs as $yearDir) {
+                $yearName = basename($yearDir);
+                if (!ctype_digit($yearName) || strlen($yearName) !== 4) continue;
+
+                foreach (glob($yearDir . DIRECTORY_SEPARATOR . 'tvsnews*.pdf') ?: [] as $filePath) {
+                    $filename = basename($filePath);
+                    $entry    = ['file' => "$yearName/$filename", 'status' => '', 'note' => ''];
+
+                    if (!preg_match('/^tvsnews(\d{2})(\d{2})\.pdf$/i', $filename, $mtch)) {
+                        $entry['status'] = 'failed';
+                        $entry['note']   = 'Filename does not match tvsnews<MM><YY>.pdf';
+                        $scanResults[] = $entry; $failed++; continue;
+                    }
+
+                    $month      = (int)$mtch[1];
+                    $cy         = (int)date('Y');
+                    $century    = (int)(floor($cy / 100) * 100);
+                    $parsedYear = $century + (int)$mtch[2];
+                    if ($parsedYear > $cy + 10) $parsedYear -= 100;
+
+                    if ($month < 1 || $month > 12 || $parsedYear < 1990) {
+                        $entry['status'] = 'failed';
+                        $entry['note']   = 'Invalid month or year parsed from filename';
+                        $scanResults[] = $entry; $failed++; continue;
+                    }
+
+                    if (!is_readable($filePath) || filesize($filePath) === 0) {
+                        $entry['status'] = 'failed';
+                        $entry['note']   = 'File not readable or empty';
+                        $scanResults[] = $entry; $failed++; continue;
+                    }
+
+                    $finfo = finfo_open(FILEINFO_MIME_TYPE);
+                    $mime  = finfo_file($finfo, $filePath);
+                    finfo_close($finfo);
+                    if ($mime !== 'application/pdf') {
+                        $entry['status'] = 'failed';
+                        $entry['note']   = 'Not a valid PDF (detected: ' . e($mime) . ')';
+                        $scanResults[] = $entry; $failed++; continue;
+                    }
+
+                    if (dbQueryOne("SELECT id FROM newsletters WHERE year = ? AND month = ?", [$parsedYear, $month])) {
+                        $entry['status'] = 'skipped';
+                        $entry['note']   = 'Already in database';
+                        $scanResults[] = $entry; $skipped++; continue;
+                    }
+
+                    $relativePath = 'newsletters/' . $parsedYear . '/' . $filename;
+                    $fileSize     = filesize($filePath);
+                    $monthLabel   = getMonthName($month) . ' ' . $parsedYear;
+
+                    if ($dryRun) {
+                        $entry['status'] = 'preview';
+                        $entry['note']   = $monthLabel . ' — ' . formatFileSize($fileSize);
+                        $scanResults[] = $entry; $inserted++; continue;
+                    }
+
+                    try {
+                        $nlId = dbInsert(
+                            "INSERT INTO newsletters (year, month, filename, file_path, file_type, file_size, uploaded_by, uploaded_at, is_current)
+                             VALUES (?, ?, ?, ?, 'pdf', ?, ?, NOW(), 0)",
+                            [$parsedYear, $month, $filename, $relativePath, $fileSize, auth()->getUserId()]
+                        );
+                        logAudit(auth()->getUserId(), 'migrate_newsletter', 'newsletters', $nlId);
+                        $entry['status'] = 'inserted';
+                        $entry['note']   = $monthLabel;
+                        $scanResults[] = $entry; $inserted++;
+                    } catch (Exception $ex) {
+                        $entry['status'] = 'failed';
+                        $entry['note']   = $ex->getMessage();
+                        $scanResults[] = $entry; $failed++;
+                    }
+                }
+            }
+
+            if (!$dryRun && $inserted > 0) {
+                $mostRecent = dbQueryOne(
+                    "SELECT id FROM newsletters ORDER BY year DESC, month DESC LIMIT 1"
+                );
+                if ($mostRecent) {
+                    dbExecute("UPDATE newsletters SET is_current = 0");
+                    dbExecute("UPDATE newsletters SET is_current = 1 WHERE id = ?", [$mostRecent['id']]);
+                }
+            }
+
+            $scanSummary = [
+                'inserted' => $inserted,
+                'skipped'  => $skipped,
+                'failed'   => $failed,
+                'dryRun'   => $dryRun,
+                'dir'      => $rawDir,
+            ];
+            break;
     }
 }
 
@@ -206,6 +372,103 @@ include __DIR__ . '/../includes/templates/admin_header.php';
         <p>Total newsletters in database: <?= dbQueryOne("SELECT COUNT(*) as c FROM newsletters")['c'] ?></p>
         <p>Years covered: <?= count($years) ?></p>
     </div>
+</div>
+
+<!-- Bulk Import from Directory -->
+<div class="card" style="margin-top: 20px;">
+    <h3>Bulk Import from Directory</h3>
+    <p style="color: #666; margin-bottom: 15px;">Navigate to the directory containing year subfolders (e.g. <code>2023/</code>, <code>2024/</code>), then scan it to import newsletters into the database.</p>
+
+    <!-- Breadcrumb -->
+    <div style="margin-bottom: 10px; font-size: 0.9em;">
+        <?php foreach ($breadcrumbs as $i => $crumb): ?>
+            <?php if ($i > 0): ?><span style="color: #bbb; margin: 0 4px;">/</span><?php endif; ?>
+            <?php if ($i < count($breadcrumbs) - 1): ?>
+                <a href="?browse=<?= urlencode($crumb['path']) ?>"><?= e($crumb['label']) ?></a>
+            <?php else: ?>
+                <strong><?= e($crumb['label']) ?></strong>
+            <?php endif; ?>
+        <?php endforeach; ?>
+    </div>
+
+    <!-- Directory listing -->
+    <?php if ($browseListing): ?>
+        <div style="margin-bottom: 15px; padding: 8px 12px; background: #f9f9f9; border: 1px solid #ddd; border-radius: 4px;">
+            <?php foreach ($browseListing as $dir): ?>
+                <?php
+                    $dirRel = str_replace(
+                        DIRECTORY_SEPARATOR,
+                        '/',
+                        trim(substr($dir, strlen($rootReal)), DIRECTORY_SEPARATOR)
+                    );
+                ?>
+                <div style="padding: 3px 0;">
+                    <a href="?browse=<?= urlencode($dirRel) ?>" style="font-family: monospace; text-decoration: none; color: #003354;">
+                        &#128193; <?= e(basename($dir)) ?>
+                    </a>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    <?php else: ?>
+        <p style="color: #999; font-style: italic; margin-bottom: 15px;">No subdirectories here.</p>
+    <?php endif; ?>
+
+    <!-- Scan form -->
+    <form method="POST" action="newsletter.php<?= $browseRelative !== '' ? '?browse=' . urlencode($browseRelative) : '' ?>">
+        <?= csrfField() ?>
+        <input type="hidden" name="action" value="scan_directory">
+        <input type="hidden" name="scan_dir" value="<?= e($browseRelative) ?>">
+        <div class="form-group" style="margin-bottom: 10px;">
+            <label>
+                <input type="checkbox" name="dry_run" <?= isset($_POST['dry_run']) ? 'checked' : '' ?>>
+                Dry run (preview only, no changes saved)
+            </label>
+        </div>
+        <button type="submit" class="btn"<?= $browseRelative === '' ? ' disabled style="opacity: 0.5; cursor: default;"' : '' ?>>
+            Scan: <?= $browseRelative !== '' ? e($browseRelative) : 'select a directory above' ?>
+        </button>
+    </form>
+
+    <?php if ($scanError): ?>
+        <div style="margin-top: 15px; padding: 10px; background: #fdd; border: 1px solid #c00; border-radius: 4px; color: #900;">
+            <?= $scanError ?>
+        </div>
+    <?php endif; ?>
+
+    <?php if ($scanSummary !== null): ?>
+        <div style="margin-top: 20px; border-top: 1px solid #eee; padding-top: 15px;">
+            <p style="margin-bottom: 8px;"><strong>Results for <code><?= e($scanSummary['dir']) ?></code><?= $scanSummary['dryRun'] ? ' <em>(dry run)</em>' : '' ?>:</strong>
+                <span style="color: green; margin-left: 12px;"><?= $scanSummary['inserted'] ?> <?= $scanSummary['dryRun'] ? 'to insert' : 'inserted' ?></span>
+                <span style="color: #666; margin-left: 12px;"><?= $scanSummary['skipped'] ?> skipped</span>
+                <?php if ($scanSummary['failed']): ?>
+                    <span style="color: #c00; margin-left: 12px;"><?= $scanSummary['failed'] ?> failed</span>
+                <?php endif; ?>
+            </p>
+            <?php if ($scanResults): ?>
+                <table style="width: 100%; font-size: 0.9em; margin-top: 8px;">
+                    <thead><tr><th>File</th><th>Status</th><th>Note</th></tr></thead>
+                    <tbody>
+                        <?php foreach ($scanResults as $r):
+                            $c = match($r['status']) {
+                                'inserted' => 'green',
+                                'preview'  => '#0066cc',
+                                'skipped'  => '#888',
+                                'failed'   => '#c00',
+                                default    => 'inherit',
+                            }; ?>
+                            <tr>
+                                <td style="font-family: monospace;"><?= e($r['file']) ?></td>
+                                <td style="color: <?= $c ?>; font-weight: 600;"><?= e($r['status']) ?></td>
+                                <td style="color: #555;"><?= e($r['note']) ?></td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+            <?php else: ?>
+                <p style="color: #666; margin-top: 8px;">No newsletter PDF files found in this directory.</p>
+            <?php endif; ?>
+        </div>
+    <?php endif; ?>
 </div>
 
 <!-- Newsletter Archive -->
