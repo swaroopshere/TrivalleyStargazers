@@ -1,0 +1,23 @@
+name: Public calendar regression tests
+on:
+  pull_request:
+    paths:
+      - 'scripts/*calendar*'
+      - 'tvs.js'
+      - 'calendar-data.json'
+      - 'tvs-deploy/includes/calendar_data.php'
+      - 'tvs-deploy/includes/db.php'
+      - 'tvs-deploy/tests/membership/calendar*'
+      - '.github/workflows/public-calendar-tests.yml'
+jobs:
+  calendar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test scripts/public-calendar.test.cjs
+      - run: php tvs-deploy/tests/membership/calendar.test.php
+      - run: php tvs-deploy/tests/membership/calendar-list.test.php
+      - run: php -l tvs-deploy/index.php && php -l tvs-deploy/includes/db.php

@@ -218,6 +218,12 @@ include __DIR__ . '/includes/templates/header.php';
             </div>
             <?php endif; ?>
 
+            <?php if (!$showH2o): ?>
+            <p>No future H2O open-house date is currently listed. Check the
+                <a href="https://groups.io/g/trivalleystargazers/calendar" target="_blank">club calendar</a>
+                for the next confirmed date and caravan departure time.</p>
+            <?php endif; ?>
+
             <?php if ($showTesla && $teslaEvents): ?>
             <!-- Tesla Vineyard Star Parties -->
             <div class="mb-6">
@@ -389,12 +395,16 @@ include __DIR__ . '/includes/templates/header.php';
                                 'board' => 'Board',
                                 'h2o' => 'H2O',
                                 'tesla' => 'Tesla',
-                                'starparty' => 'Star Party'
+                                'starparty' => 'Star Party',
+                                'calendar' => 'Calendar'
                             ];
                             echo $badges[$event['event_type']] ?? 'Event';
                             ?>
                         </span>
                         <span class="event-title"><?= e($event['title']) ?></span>
+                        <?php if (!empty($event['event_time'])): ?>
+                        <span class="event-time"><?= formatTime($event['event_time']) ?></span>
+                        <?php endif; ?>
                         <?php if (!empty($event['location'])): ?>
                         <span class="event-location"><?= e($event['location']) ?></span>
                         <?php endif; ?>
