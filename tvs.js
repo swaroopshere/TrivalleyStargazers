@@ -331,7 +331,7 @@ function startBannerSwapping() {
 // Fetch and display upcoming events
 async function displayUpcomingEvents() {
     try {
-        const response = await fetch('calendar-data.json');
+        const response = await fetch('calendar-data.json', { cache: 'no-store' });
         if (!response.ok) {
             throw new Error('Failed to fetch events');
         }
@@ -341,22 +341,17 @@ async function displayUpcomingEvents() {
         if (!eventsDiv) return;
         
         const now = new Date();
+        const today = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Los_Angeles', year: 'numeric', month: '2-digit', day: '2-digit' }).format(now);
         const upcomingEvents = data.events
             .filter(event => {
-                // Filter out member-only events and club meetings
-                const isMemberOnly = event.title.toLowerCase().includes('member') || 
-                                   event.description.toLowerCase().includes('member only') ||
-                                   event.title.toLowerCase().includes('tesla vintner');
-                const isMeeting = event.title.toLowerCase().includes('meeting') ||
-                                event.description.toLowerCase().includes('meeting') ||
-                                event.title.toLowerCase().includes('board') ||
-                                event.description.toLowerCase().includes('board');
-                return new Date(event.date) >= now && !isMemberOnly && !isMeeting;
+                const restricted = /\bboard\b|\bclub meeting\b|\bmembers?[ -]+only\b|tesla vintner/i.test(event.title || '') ||
+                    /\bmembers?[ -]+only\b/i.test(event.description || '');
+                return event.date >= today && (!event.startDate || new Date(event.startDate) >= now) && !event.is_canceled && !event.is_private && !event.is_member_only && !restricted;
             })
             .sort((a, b) => new Date(a.date) - new Date(b.date));
             
         if (upcomingEvents.length === 0) {
-            eventsDiv.innerHTML = '<p>No upcoming public star parties scheduled.</p>';
+            eventsDiv.innerHTML = '<p>No upcoming events listed in the public calendar.</p>';
             return;
         }
         
@@ -408,7 +403,7 @@ async function displayUpcomingEvents() {
         table.appendChild(tbody);
         
         // Add table to the page
-        eventsDiv.innerHTML = '<h3 class="subtitle">Upcoming Public Star Parties</h3>';
+        eventsDiv.innerHTML = '<h3 class="subtitle">Upcoming Star Parties &amp; Outreach</h3><p>School outreach listings coordinate TVS volunteers; follow the calendar participation instructions.</p>';
         eventsDiv.appendChild(table);
         
         // Add some basic styling for the table
