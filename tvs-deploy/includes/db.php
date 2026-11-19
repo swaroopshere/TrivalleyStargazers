@@ -189,31 +189,12 @@ function getNewsletterYears(): array {
 /**
  * Get all upcoming events chronologically (meetings, star parties, etc.)
  */
-function getAllUpcomingEvents(int $limit = 15): array {
+function getAllUpcomingEvents(int $limit = 15, ?DateTimeImmutable $now = null): array {
     $events = [];
-    $today = date('Y-m-d');
-
-    // Get upcoming public meetings
-    $meetings = dbQuery(
-        "SELECT 'meeting' as event_type, 'Club Meeting' as title, meeting_date as event_date,
-                meeting_time as event_time, location, CONCAT('Public meeting at ', location) as description
-         FROM meetings
-         WHERE meeting_type = 'public' AND is_active = 1 AND meeting_date >= ?
-         ORDER BY meeting_date ASC LIMIT 3",
-        [$today]
-    );
-    $events = array_merge($events, $meetings);
-
-    // Get upcoming board meetings
-    $boardMeetings = dbQuery(
-        "SELECT 'board' as event_type, 'Board Meeting' as title, meeting_date as event_date,
-                meeting_time as event_time, location, description
-         FROM meetings
-         WHERE meeting_type = 'board' AND is_active = 1 AND meeting_date >= ?
-         ORDER BY meeting_date ASC LIMIT 3",
-        [$today]
-    );
-    $events = array_merge($events, $boardMeetings);
+    $zone = new DateTimeZone('America/Los_Angeles');
+    $now = ($now ?? new DateTimeImmutable('now', $zone))->setTimezone($zone);
+    $today = $now->format('Y-m-d');
+    // Club and board meetings have separate announcement cards.
 
     // Get H2O events (star parties)
     $h2oEvents = dbQuery(
@@ -237,20 +218,38 @@ function getAllUpcomingEvents(int $limit = 15): array {
     );
     $events = array_merge($events, $teslaEvents);
 
-    // Get general star parties from calendar cache
+    // Include all public calendar events, preserving their actual start times.
     $starParties = dbQuery(
-        "SELECT 'starparty' as event_type, title, event_date,
-                '20:00:00' as event_time, location, title as description
+        "SELECT 'calendar' as event_type, title, event_date,
+                event_time, location, description
          FROM calendar_cache
-         WHERE event_date >= ? AND (title LIKE '%star party%' OR title LIKE '%Star Party%')
-         ORDER BY event_date ASC LIMIT 5",
+         WHERE event_date >= ?
+         ORDER BY event_date ASC, event_time ASC",
         [$today]
     );
-    $events = array_merge($events, $starParties);
+    foreach ($starParties as $event) {
+        // Avoid duplicates when an organizer has also entered the event manually.
+        $duplicate = false;
+        foreach ($events as $published) {
+            if ($published['event_date'] === $event['event_date']
+                && $published['title'] === $event['title']) {
+                $duplicate = true; break;
+            }
+        }
+        if (!$duplicate) $events[] = $event;
+    }
+
+    $events = array_values(array_filter($events, function ($event) use ($now, $zone, $today) {
+        if (preg_match('/\b(?:club|board) meeting\b/i', $event['title'])) return false;
+        if (empty($event['event_time'])) return $event['event_date'] >= $today;
+        try { $start = new DateTimeImmutable($event['event_date'].' '.$event['event_time'], $zone); }
+        catch (Exception $e) { return false; }
+        return $start >= $now;
+    }));
 
     // Sort all events by date
     usort($events, function($a, $b) {
-        return strcmp($a['event_date'], $b['event_date']);
+        return strcmp($a['event_date'].' '.($a['event_time'] ?? ''), $b['event_date'].' '.($b['event_time'] ?? ''));
     });
 
     // Return limited results

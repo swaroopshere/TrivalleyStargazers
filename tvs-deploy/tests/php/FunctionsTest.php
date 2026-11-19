@@ -124,7 +124,7 @@ class FunctionsTest extends TestCase
 
     public function testTruncateWithCustomSuffix(): void
     {
-        $this->assertEquals('Hello[more]', truncate('Hello World', 11, '[more]'));
+        $this->assertEquals('Hello World', truncate('Hello World', 11, '[more]'));
         $this->assertEquals('Test--', truncate('Testing 123', 6, '--'));
     }
 
@@ -183,9 +183,9 @@ class FunctionsTest extends TestCase
      */
     public function testSanitizeTimeValid(): void
     {
-        $this->assertEquals('19:30', sanitizeTime('19:30'));
-        $this->assertEquals('00:00', sanitizeTime('00:00'));
-        $this->assertEquals('23:59', sanitizeTime('23:59'));
+        $this->assertEquals('19:30:00', sanitizeTime('19:30'));
+        $this->assertEquals('00:00:00', sanitizeTime('00:00'));
+        $this->assertEquals('23:59:00', sanitizeTime('23:59'));
     }
 
     public function testSanitizeTimeWithSeconds(): void
@@ -206,15 +206,15 @@ class FunctionsTest extends TestCase
      */
     public function testGetMeetingFormatLabel(): void
     {
-        $this->assertEquals('In-person', getMeetingFormatLabel('in-person'));
-        $this->assertEquals('Zoom', getMeetingFormatLabel('zoom'));
-        $this->assertEquals('Hybrid', getMeetingFormatLabel('hybrid'));
+        $this->assertEquals('In-person only', getMeetingFormatLabel('in-person'));
+        $this->assertEquals('Zoom only', getMeetingFormatLabel('zoom'));
+        $this->assertEquals('Hybrid (In-person and Zoom)', getMeetingFormatLabel('hybrid'));
     }
 
     public function testGetMeetingFormatLabelUnknown(): void
     {
-        $this->assertEquals('Unknown', getMeetingFormatLabel('unknown'));
-        $this->assertEquals('Unknown', getMeetingFormatLabel(''));
+        $this->assertEquals('unknown', getMeetingFormatLabel('unknown'));
+        $this->assertEquals('', getMeetingFormatLabel(''));
     }
 
     /**

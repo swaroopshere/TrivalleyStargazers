@@ -13,11 +13,8 @@ $pageId = 'm_membership';
 include __DIR__ . '/includes/templates/header.php';
 ?>
 
-<script type="text/javascript">
-<!--
-    document.addEventListener('DOMContentLoaded', setupForm);
-//-->
-</script>
+<script src="membership.js?v=20261115" type="text/javascript" defer></script>
+
 
 <h1 class="title">Membership Application and Renewal</h1>
 
@@ -49,7 +46,7 @@ claims of liability for any injury or loss sustained at a TVS function. TVS will
 except as detailed in our
 <a href="privacy.pdf" title="Read our privacy policy">Privacy Policy</a>.<br><br>
 
-<form class="application" name="application" action="">
+<form class="application" name="application" action="apply.php" method="post">
   <p>
    <label for="name">Name:</label>
    <input type="text" id="name" name="name" title="Enter your name here"
@@ -112,6 +109,8 @@ except as detailed in our
       onclick="document.getElementById('new').value = 'No';">
   </p>
 
+  <p id="applicationStatus" role="status" aria-live="polite"></p>
+  <noscript><p>Please enable JavaScript to submit online, or use the PDF application linked above.</p></noscript>
 </form>
 <br><br>
 

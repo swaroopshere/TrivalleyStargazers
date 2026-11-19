@@ -95,7 +95,9 @@ include __DIR__ . '/includes/templates/header.php';
                     <?php endif; ?>
 
                     <div class="meeting-description">
-                        <?php if ($publicMeeting['meeting_format'] === 'hybrid'): ?>
+                        <?php if (!empty($publicMeeting['description'])): ?>
+                            <?= nl2br(e($publicMeeting['description'])) ?>
+                        <?php elseif ($publicMeeting['meeting_format'] === 'hybrid'): ?>
                             This will be a hybrid meeting. The meeting will be held in person at the <?= e($publicMeeting['location']) ?> and will also be available via Zoom.
                         <?php elseif ($publicMeeting['meeting_format'] === 'zoom'): ?>
                             This meeting will be held via Zoom only.
@@ -214,6 +216,12 @@ include __DIR__ . '/includes/templates/header.php';
                     The admission is $3/car; please bring the exact amount.
                 </p>
             </div>
+            <?php endif; ?>
+
+            <?php if (!$showH2o): ?>
+            <p>No future H2O open-house date is currently listed. Check the
+                <a href="https://groups.io/g/trivalleystargazers/calendar" target="_blank">club calendar</a>
+                for the next confirmed date and caravan departure time.</p>
             <?php endif; ?>
 
             <?php if ($showTesla && $teslaEvents): ?>
@@ -387,12 +395,16 @@ include __DIR__ . '/includes/templates/header.php';
                                 'board' => 'Board',
                                 'h2o' => 'H2O',
                                 'tesla' => 'Tesla',
-                                'starparty' => 'Star Party'
+                                'starparty' => 'Star Party',
+                                'calendar' => 'Calendar'
                             ];
                             echo $badges[$event['event_type']] ?? 'Event';
                             ?>
                         </span>
                         <span class="event-title"><?= e($event['title']) ?></span>
+                        <?php if (!empty($event['event_time'])): ?>
+                        <span class="event-time"><?= formatTime($event['event_time']) ?></span>
+                        <?php endif; ?>
                         <?php if (!empty($event['location'])): ?>
                         <span class="event-location"><?= e($event['location']) ?></span>
                         <?php endif; ?>

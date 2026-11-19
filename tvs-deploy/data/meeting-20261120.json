@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "public": {
+    "meeting_type": "public",
+    "meeting_date": "2026-11-20",
+    "meeting_time": "19:30:00",
+    "location": "Unitarian Universalist Church",
+    "location_address": "1893 N. Vasco Rd., Livermore",
+    "description": "Doors open at 7:00 PM and the meeting starts at 7:30 PM. Club meetings are open to members and guests. Please join us in person if you are able; virtual attendance is available via Zoom.",
+    "meeting_format": "hybrid",
+    "presentation_topic": "StackingWizard and AstroWizard Intro and Application",
+    "presenter_name": "Eric Holland",
+    "presenter_title": "",
+    "presentation_abstract": "Our featured, in-person presenter this month is Eric Holland. His topic will focus on the demonstration of two fairly new applications called StackingWizard and AstroWizard. Both really simplify the image processing side of astrophotography, suit those new to the hobby, and are a nice complement to smart telescopes. Still, the advanced imager can benefit from these applications, and they are not just for smart scopes. He will briefly discuss the need for stacking and why we do it. He doesn't plan to discuss the image acquisition side of astrophotography but, if there is time, he will take questions on both sides.",
+    "presenter_bio": "Eric is a graduate of UC Davis with a degree in Computer Engineering. He currently works in Information Services as a Systems Engineer. His main duties pertain to Oracle CNC and DBA work. Eric became serious about astronomy in college and has been active as an amateur astronomer ever since, going on for 24 years. He has been a member of the Stockton Astronomical Society for about 16 years, was president for five of those years, and is currently editor of the club Valley Skies newsletter."
+  },
+  "board": {
+    "meeting_type": "board",
+    "meeting_date": "2026-11-23",
+    "meeting_time": "19:30:00",
+    "location": "Video Conference",
+    "location_address": null,
+    "description": "Board meetings take place at 7:30 PM on the Monday following the Club Meeting. This month's board meeting is Monday, November 23, via Zoom. Board meetings are open to TVS members in good standing.",
+    "meeting_format": "zoom"
+  }
+}

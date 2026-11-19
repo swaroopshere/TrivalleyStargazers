@@ -10,6 +10,7 @@
 
 require_once __DIR__ . '/../includes/config.php';
 require_once __DIR__ . '/../includes/db.php';
+require_once __DIR__ . '/../includes/calendar_data.php';
 
 /**
  * Main sync function
@@ -104,21 +105,7 @@ function readLocalCalendarData(): array {
         return [];
     }
 
-    $events = [];
-
-    foreach ($data as $event) {
-        // Parse the event format from calendar-data.json
-        $events[] = [
-            'event_id' => md5($event['title'] . ($event['startDate'] ?? '')),
-            'title' => $event['title'] ?? 'Star Party',
-            'event_date' => isset($event['startDate']) ? date('Y-m-d', strtotime($event['startDate'])) : null,
-            'event_time' => isset($event['startDate']) ? date('H:i:s', strtotime($event['startDate'])) : null,
-            'description' => $event['description'] ?? '',
-            'location' => $event['location'] ?? ''
-        ];
-    }
-
-    return $events;
+    return parsePublishedCalendarData($data);
 }
 
 /**

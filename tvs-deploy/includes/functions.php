@@ -10,23 +10,23 @@ require_once __DIR__ . '/config.php';
 /**
  * Escape HTML for safe output
  */
-function e(string $str): string {
-    return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
+function e(?string $str): string {
+    return htmlspecialchars($str ?? '', ENT_QUOTES, 'UTF-8');
 }
 
 /**
  * Format a date for display
  */
-function formatDate(string $date, string $format = 'F j, Y'): string {
-    $timestamp = strtotime($date);
+function formatDate(?string $date, string $format = 'F j, Y'): string {
+    $timestamp = $date ? strtotime($date) : false;
     return $timestamp ? date($format, $timestamp) : '';
 }
 
 /**
  * Format a time for display
  */
-function formatTime(string $time, string $format = 'g:i A'): string {
-    $timestamp = strtotime($time);
+function formatTime(?string $time, string $format = 'g:i A'): string {
+    $timestamp = $time ? strtotime($time) : false;
     return $timestamp ? date($format, $timestamp) : '';
 }
 
@@ -75,25 +75,26 @@ function fileExistsPublic(string $path): bool {
  * Get file size in human readable format
  */
 function formatFileSize(int $bytes): string {
-    $units = ['B', 'KB', 'MB', 'GB'];
-    $factor = floor((strlen($bytes) - 1) / 3);
-    return sprintf("%.1f %s", $bytes / pow(1024, $factor), $units[$factor]);
+    $bytes = max(0, $bytes);
+    $units = ['B', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB'];
+    $factor = $bytes > 0 ? min(count($units) - 1, (int)floor(log($bytes, 1024))) : 0;
+    return $factor === 0 ? $bytes . ' B' : sprintf('%.2f %s', $bytes / pow(1024, $factor), $units[$factor]);
 }
 
 /**
  * Validate and sanitize a date string
  */
 function sanitizeDate(string $date): ?string {
-    $timestamp = strtotime($date);
-    return $timestamp ? date('Y-m-d', $timestamp) : null;
+    if (!preg_match('/^([0-9]{4})-([0-9]{2})-([0-9]{2})$/', $date, $m)) return null;
+    return checkdate((int)$m[2], (int)$m[3], (int)$m[1]) ? $date : null;
 }
 
 /**
  * Validate and sanitize a time string
  */
 function sanitizeTime(string $time): ?string {
-    $timestamp = strtotime($time);
-    return $timestamp ? date('H:i:s', $timestamp) : null;
+    if (!preg_match('/^([01][0-9]|2[0-3]):([0-5][0-9])(?::([0-5][0-9]))?$/', $time)) return null;
+    return strlen($time) === 5 ? $time . ':00' : $time;
 }
 
 /**
@@ -164,6 +165,8 @@ function showFlashMessage(): void {
  * Pagination helper
  */
 function paginate(int $total, int $perPage, int $currentPage): array {
+    $total = max(0, $total);
+    $perPage = max(1, $perPage);
     $totalPages = (int)ceil($total / $perPage);
     $currentPage = max(1, min($currentPage, $totalPages));
     $offset = ($currentPage - 1) * $perPage;
@@ -252,7 +255,7 @@ function jsonResponse(array $data, int $status = 200): void {
  * Get current page for active nav highlighting
  */
 function getCurrentPage(): string {
-    $path = $_SERVER['PHP_SELF'] ?? '';
+    $path = $_SERVER['SCRIPT_NAME'] ?? $_SERVER['PHP_SELF'] ?? '';
     return basename($path, '.php');
 }
 

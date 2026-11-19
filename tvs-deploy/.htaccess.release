@@ -1,0 +1,38 @@
+# Release overlay. Preserve the host's existing database SetEnv settings.
+DirectoryIndex index.php index.shtml index.html
+Options -Indexes
+ErrorDocument 404 /404.php
+AddType application/javascript .js
+AddType text/css .css
+AddType text/html .shtml
+AddHandler server-parsed .shtml
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTPS} off
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+    RewriteRule ^(?:data|includes|tools|tests|docs|vendor|node_modules)/ - [F,L]
+    RewriteRule ^cgi-bin/(?:info\.php|_test_.*|include\.shtml|a\.shtml)$ - [F,L]
+    # Beta previews existing production archive/downloads without duplicating them.
+    RewriteCond %{HTTP_HOST} ^beta\.trivalleystargazers\.org$ [NC]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(newsletters|pdfs)/(.+)$ https://www.trivalleystargazers.org/$1/$2 [R=302,L]
+    # Only redirect legacy pages with a real PHP replacement.
+    RewriteCond %{DOCUMENT_ROOT}/$1.php -f
+    RewriteRule ^(.+)\.shtml$ /$1.php [R=302,L]
+    # Hosting's PHP handler otherwise turns missing scripts into HTTP 500.
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule \.php$ /404.php [L]
+</IfModule>
+
+<FilesMatch "(^\.|\.(?:sql|log|ini|env|bak|config|dist|inc|sh|sqlite|db)$)">
+    Require all denied
+</FilesMatch>
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+<Files "delvallenotify.pdf">
+    Header always set X-Robots-Tag "noindex, nofollow, noarchive, nosnippet"
+</Files>

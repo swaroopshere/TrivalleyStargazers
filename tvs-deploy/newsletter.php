@@ -12,11 +12,16 @@ require_once __DIR__ . '/includes/functions.php';
 $pageTitle = 'Newsletter - Tri-Valley Stargazers';
 $pageId = 'm_newsletter';
 
-// Get current newsletter
-$currentNewsletter = getCurrentNewsletter();
-
-// Get all newsletter years
-$years = getNewsletterYears();
+// Include FTP-published issues as well as database-managed history.
+require_once __DIR__ . '/includes/newsletter_archive.php';
+$history = [];
+foreach (getNewsletterYears() as $yearData) {
+    $history = array_merge($history, getNewslettersByYear((int)$yearData['year']));
+}
+$archive = publishedNewsletterArchive($history, ROOT_PATH);
+$latestYear = $archive ? reset($archive) : [];
+$currentNewsletter = $latestYear ? reset($latestYear) : null;
+$years = array_map(function ($year) { return ['year' => $year]; }, array_keys($archive));
 
 include __DIR__ . '/includes/templates/header.php';
 ?>
@@ -59,7 +64,7 @@ include __DIR__ . '/includes/templates/header.php';
         <?php foreach ($years as $yearData): ?>
             <?php
             $year = $yearData['year'];
-            $newsletters = getNewslettersByYear($year);
+            $newsletters = $archive[$year];
             ?>
             <details class="archive-year">
                 <summary>

@@ -1,0 +1,38 @@
+name: Beta membership regression tests
+on:
+  pull_request:
+    paths:
+      - 'tvs-deploy/apply.php'
+      - 'tvs-deploy/membership*'
+      - 'tvs-deploy/pay.php'
+      - 'tvs-deploy/tvs.js'
+      - 'tvs-deploy/includes/membership_submission.php'
+      - 'tvs-deploy/includes/legacy_asset_migration.php'
+      - 'tvs-deploy/tools/migrate_legacy_assets.php'
+      - 'tvs-deploy/data/legacy-ftp-assets-*.json'
+      - 'tvs-deploy/tests/membership/**'
+      - '.github/workflows/beta-membership-tests.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: php -l tvs-deploy/apply.php && php -l tvs-deploy/includes/membership_submission.php && php -l tvs-deploy/membership.php && php -l tvs-deploy/pay.php
+      - run: php tvs-deploy/tests/membership/handler.test.php
+      - run: node --test tvs-deploy/tests/membership/frontend.test.cjs
+      - run: find tvs-deploy -name '*.php' -not -path '*/vendor/*' -print0 | xargs -0 -n1 php -l
+      - run: php tvs-deploy/tests/membership/newsletter.test.php
+      - run: php tvs-deploy/tests/membership/content-sync.test.php
+      - run: php tvs-deploy/tests/membership/calendar.test.php
+      - run: php tvs-deploy/tests/membership/legacy-assets.test.php
+      - name: Existing PHP unit suite
+        working-directory: tvs-deploy
+        run: |
+          composer install --no-interaction --prefer-dist --no-progress
+          vendor/bin/phpunit --testsuite 'Unit Tests'
